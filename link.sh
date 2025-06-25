@@ -44,6 +44,13 @@ ln -sf "$DOTFILES_DIR/shell/zshenv" "$HOME/.zshenv"
 ln -sf "$DOTFILES_DIR/shell/p10k.graphical.zsh" "$HOME/.p10k.graphical.zsh"
 ln -sf "$DOTFILES_DIR/shell/p10k.tty.zsh" "$HOME/.p10k.tty.zsh"
 
+rm -rf "$CONFIG_DIR/nvim" \
+    "$CONFIG_DIR/kitty" \
+    "$CONFIG_DIR/sway" \
+    "$CONFIG_DIR/waybar" \
+    "$CONFIG_DIR/fastfetch" \
+    "$CONFIG_DIR/rofi"
+
 ln -sf "$DOTFILES_DIR/config/nvim" "$CONFIG_DIR/nvim"
 ln -sf "$DOTFILES_DIR/config/kitty" "$CONFIG_DIR/kitty"
 ln -sf "$DOTFILES_DIR/config/sway" "$CONFIG_DIR/sway"
