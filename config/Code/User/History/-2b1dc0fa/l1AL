@@ -1,7 +1,0 @@
-main.c
-my_putchar.c
-a.out
-vgcore*
-*.gc*
-test
-coverage*

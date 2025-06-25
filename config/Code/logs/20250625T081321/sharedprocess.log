@@ -1,9 +1,0 @@
-2025-06-25 08:13:23.564 [info] ComputeTargetPlatform: linux-x64
-2025-06-25 08:13:24.929 [info] ComputeTargetPlatform: linux-x64
-2025-06-25 08:13:26.699 [info] Getting Manifest... github.copilot-chat
-2025-06-25 08:13:26.817 [info] Installing extension: github.copilot-chat {"productVersion":{"version":"1.101.1","date":"2025-06-18T13:35:12.605Z"},"pinned":true,"operation":3,"isApplicationScoped":true,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/curry/.vscode/extensions/extensions.json","path":"/home/curry/.vscode/extensions/extensions.json","scheme":"vscode-userdata"}}
-2025-06-25 08:13:31.067 [info] Extension signature verification result for github.copilot-chat: Success. Internal Code: 0. Executed: true. Duration: 1797ms.
-2025-06-25 08:13:31.493 [info] Extracted extension to file:///home/curry/.vscode/extensions/github.copilot-chat-0.28.2: github.copilot-chat
-2025-06-25 08:13:31.525 [info] Renamed to /home/curry/.vscode/extensions/github.copilot-chat-0.28.2
-2025-06-25 08:13:31.586 [info] Marked extension as removed github.copilot-chat-0.28.1
-2025-06-25 08:13:31.591 [info] Extension installed successfully: github.copilot-chat vscode-userdata:/home/curry/.vscode/extensions/extensions.json

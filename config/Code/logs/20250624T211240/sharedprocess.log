@@ -1,5 +1,0 @@
-2025-06-24 21:12:41.803 [info] ComputeTargetPlatform: linux-x64
-2025-06-24 21:12:42.157 [info] Deleted marked for removal extension from disk rust-lang.rust-analyzer /home/curry/.vscode/extensions/rust-lang.rust-analyzer-0.3.2500-linux-x64
-2025-06-24 21:12:43.673 [info] ComputeTargetPlatform: linux-x64
-2025-06-24 21:30:06.754 [info] Getting Manifest... github.copilot-chat
-2025-06-24 21:30:07.438 [info] Installing extension: github.copilot-chat {"productVersion":{"version":"1.101.1","date":"2025-06-18T13:35:12.605Z"},"pinned":true,"operation":3,"isApplicationScoped":true,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/curry/.vscode/extensions/extensions.json","path":"/home/curry/.vscode/extensions/extensions.json","scheme":"vscode-userdata"}}

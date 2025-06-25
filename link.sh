@@ -24,8 +24,7 @@ if [ -f /etc/os-release ]; then
             sway \
             waybar \
             rofi \
-            fastfetch \
-            konsave
+            fastfetch
     else
         echo "Unsupported OS: $ID"
         exit 1
@@ -50,7 +49,6 @@ ln -sf "$DOTFILES_DIR/config/kitty" "$CONFIG_DIR/kitty"
 ln -sf "$DOTFILES_DIR/config/sway" "$CONFIG_DIR/sway"
 ln -sf "$DOTFILES_DIR/config/waybar" "$CONFIG_DIR/waybar"
 ln -sf "$DOTFILES_DIR/config/fastfetch" "$CONFIG_DIR/fastfetch"
-ln -sf "$DOTFILES_DIR/config/Code" "$CONFIG_DIR/Code"
 ln -sf "$DOTFILES_DIR/config/rofi" "$CONFIG_DIR/rofi"
 
 konsave -i "$DOTFILES_DIR/curry-catppuccin.knsv"
