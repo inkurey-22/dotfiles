@@ -1,0 +1,22 @@
+2025-06-25 11:41:27.551 [info] Using the Electron fetcher.
+2025-06-25 11:41:27.551 [info] [GitExtensionServiceImpl] Initializing Git extension service.
+2025-06-25 11:41:27.551 [info] [GitExtensionServiceImpl] Successfully activated the vscode.git extension.
+2025-06-25 11:41:27.551 [info] [GitExtensionServiceImpl] Enablement state of the vscode.git extension: true.
+2025-06-25 11:41:27.551 [info] [GitExtensionServiceImpl] Successfully registered Git commit message provider.
+2025-06-25 11:41:27.992 [info] Logged in as inkurey-22
+2025-06-25 11:41:28.973 [info] Got Copilot token for inkurey-22
+2025-06-25 11:41:28.982 [info] activationBlocker from 'languageModelAccess' took for 1705ms
+2025-06-25 11:41:29.087 [info] copilot token chat_enabled: true, sku: free_educational_quota
+2025-06-25 11:41:29.087 [info] GitHub.vscode-pull-request-github extension is not yet activated.
+2025-06-25 11:41:29.112 [info] Registering default platform agent...
+2025-06-25 11:41:29.113 [info] activationBlocker from 'conversationFeature' took for 1839ms
+2025-06-25 11:41:29.290 [info] BYOK: Copilot Chat known models list fetched successfully.
+2025-06-25 11:41:29.987 [info] Fetched model metadata in 1005ms 5fbacee8-ed39-4157-ab82-db2824aed71e
+2025-06-25 11:41:37.885 [info] message 0 returned. finish reason: [stop]
+2025-06-25 11:41:37.885 [info] request done: requestId: [c59d9337-6869-4bd9-9b89-30b0d8da17d7] model deployment ID: []
+2025-06-25 11:41:39.431 [info] message 0 returned. finish reason: [stop]
+2025-06-25 11:41:39.431 [info] request done: requestId: [3bb25734-de3b-4d22-ba6f-08162853d7a6] model deployment ID: []
+2025-06-25 11:41:48.785 [info] message 0 returned. finish reason: [stop]
+2025-06-25 11:41:48.785 [info] request done: requestId: [cc34e50e-382e-432a-ae26-541948962c81] model deployment ID: []
+2025-06-25 11:41:49.187 [info] message 0 returned. finish reason: [stop]
+2025-06-25 11:41:49.187 [info] request done: requestId: [e8525917-0cb1-404a-afcc-8c8ada1b1b1c] model deployment ID: []

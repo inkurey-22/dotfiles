@@ -1,0 +1,200 @@
+{
+  "version": 3,
+  "requesterUsername": "",
+  "responderUsername": "",
+  "initialLocation": "panel",
+  "requests": [
+    {
+      "requestId": "request_06f502e1-0c82-4f3b-b3fa-db681b3e8f8d",
+      "message": {
+        "text": "Do you see any problem in my configuration ? Because hyprland doesn't want to launch",
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 84
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 85
+            },
+            "text": "Do you see any problem in my configuration ? Because hyprland doesn't want to launch",
+            "kind": "text"
+          }
+        ]
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "file:///home/curry/.config/hypr/hyprland.conf",
+            "value": {
+              "$mid": 1,
+              "fsPath": "/home/curry/.config/hypr/hyprland.conf",
+              "external": "file:///home/curry/.config/hypr/hyprland.conf",
+              "path": "/home/curry/.config/hypr/hyprland.conf",
+              "scheme": "file"
+            },
+            "name": "hyprland.conf"
+          },
+          {
+            "kind": "file",
+            "id": "file:///home/curry/.config/hypr/keybindings.conf",
+            "value": {
+              "$mid": 1,
+              "fsPath": "/home/curry/.config/hypr/keybindings.conf",
+              "external": "file:///home/curry/.config/hypr/keybindings.conf",
+              "path": "/home/curry/.config/hypr/keybindings.conf",
+              "scheme": "file"
+            },
+            "name": "keybindings.conf"
+          },
+          {
+            "kind": "file",
+            "id": "file:///home/curry/.config/hypr/monitors.conf",
+            "value": {
+              "$mid": 1,
+              "fsPath": "/home/curry/.config/hypr/monitors.conf",
+              "external": "file:///home/curry/.config/hypr/monitors.conf",
+              "path": "/home/curry/.config/hypr/monitors.conf",
+              "scheme": "file"
+            },
+            "name": "monitors.conf"
+          },
+          {
+            "kind": "file",
+            "id": "file:///home/curry/.config/hypr/nvidia.conf",
+            "value": {
+              "$mid": 1,
+              "fsPath": "/home/curry/.config/hypr/nvidia.conf",
+              "external": "file:///home/curry/.config/hypr/nvidia.conf",
+              "path": "/home/curry/.config/hypr/nvidia.conf",
+              "scheme": "file"
+            },
+            "name": "nvidia.conf"
+          },
+          {
+            "kind": "file",
+            "id": "file:///home/curry/.config/hypr/windowrules.conf",
+            "value": {
+              "$mid": 1,
+              "fsPath": "/home/curry/.config/hypr/windowrules.conf",
+              "external": "file:///home/curry/.config/hypr/windowrules.conf",
+              "path": "/home/curry/.config/hypr/windowrules.conf",
+              "scheme": "file"
+            },
+            "name": "windowrules.conf"
+          },
+          {
+            "kind": "file",
+            "id": "file:///home/curry/.config/hypr/animations.conf",
+            "value": {
+              "$mid": 1,
+              "fsPath": "/home/curry/.config/hypr/animations.conf",
+              "external": "file:///home/curry/.config/hypr/animations.conf",
+              "path": "/home/curry/.config/hypr/animations.conf",
+              "scheme": "file"
+            },
+            "name": "animations.conf"
+          },
+          {
+            "kind": "file",
+            "id": "file:///home/curry/.config/hypr/custom-prefs.conf",
+            "value": {
+              "$mid": 1,
+              "fsPath": "/home/curry/.config/hypr/custom-prefs.conf",
+              "external": "file:///home/curry/.config/hypr/custom-prefs.conf",
+              "path": "/home/curry/.config/hypr/custom-prefs.conf",
+              "scheme": "file"
+            },
+            "name": "custom-prefs.conf"
+          },
+          {
+            "kind": "file",
+            "id": "file:///home/curry/.config/hypr/hypridle.conf",
+            "value": {
+              "$mid": 1,
+              "fsPath": "/home/curry/.config/hypr/hypridle.conf",
+              "external": "file:///home/curry/.config/hypr/hypridle.conf",
+              "path": "/home/curry/.config/hypr/hypridle.conf",
+              "scheme": "file"
+            },
+            "name": "hypridle.conf"
+          },
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:windowrules.conf",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/.config/hypr/windowrules.conf",
+                "external": "file:///home/curry/.config/hypr/windowrules.conf",
+                "path": "/home/curry/.config/hypr/windowrules.conf",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 53,
+                "endColumn": 46
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "kind": "progressMessage",
+          "content": {
+            "value": "Signing in to GitHub.",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false
+          }
+        }
+      ],
+      "responseId": "response_b935fc4c-8d0d-4d5d-b12e-4ed86d9c112f",
+      "isCanceled": false,
+      "agent": {
+        "id": "setup.chat",
+        "name": "GitHub Copilot",
+        "isDefault": true,
+        "isCore": true,
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [],
+        "locations": [
+          "panel"
+        ],
+        "metadata": {
+          "helpTextPrefix": {
+            "value": "You need to set up Copilot to use Chat.",
+            "isTrusted": false,
+            "supportThemeIcons": false,
+            "supportHtml": false
+          }
+        },
+        "description": "Ask Copilot",
+        "extensionId": {
+          "value": "nullExtensionDescription",
+          "_lower": "nullextensiondescription"
+        },
+        "extensionDisplayName": "Null Extension Description",
+        "extensionPublisherId": "vscode"
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timestamp": 1748351899476
+    }
+  ],
+  "sessionId": "0ebfb33c-483f-4906-9f48-e7e523d05a86",
+  "creationDate": 1748351862421,
+  "isImported": false,
+  "lastMessageDate": 1748351899476
+}

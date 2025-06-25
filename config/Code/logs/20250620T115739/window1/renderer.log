@@ -1,0 +1,11 @@
+2025-06-20 11:57:40.869 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-vsliveshare.vsliveshare' wants API proposal 'notebookCellExecutionState' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-06-20 11:57:40.883 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.gather' wants API proposal 'notebookCellExecutionState' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-06-20 11:57:40.884 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.vscode-pylance' wants API proposal 'mcpConfigurationProvider' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-06-20 11:57:41.275 [info] Started local extension host with pid 2653.
+2025-06-20 11:57:41.705 [info] ComputeTargetPlatform: linux-x64
+2025-06-20 11:57:41.712 [error] Extension 'ms-python.vscode-pylance' wants API proposal 'mcpConfigurationProvider' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-06-20 11:57:41.810 [error] Ignoring clangd.onConfigChanged.forceEnable as clangd.onConfigChanged is "prompt"
+2025-06-20 11:57:43.125 [info] Settings Sync: Account status changed from uninitialized to unavailable
+2025-06-20 11:57:45.404 [error] [Extension Host] (node:2653) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `exe --trace-deprecation ...` to show where the warning was created)
+2025-06-20 11:57:51.437 [info] [perf] Render performance baseline is 21ms

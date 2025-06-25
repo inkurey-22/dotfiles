@@ -1,0 +1,9 @@
+2025-06-23 17:21:26.432 [info] ComputeTargetPlatform: linux-x64
+2025-06-23 17:21:29.121 [info] ComputeTargetPlatform: linux-x64
+2025-06-23 17:21:30.831 [info] Getting Manifest... rust-lang.rust-analyzer
+2025-06-23 17:21:30.954 [info] Installing extension: rust-lang.rust-analyzer {"productVersion":{"version":"1.101.1","date":"2025-06-18T13:35:12.605Z"},"pinned":true,"operation":3,"isApplicationScoped":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/curry/.vscode/extensions/extensions.json","path":"/home/curry/.vscode/extensions/extensions.json","scheme":"vscode-userdata"}}
+2025-06-23 17:21:38.357 [info] Extension signature verification result for rust-lang.rust-analyzer: Success. Internal Code: 0. Executed: true. Duration: 1032ms.
+2025-06-23 17:21:39.279 [info] Extracted extension to file:///home/curry/.vscode/extensions/rust-lang.rust-analyzer-0.3.2509-linux-x64: rust-lang.rust-analyzer
+2025-06-23 17:21:39.295 [info] Renamed to /home/curry/.vscode/extensions/rust-lang.rust-analyzer-0.3.2509-linux-x64
+2025-06-23 17:21:39.339 [info] Marked extension as removed rust-lang.rust-analyzer-0.3.2500-linux-x64
+2025-06-23 17:21:39.377 [info] Extension installed successfully: rust-lang.rust-analyzer vscode-userdata:/home/curry/.vscode/extensions/extensions.json

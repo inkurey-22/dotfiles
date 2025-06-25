@@ -1,0 +1,1435 @@
+{
+  "version": 3,
+  "requesterUsername": "inkurey-22",
+  "requesterAvatarIconUri": {
+    "$mid": 1,
+    "path": "/u/146175466",
+    "scheme": "https",
+    "authority": "avatars.githubusercontent.com",
+    "query": "v=4"
+  },
+  "responderUsername": "GitHub Copilot",
+  "responderAvatarIconUri": {
+    "id": "copilot"
+  },
+  "initialLocation": "panel",
+  "requests": [
+    {
+      "requestId": "request_998edaeb-b9a0-4ca6-8f26-cf81f3342edc",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 54
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 55
+            },
+            "text": "For some reason my sort function doesn't sort anything",
+            "kind": "text"
+          }
+        ],
+        "text": "For some reason my sort function doesn't sort anything"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "file:///home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+            "value": {
+              "$mid": 1,
+              "fsPath": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+              "external": "file:///home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+              "path": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+              "scheme": "file"
+            },
+            "name": "lib.rs"
+          },
+          {
+            "kind": "file",
+            "id": "file:///home/curry/Workspace/Persos/pandas-rs/src/main.rs",
+            "value": {
+              "$mid": 1,
+              "fsPath": "/home/curry/Workspace/Persos/pandas-rs/src/main.rs",
+              "external": "file:///home/curry/Workspace/Persos/pandas-rs/src/main.rs",
+              "path": "/home/curry/Workspace/Persos/pandas-rs/src/main.rs",
+              "scheme": "file"
+            },
+            "name": "main.rs"
+          },
+          {
+            "kind": "file",
+            "id": "file:///home/curry/Workspace/Persos/pandas-rs/filtered_data.csv",
+            "value": {
+              "$mid": 1,
+              "fsPath": "/home/curry/Workspace/Persos/pandas-rs/filtered_data.csv",
+              "external": "file:///home/curry/Workspace/Persos/pandas-rs/filtered_data.csv",
+              "path": "/home/curry/Workspace/Persos/pandas-rs/filtered_data.csv",
+              "scheme": "file"
+            },
+            "name": "filtered_data.csv"
+          },
+          {
+            "kind": "file",
+            "id": "file:///home/curry/Workspace/Persos/pandas-rs/data.csv",
+            "value": {
+              "$mid": 1,
+              "fsPath": "/home/curry/Workspace/Persos/pandas-rs/data.csv",
+              "external": "file:///home/curry/Workspace/Persos/pandas-rs/data.csv",
+              "path": "/home/curry/Workspace/Persos/pandas-rs/data.csv",
+              "scheme": "file"
+            },
+            "name": "data.csv"
+          },
+          {
+            "kind": "file",
+            "id": "file:///home/curry/Workspace/Persos/pandas-rs/sorted_data.csv",
+            "value": {
+              "$mid": 1,
+              "fsPath": "/home/curry/Workspace/Persos/pandas-rs/sorted_data.csv",
+              "external": "file:///home/curry/Workspace/Persos/pandas-rs/sorted_data.csv",
+              "path": "/home/curry/Workspace/Persos/pandas-rs/sorted_data.csv",
+              "scheme": "file"
+            },
+            "name": "sorted_data.csv"
+          },
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:lib.rs",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "external": "file:///home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "path": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 188,
+                "startColumn": 1,
+                "endLineNumber": 206,
+                "endColumn": 1
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "Your ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/Persos/pandas-rs/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "sort_by_wealth",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 14,
+                "startColumn": 4,
+                "endLineNumber": 14,
+                "endColumn": 4
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/Persos/pandas-rs/src/main.rs",
+                "external": "file:///home/curry/Workspace/Persos/pandas-rs/src/main.rs",
+                "path": "/home/curry/Workspace/Persos/pandas-rs/src/main.rs",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "4dc1fa32-28b7-416d-923d-04184c585025"
+        },
+        {
+          "value": " function in ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/Persos/pandas-rs/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/Persos/pandas-rs/src/main.rs",
+            "external": "file:///home/curry/Workspace/Persos/pandas-rs/src/main.rs",
+            "path": "/home/curry/Workspace/Persos/pandas-rs/src/main.rs",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": " only compares ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/Persos/pandas-rs/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "DataValue::Float",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 2,
+                "startColumn": 10,
+                "endLineNumber": 2,
+                "endColumn": 10
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "external": "file:///home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "path": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "a211f537-62ac-4439-980b-e2f020fde28b"
+        },
+        {
+          "value": " variants, but your CSV data for the `wealth` column contains both integer-like (e.g., `85484`) and float-like (e.g., `484.25`) values. When parsing, your ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/Persos/pandas-rs/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "read_csv",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 28,
+                "startColumn": 12,
+                "endLineNumber": 28,
+                "endColumn": 12
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "external": "file:///home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "path": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "bb44fec7-00e7-485d-a04e-e9483131b50b"
+        },
+        {
+          "value": " tries to parse as `i64` first, so most `wealth` values become ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/Persos/pandas-rs/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "DataValue::Int",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 2,
+                "startColumn": 10,
+                "endLineNumber": 2,
+                "endColumn": 10
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "external": "file:///home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "path": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "0a17f0e1-76d7-43b5-a107-6f130b8d2ebb"
+        },
+        {
+          "value": ", not ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/Persos/pandas-rs/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "Float",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 4,
+                "startColumn": 5,
+                "endLineNumber": 4,
+                "endColumn": 5
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "external": "file:///home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "path": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "92b5f3cf-88c0-43ac-b3a6-665114cd5154"
+        },
+        {
+          "value": ".\n\nThus, your sort function always returns ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/Persos/pandas-rs/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "Ordering::Equal",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 388,
+                "startColumn": 10,
+                "endLineNumber": 388,
+                "endColumn": 10
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/cmp.rs",
+                "external": "file:///home/curry/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/cmp.rs",
+                "path": "/home/curry/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/cmp.rs",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "f3530b04-ef34-4854-9ba1-86bda3377c6d"
+        },
+        {
+          "value": " except when both are floats, so the sort is effectively a no-op.\n\n**How to fix:**  \nUpdate your ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/Persos/pandas-rs/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "sort_by_wealth",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 14,
+                "startColumn": 4,
+                "endLineNumber": 14,
+                "endColumn": 4
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/Persos/pandas-rs/src/main.rs",
+                "external": "file:///home/curry/Workspace/Persos/pandas-rs/src/main.rs",
+                "path": "/home/curry/Workspace/Persos/pandas-rs/src/main.rs",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "bb9b1466-2db0-4fbf-8faa-bcdc432cd0f0"
+        },
+        {
+          "value": " function to handle both ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/Persos/pandas-rs/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "Int",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 3,
+                "startColumn": 5,
+                "endLineNumber": 3,
+                "endColumn": 5
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "external": "file:///home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "path": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "0f514e09-2dac-4b1e-975f-5e3ed8506e5f"
+        },
+        {
+          "value": " and ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/Persos/pandas-rs/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "Float",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 4,
+                "startColumn": 5,
+                "endLineNumber": 4,
+                "endColumn": 5
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "external": "file:///home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "path": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "f1be2f68-be89-4acf-ae66-81c440b9f7e0"
+        },
+        {
+          "value": " by converting both to ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/Persos/pandas-rs/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "f64",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 1,
+                "endColumn": 1
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/f64.rs",
+                "external": "file:///home/curry/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/f64.rs",
+                "path": "/home/curry/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/f64.rs",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "9026e3ef-7ca1-476e-9dc2-0148a1dbe6b6"
+        },
+        {
+          "value": " before comparing:\n\n````rust\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/Persos/pandas-rs/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/Persos/pandas-rs/src/main.rs",
+            "external": "file:///home/curry/Workspace/Persos/pandas-rs/src/main.rs",
+            "path": "/home/curry/Workspace/Persos/pandas-rs/src/main.rs",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "fn sort_by_wealth(a: &DataValue, b: &DataValue) -> Ordering {\n    let a_val = match a {\n        DataValue::Int(i) => *i as f64,\n        DataValue::Float(f) => *f,\n        _ => f64::NAN,\n    };\n    let b_val = match b {\n        DataValue::Int(i) => *i as f64,\n        DataValue::Float(f) => *f,\n        _ => f64::NAN,\n    };\n    a_val.partial_cmp(&b_val).unwrap_or(Ordering::Equal)\n}\n````\n\nThis will allow sorting to work as expected for both integer and float values in the `wealth` column.",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/Persos/pandas-rs/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_9493c28f-d92f-4563-893d-a02503d36634",
+      "result": {
+        "timings": {
+          "firstProgress": 1051,
+          "totalElapsed": 4710
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "fn sort_by_wealth(a: &DataValue, b: &DataValue) -> Ordering {\n    let a_val = match a {\n        DataValue::Int(i) => *i as f64,\n        DataValue::Float(f) => *f,\n        _ => f64::NAN,\n    };\n    let b_val = match b {\n        DataValue::Int(i) => *i as f64,\n        DataValue::Float(f) => *f,\n        _ => f64::NAN,\n    };\n    a_val.partial_cmp(&b_val).unwrap_or(Ordering::Equal)\n}\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/home/curry/Workspace/Persos/pandas-rs/src/main.rs",
+                "scheme": "file"
+              },
+              "language": "rust",
+              "markdownBeforeBlock": "Your  function in  only compares  variants, but your CSV data for the `wealth` column contains both integer-like (e.g., `85484`) and float-like (e.g., `484.25`) values. When parsing, your  tries to parse as `i64` first, so most `wealth` values become , not .\n\nThus, your sort function always returns  except when both are floats, so the sort is effectively a no-op.\n\n**How to fix:**  \nUpdate your  function to handle both  and  by converting both to  before comparing:\n\n"
+            }
+          ],
+          "modelMessageId": "3442fa69-a3ca-4859-9b35-fe76b40c599d",
+          "responseId": "252210cd-fbe1-4e88-a4f8-412872f21d2f",
+          "sessionId": "fe32f9fd-c121-4da8-b1fc-3359ffe5bf14",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "inkurey-22",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/146175466",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/Persos/pandas-rs/data.csv",
+            "external": "file:///home/curry/Workspace/Persos/pandas-rs/data.csv",
+            "path": "/home/curry/Workspace/Persos/pandas-rs/data.csv",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/Persos/pandas-rs/filtered_data.csv",
+            "external": "file:///home/curry/Workspace/Persos/pandas-rs/filtered_data.csv",
+            "path": "/home/curry/Workspace/Persos/pandas-rs/filtered_data.csv",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/Persos/pandas-rs/sorted_data.csv",
+            "external": "file:///home/curry/Workspace/Persos/pandas-rs/sorted_data.csv",
+            "path": "/home/curry/Workspace/Persos/pandas-rs/sorted_data.csv",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+            "external": "file:///home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+            "path": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/Persos/pandas-rs/src/main.rs",
+            "external": "file:///home/curry/Workspace/Persos/pandas-rs/src/main.rs",
+            "path": "/home/curry/Workspace/Persos/pandas-rs/src/main.rs",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1749133181910
+    },
+    {
+      "requestId": "request_5e87bf79-0abb-45ba-924a-a6fb8f08734a",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 96
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 97
+            },
+            "text": "It should handle all data types. But isn't the type of each column registered in the dataframe ?",
+            "kind": "text"
+          }
+        ],
+        "text": "It should handle all data types. But isn't the type of each column registered in the dataframe ?"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:lib.rs",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "external": "file:///home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "path": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 188,
+                "startColumn": 1,
+                "endLineNumber": 206,
+                "endColumn": 1
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "Currently, your ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/Persos/pandas-rs/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "DataFrame",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 11,
+                "startColumn": 12,
+                "endLineNumber": 11,
+                "endColumn": 12
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "external": "file:///home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "path": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "97965d7d-26f1-4f4d-92f4-c482450ab3dc"
+        },
+        {
+          "value": " does **not** store the type of each column explicitly.  \nInstead, it infers types on the fly by inspecting the ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/Persos/pandas-rs/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "DataValue",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 2,
+                "startColumn": 10,
+                "endLineNumber": 2,
+                "endColumn": 10
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "external": "file:///home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "path": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "e605a32c-485b-433e-b5e0-2e5ed3ae561d"
+        },
+        {
+          "value": " of each cell (see your ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/Persos/pandas-rs/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "info()",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 96,
+                "startColumn": 12,
+                "endLineNumber": 96,
+                "endColumn": 12
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "external": "file:///home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "path": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "4f43318e-e4fd-4b5a-9a31-abac899dde76"
+        },
+        {
+          "value": " and ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/Persos/pandas-rs/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "describe()",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 124,
+                "startColumn": 12,
+                "endLineNumber": 124,
+                "endColumn": 12
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "external": "file:///home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "path": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "a09207fd-5010-42b8-ae81-3a671471b8af"
+        },
+        {
+          "value": " methods). The ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/Persos/pandas-rs/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "columns",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 17,
+                "startColumn": 16,
+                "endLineNumber": 17,
+                "endColumn": 16
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "external": "file:///home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "path": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "e97ccf71-1476-4190-bbcd-cd2b49d144bd"
+        },
+        {
+          "value": " field is just a ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/Persos/pandas-rs/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "Vec<String>",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 409,
+                "startColumn": 12,
+                "endLineNumber": 409,
+                "endColumn": 12
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs",
+                "external": "file:///home/curry/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs",
+                "path": "/home/curry/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "b0309271-21ca-428e-87b8-d927961bf0c3"
+        },
+        {
+          "value": " with column names, and the types are not tracked or enforced.\n\n**How types are handled now:**\n- Each cell is a ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/Persos/pandas-rs/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "DataValue",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 2,
+                "startColumn": 10,
+                "endLineNumber": 2,
+                "endColumn": 10
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "external": "file:///home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "path": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "d0578715-3e6c-4eca-9646-eef10d14ea54"
+        },
+        {
+          "value": ", which can be ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/Persos/pandas-rs/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "Int",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 3,
+                "startColumn": 5,
+                "endLineNumber": 3,
+                "endColumn": 5
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "external": "file:///home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "path": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "a4183a4c-03ec-4d1d-a543-00c4a750746d"
+        },
+        {
+          "value": ", ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/Persos/pandas-rs/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "Float",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 4,
+                "startColumn": 5,
+                "endLineNumber": 4,
+                "endColumn": 5
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "external": "file:///home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "path": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "4f40b80b-8b8d-4f9e-9c71-be953290dd17"
+        },
+        {
+          "value": ", ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/Persos/pandas-rs/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "Bool",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 5,
+                "startColumn": 5,
+                "endLineNumber": 5,
+                "endColumn": 5
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "external": "file:///home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "path": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "dc9669be-292c-4455-93dc-6e2f76fae7e5"
+        },
+        {
+          "value": ", ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/Persos/pandas-rs/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "Str",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 6,
+                "startColumn": 5,
+                "endLineNumber": 6,
+                "endColumn": 5
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "external": "file:///home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "path": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "221ad904-fbd9-46a7-9334-15842a2fb1a3"
+        },
+        {
+          "value": ", or ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/Persos/pandas-rs/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "Null",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 7,
+                "startColumn": 5,
+                "endLineNumber": 7,
+                "endColumn": 5
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "external": "file:///home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "path": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "82b08d03-f2b3-44e3-bda2-db6b8217bf39"
+        },
+        {
+          "value": ".\n- When reading CSV, you parse each value and pick the first type that matches (int, then float, then bool, etc.).\n- There is no per-column type registration or enforcement.\n\n**If you want to register and enforce column types:**\n- You'd need to add a ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/Persos/pandas-rs/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "Vec<DataType>",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 409,
+                "startColumn": 12,
+                "endLineNumber": 409,
+                "endColumn": 12
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs",
+                "external": "file:///home/curry/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs",
+                "path": "/home/curry/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "47449553-c955-49bd-aff6-3230b5e18106"
+        },
+        {
+          "value": " (or similar) to your ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/Persos/pandas-rs/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "DataFrame",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 11,
+                "startColumn": 12,
+                "endLineNumber": 11,
+                "endColumn": 12
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "external": "file:///home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "path": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "098d2368-3a94-4bee-a050-7ec88ca9f066"
+        },
+        {
+          "value": " struct, and use it when reading, writing, and operating on data.\n- This would allow you to know the intended type of each column and handle conversions and sorting more robustly.\n\n**For now:**  \nYour sort/filter functions must always handle all possible ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/Persos/pandas-rs/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "DataValue",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 2,
+                "startColumn": 10,
+                "endLineNumber": 2,
+                "endColumn": 10
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "external": "file:///home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "path": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "00e81a37-215f-40d0-ad69-3570a5d330a6"
+        },
+        {
+          "value": " variants, because the type is not registered per column.\n\nIf you want to add column type registration, let me know and I can show you how to extend your ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/Persos/pandas-rs/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "name": "DataFrame",
+            "kind": 12,
+            "containerName": "",
+            "location": {
+              "range": {
+                "startLineNumber": 11,
+                "startColumn": 12,
+                "endLineNumber": 11,
+                "endColumn": 12
+              },
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "external": "file:///home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "path": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+                "scheme": "file"
+              }
+            }
+          },
+          "resolveId": "8581e803-4e3a-42d8-8ab8-ee40a42d65d3"
+        },
+        {
+          "value": " struct and CSV parsing logic!",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/Persos/pandas-rs/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_8f61bae2-7476-46b5-a671-0890d4a14f9e",
+      "result": {
+        "timings": {
+          "firstProgress": 2118,
+          "totalElapsed": 6037
+        },
+        "metadata": {
+          "codeBlocks": [],
+          "modelMessageId": "9b60146b-8fb0-4462-a6ef-866911c37a47",
+          "responseId": "3fd90bed-bb7b-4005-996e-22b9ec47a440",
+          "sessionId": "fe32f9fd-c121-4da8-b1fc-3359ffe5bf14",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "inkurey-22",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/146175466",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+            "external": "file:///home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+            "path": "/home/curry/Workspace/Persos/pandas-rs/src/lib.rs",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1749133236321
+    }
+  ],
+  "sessionId": "f487afea-8381-4fc2-b1e6-85266582b51d",
+  "creationDate": 1749133160759,
+  "isImported": false,
+  "lastMessageDate": 1749133236322,
+  "customTitle": "Sorting issue in DataFrame implementation"
+}

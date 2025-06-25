@@ -1,0 +1,1 @@
+2025-06-19 12:49:58.106 [error] Failed to set sticky bit on /tmp/curry-code-zsh: Error: ENOENT: no such file or directory, chmod '/tmp/curry-code-zsh'

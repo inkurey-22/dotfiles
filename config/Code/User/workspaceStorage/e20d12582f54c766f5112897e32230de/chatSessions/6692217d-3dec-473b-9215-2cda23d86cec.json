@@ -1,0 +1,383 @@
+{
+  "version": 3,
+  "requesterUsername": "inkurey-22",
+  "requesterAvatarIconUri": {
+    "$mid": 1,
+    "path": "/u/146175466",
+    "scheme": "https",
+    "authority": "avatars.githubusercontent.com",
+    "query": "v=4"
+  },
+  "responderUsername": "GitHub Copilot",
+  "responderAvatarIconUri": {
+    "id": "copilot"
+  },
+  "initialLocation": "panel",
+  "requests": [
+    {
+      "requestId": "request_efd38b72-30a2-4e2a-a31b-388a5291dd5e",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 83
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 84
+            },
+            "text": "Using the subject provided via PDF, make the \"AI\" do logical moves, not random ones",
+            "kind": "text"
+          }
+        ],
+        "text": "Using the subject provided via PDF, make the \"AI\" do logical moves, not random ones"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "value": {
+              "$mid": 1,
+              "fsPath": "/home/curry/Downloads/sujets/Groupe 1 - 5/Mercredi/Ressources/tictactoe.py",
+              "external": "file:///home/curry/Downloads/sujets/Groupe%201%20-%205/Mercredi/Ressources/tictactoe.py",
+              "path": "/home/curry/Downloads/sujets/Groupe 1 - 5/Mercredi/Ressources/tictactoe.py",
+              "scheme": "file"
+            },
+            "id": "file:///home/curry/Downloads/sujets/Groupe%201%20-%205/Mercredi/Ressources/tictactoe.py",
+            "name": "tictactoe.py"
+          },
+          {
+            "kind": "file",
+            "id": "file:///home/curry/Downloads/sujets/Groupe%201%20-%205/Mercredi/TicTacToe.pdf",
+            "value": {
+              "$mid": 1,
+              "fsPath": "/home/curry/Downloads/sujets/Groupe 1 - 5/Mercredi/TicTacToe.pdf",
+              "external": "file:///home/curry/Downloads/sujets/Groupe%201%20-%205/Mercredi/TicTacToe.pdf",
+              "path": "/home/curry/Downloads/sujets/Groupe 1 - 5/Mercredi/TicTacToe.pdf",
+              "scheme": "file"
+            },
+            "name": "TicTacToe.pdf",
+            "omittedState": 0
+          }
+        ]
+      },
+      "response": [
+        {
+          "kind": "progressMessage",
+          "content": {
+            "value": "Determining user intent...",
+            "uris": {}
+          }
+        },
+        {
+          "value": "Sure, here's a proposed directory structure for a Python Tic Tac Toe project:\n\n",
+          "supportThemeIcons": false,
+          "supportHtml": false
+        },
+        {
+          "kind": "progressMessage",
+          "content": {
+            "value": "Generating workspace preview...",
+            "uris": {}
+          }
+        },
+        {
+          "kind": "progressMessage",
+          "content": {
+            "value": "Generating workspace preview...",
+            "uris": {}
+          }
+        },
+        {
+          "label": "tictactoe-python",
+          "uri": {
+            "$mid": 1,
+            "external": "vscode-copilot-workspace://22858338-db17-4b03-aae8-40f84f36adbd/tictactoe-python",
+            "path": "/tictactoe-python",
+            "scheme": "vscode-copilot-workspace",
+            "authority": "22858338-db17-4b03-aae8-40f84f36adbd"
+          },
+          "children": [
+            {
+              "label": "tictactoe-python",
+              "uri": {
+                "$mid": 1,
+                "external": "vscode-copilot-workspace://22858338-db17-4b03-aae8-40f84f36adbd/tictactoe-python/tictactoe-python",
+                "path": "/tictactoe-python/tictactoe-python",
+                "scheme": "vscode-copilot-workspace",
+                "authority": "22858338-db17-4b03-aae8-40f84f36adbd"
+              },
+              "children": [
+                {
+                  "label": "src",
+                  "uri": {
+                    "$mid": 1,
+                    "external": "vscode-copilot-workspace://22858338-db17-4b03-aae8-40f84f36adbd/tictactoe-python/tictactoe-python/src",
+                    "path": "/tictactoe-python/tictactoe-python/src",
+                    "scheme": "vscode-copilot-workspace",
+                    "authority": "22858338-db17-4b03-aae8-40f84f36adbd"
+                  },
+                  "children": [
+                    {
+                      "label": "tictactoe.py",
+                      "uri": {
+                        "$mid": 1,
+                        "fsPath": "/tictactoe-python/tictactoe-python/src/tictactoe.py",
+                        "external": "vscode-copilot-workspace://22858338-db17-4b03-aae8-40f84f36adbd/tictactoe-python/tictactoe-python/src/tictactoe.py",
+                        "path": "/tictactoe-python/tictactoe-python/src/tictactoe.py",
+                        "scheme": "vscode-copilot-workspace",
+                        "authority": "22858338-db17-4b03-aae8-40f84f36adbd"
+                      }
+                    },
+                    {
+                      "label": "ai.py",
+                      "uri": {
+                        "$mid": 1,
+                        "fsPath": "/tictactoe-python/tictactoe-python/src/ai.py",
+                        "external": "vscode-copilot-workspace://22858338-db17-4b03-aae8-40f84f36adbd/tictactoe-python/tictactoe-python/src/ai.py",
+                        "path": "/tictactoe-python/tictactoe-python/src/ai.py",
+                        "scheme": "vscode-copilot-workspace",
+                        "authority": "22858338-db17-4b03-aae8-40f84f36adbd"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "label": "requirements.txt",
+                  "uri": {
+                    "$mid": 1,
+                    "fsPath": "/tictactoe-python/tictactoe-python/requirements.txt",
+                    "external": "vscode-copilot-workspace://22858338-db17-4b03-aae8-40f84f36adbd/tictactoe-python/tictactoe-python/requirements.txt",
+                    "path": "/tictactoe-python/tictactoe-python/requirements.txt",
+                    "scheme": "vscode-copilot-workspace",
+                    "authority": "22858338-db17-4b03-aae8-40f84f36adbd"
+                  }
+                },
+                {
+                  "label": "README.md",
+                  "uri": {
+                    "$mid": 1,
+                    "fsPath": "/tictactoe-python/tictactoe-python/README.md",
+                    "external": "vscode-copilot-workspace://22858338-db17-4b03-aae8-40f84f36adbd/tictactoe-python/tictactoe-python/README.md",
+                    "path": "/tictactoe-python/tictactoe-python/README.md",
+                    "scheme": "vscode-copilot-workspace",
+                    "authority": "22858338-db17-4b03-aae8-40f84f36adbd"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "value": "\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "uris": {}
+        },
+        {
+          "kind": "command",
+          "command": {
+            "$ident": "github.copilot.createProject /9",
+            "id": "__vsc32d81227-1b5b-4631-b9f1-1316ed998515",
+            "title": "Create Workspace...",
+            "arguments": [
+              "github.copilot.createProject /9"
+            ]
+          }
+        }
+      ],
+      "responseId": "response_ddc90eee-cbef-4611-8ab8-ee979b0c22be",
+      "result": {
+        "timings": {
+          "firstProgress": 6755,
+          "totalElapsed": 7394
+        },
+        "metadata": {
+          "codeBlocks": [],
+          "modelMessageId": "bc3871ed-b782-4250-b40b-c144e60e8204",
+          "responseId": "22858338-db17-4b03-aae8-40f84f36adbd",
+          "sessionId": "a07d3b1a-ca6b-48d4-a192-a43d708da8cd",
+          "agentId": "github.copilot.workspace",
+          "command": "new"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.workspace",
+        "description": "Ask about your workspace",
+        "metadata": {
+          "sampleRequest": "How do I build this project?",
+          "themeIcon": {
+            "id": "code"
+          },
+          "hasFollowups": false,
+          "supportIssueReporting": false
+        },
+        "name": "workspace",
+        "fullName": "Workspace",
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [
+          {
+            "name": "explain",
+            "description": "Explain how the code in your active editor works"
+          },
+          {
+            "name": "tests",
+            "description": "Generate unit tests for the selected code",
+            "disambiguation": [
+              {
+                "category": "create_tests",
+                "description": "The user wants to generate unit tests.",
+                "examples": [
+                  "Generate tests for my selection using pytest."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "fix",
+            "description": "Propose a fix for the problems in the selected code",
+            "sampleRequest": "There is a problem in this code. Rewrite the code to show it with the bug fixed."
+          },
+          {
+            "name": "new",
+            "description": "Scaffold code for a new file or project in a workspace",
+            "sampleRequest": "Create a RESTful API server using typescript",
+            "isSticky": true,
+            "disambiguation": [
+              {
+                "category": "create_new_workspace_or_extension",
+                "description": "The user wants to create a complete Visual Studio Code workspace from scratch, such as a new application or a Visual Studio Code extension. Use this category only if the question relates to generating or creating new workspaces in Visual Studio Code. Do not use this category for updating existing code or generating sample code snippets",
+                "examples": [
+                  "Scaffold a Node server.",
+                  "Create a sample project which uses the fileSystemProvider API.",
+                  "react application"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "newNotebook",
+            "description": "Create a new Jupyter Notebook",
+            "sampleRequest": "How do I create a notebook to load data from a csv file?",
+            "disambiguation": [
+              {
+                "category": "create_jupyter_notebook",
+                "description": "The user wants to create a new Jupyter notebook in Visual Studio Code.",
+                "examples": [
+                  "Create a notebook to analyze this CSV file."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "setupTests",
+            "description": "Set up tests in your project (Experimental)",
+            "sampleRequest": "add playwright tests to my project",
+            "when": "config.github.copilot.chat.setupTests.enabled",
+            "disambiguation": [
+              {
+                "category": "set_up_tests",
+                "description": "The user wants to configure project test setup, framework, or test runner. The user does not want to fix their existing tests.",
+                "examples": [
+                  "Set up tests for this project."
+                ]
+              }
+            ]
+          }
+        ],
+        "disambiguation": [
+          {
+            "category": "workspace_project_questions",
+            "description": "The user wants to learn about or update the code or files in their current workspace. Questions in this category may be about understanding what the whole workspace does or locating the implementation of some code. This does not include generating or updating tests.",
+            "examples": [
+              "What does this project do?"
+            ]
+          },
+          {
+            "category": "find_code_in_workspace",
+            "description": "The user wants to locate the implementation of some functionality in their current workspace.",
+            "examples": [
+              "Where is the tree widget implemented?"
+            ]
+          },
+          {
+            "category": "generate_with_workspace_context",
+            "description": "The user wants to generate code based on multiple files in the workspace and did not specify which files to reference.",
+            "examples": [
+              "Create a README for this project."
+            ]
+          }
+        ]
+      },
+      "slashCommand": {
+        "name": "new",
+        "description": "Scaffold code for a new file or project in a workspace",
+        "sampleRequest": "Create a RESTful API server using typescript",
+        "isSticky": true,
+        "disambiguation": [
+          {
+            "category": "create_new_workspace_or_extension",
+            "description": "The user wants to create a complete Visual Studio Code workspace from scratch, such as a new application or a Visual Studio Code extension. Use this category only if the question relates to generating or creating new workspaces in Visual Studio Code. Do not use this category for updating existing code or generating sample code snippets",
+            "examples": [
+              "Scaffold a Node server.",
+              "Create a sample project which uses the fileSystemProvider API.",
+              "react application"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Downloads/sujets/Groupe 1 - 5/Mercredi/Ressources/tictactoe.py",
+            "external": "file:///home/curry/Downloads/sujets/Groupe%201%20-%205/Mercredi/Ressources/tictactoe.py",
+            "path": "/home/curry/Downloads/sujets/Groupe 1 - 5/Mercredi/Ressources/tictactoe.py",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Downloads/sujets/Groupe 1 - 5/Mercredi/TicTacToe.pdf",
+            "external": "file:///home/curry/Downloads/sujets/Groupe%201%20-%205/Mercredi/TicTacToe.pdf",
+            "path": "/home/curry/Downloads/sujets/Groupe 1 - 5/Mercredi/TicTacToe.pdf",
+            "scheme": "file"
+          },
+          "options": {
+            "status": {
+              "description": "Part of this file was not sent to the model due to context window limitations. Try attaching specific selections from your file instead.",
+              "kind": 2
+            }
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1750155235787
+    }
+  ],
+  "sessionId": "6692217d-3dec-473b-9215-2cda23d86cec",
+  "creationDate": 1750155212078,
+  "isImported": false,
+  "lastMessageDate": 1750155235788,
+  "customTitle": "Implementing logical AI moves in Tic Tac Toe"
+}

@@ -1,0 +1,4 @@
+2025-06-19 12:49:57.168 [info] Telemetry level is off
+2025-06-19 12:49:57.168 [info] Experiments are disabled, only manually opted experiments are active.
+2025-06-19 12:49:57.277 [info] Python interpreter path: /bin/python
+2025-06-19 12:50:03.977 [info] Starting Pylance language server.

@@ -1,0 +1,454 @@
+{
+  "version": 3,
+  "requesterUsername": "inkurey-22",
+  "requesterAvatarIconUri": {
+    "$mid": 1,
+    "path": "/u/146175466",
+    "scheme": "https",
+    "authority": "avatars.githubusercontent.com",
+    "query": "v=4"
+  },
+  "responderUsername": "GitHub Copilot",
+  "responderAvatarIconUri": {
+    "id": "copilot"
+  },
+  "initialLocation": "panel",
+  "requests": [
+    {
+      "requestId": "request_0584c0b4-f452-4e27-826d-578e9dc90f19",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 18
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 19
+            },
+            "text": "Explain this to me",
+            "kind": "text"
+          }
+        ],
+        "text": "Explain this to me"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.selection",
+            "name": "file:my.hs",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM3/PDG/day01/my.hs",
+                "external": "file:///home/curry/Workspace/SEM3/PDG/day01/my.hs",
+                "path": "/home/curry/Workspace/SEM3/PDG/day01/my.hs",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 126,
+                "startColumn": 1,
+                "endLineNumber": 131,
+                "endColumn": 62,
+                "selectionStartLineNumber": 131,
+                "selectionStartColumn": 62,
+                "positionLineNumber": 126,
+                "positionColumn": 1
+              }
+            },
+            "modelDescription": "User's active selection"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "Certainly! Here’s an explanation of the selected code:\n\n````haskell\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM3/PDG/day01/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM3/PDG/day01/my.hs",
+            "external": "file:///home/curry/Workspace/SEM3/PDG/day01/my.hs",
+            "path": "/home/curry/Workspace/SEM3/PDG/day01/my.hs",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "myQuickSort :: (a -> a -> Bool) -> [a] -> [a]\nmyQuickSort _ [] = []\nmyQuickSort cmp (x:xs) =\n  let smaller = myFilter (`cmp` x) xs\n      larger = myFilter (not . (`cmp` x)) xs\n  in myQuickSort cmp smaller ++ [x] ++ myQuickSort cmp larger\n````\n\n### What does this do?\n\nThis is a custom implementation of the **quicksort** algorithm in Haskell, called `myQuickSort`.  \nIt sorts a list using a user-provided comparison function.\n\n#### How it works:\n\n- **Type signature:**  \n  `(a -> a -> Bool) -> [a] -> [a]`  \n  It takes a comparison function and a list, and returns a sorted list.\n\n- **Base case:**  \n  `myQuickSort _ [] = []`  \n  An empty list is already sorted.\n\n- **Recursive case:**  \n  For a non-empty list `(x:xs)`:\n  - `smaller` contains all elements from `xs` that are \"smaller\" than `x` according to `cmp`.\n  - `larger` contains all elements from `xs` that are **not** \"smaller\" than `x`.\n  - It recursively sorts `smaller` and `larger`, then concatenates:  \n    `sorted smaller ++ [x] ++ sorted larger`\n\n- **myFilter:**  \n  This is a custom filter function (defined elsewhere in your file) that selects elements based on a predicate.\n\n#### Example usage:\n\n```haskell\nmyQuickSort (>) [3,1,4,2]\n-- Output: [4,3,2,1]\n```\nHere, `(>)` sorts in descending order.\n\n#### Summary\n\n- `myQuickSort` is a generic quicksort.\n- The comparison function lets you choose ascending, descending, or custom order.\n- It uses your own `myFilter` for partitioning.\n\nLet me know if you want a step-by-step example or more details!",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM3/PDG/day01/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_c0371adb-c11d-46b7-9c85-095b0d26bed4",
+      "result": {
+        "timings": {
+          "firstProgress": 999,
+          "totalElapsed": 15453
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "myQuickSort :: (a -> a -> Bool) -> [a] -> [a]\nmyQuickSort _ [] = []\nmyQuickSort cmp (x:xs) =\n  let smaller = myFilter (`cmp` x) xs\n      larger = myFilter (not . (`cmp` x)) xs\n  in myQuickSort cmp smaller ++ [x] ++ myQuickSort cmp larger\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/home/curry/Workspace/SEM3/PDG/day01/my.hs",
+                "scheme": "file"
+              },
+              "language": "haskell",
+              "markdownBeforeBlock": "Certainly! Here’s an explanation of the selected code:\n\n"
+            },
+            {
+              "code": "myQuickSort (>) [3,1,4,2]\n-- Output: [4,3,2,1]\n",
+              "language": "haskell",
+              "markdownBeforeBlock": "\n### What does this do?\n\nThis is a custom implementation of the **quicksort** algorithm in Haskell, called `myQuickSort`.  \nIt sorts a list using a user-provided comparison function.\n\n#### How it works:\n\n- **Type signature:**  \n  `(a -> a -> Bool) -> [a] -> [a]`  \n  It takes a comparison function and a list, and returns a sorted list.\n\n- **Base case:**  \n  `myQuickSort _ [] = []`  \n  An empty list is already sorted.\n\n- **Recursive case:**  \n  For a non-empty list `(x:xs)`:\n  - `smaller` contains all elements from `xs` that are \"smaller\" than `x` according to `cmp`.\n  - `larger` contains all elements from `xs` that are **not** \"smaller\" than `x`.\n  - It recursively sorts `smaller` and `larger`, then concatenates:  \n    `sorted smaller ++ [x] ++ sorted larger`\n\n- **myFilter:**  \n  This is a custom filter function (defined elsewhere in your file) that selects elements based on a predicate.\n\n#### Example usage:\n\n"
+            }
+          ],
+          "modelMessageId": "a051df79-42ef-4564-aaa7-7b86a0f6f21a",
+          "responseId": "a62c2247-1fd5-47ff-91d7-34b736660a21",
+          "sessionId": "e14d0361-cdac-4c88-a95e-00cfe2ddfe72",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "inkurey-22",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/146175466",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM3/PDG/day01/my.hs",
+            "external": "file:///home/curry/Workspace/SEM3/PDG/day01/my.hs",
+            "path": "/home/curry/Workspace/SEM3/PDG/day01/my.hs",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1748422963404
+    },
+    {
+      "requestId": "request_e6d8e8bb-3a46-4105-a686-c192925f015e",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 21
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 3,
+              "endColumn": 4
+            },
+            "text": "Here is myFilter\n\n```",
+            "kind": "text"
+          }
+        ],
+        "text": "Here is myFilter\n\n```"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.selection",
+            "name": "file:my.hs",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM3/PDG/day01/my.hs",
+                "external": "file:///home/curry/Workspace/SEM3/PDG/day01/my.hs",
+                "path": "/home/curry/Workspace/SEM3/PDG/day01/my.hs",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 104,
+                "startColumn": 1,
+                "endLineNumber": 108,
+                "endColumn": 30,
+                "selectionStartLineNumber": 108,
+                "selectionStartColumn": 30,
+                "positionLineNumber": 104,
+                "positionColumn": 1
+              }
+            },
+            "modelDescription": "User's active selection"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "Here’s how `myFilter` works:\n\n````haskell\nmyFilter :: (a -> Bool) -> [a] -> [a]\nmyFilter _ [] = []\nmyFilter p (x:xs)\n  | p x = x : myFilter p xs\n  | otherwise = myFilter p xs\n````\n\n### Explanation\n\n- **Purpose:**  \n  `myFilter` takes a predicate function `(a -> Bool)` and a list `[a]`, and returns a new list containing only the elements that satisfy the predicate.\n\n- **How it works:**  \n  - If the list is empty (`[]`), it returns an empty list.\n  - For a non-empty list `(x:xs)`:\n    - If `p x` is `True`, it includes `x` in the result and continues filtering the rest (`xs`).\n    - If `p x` is `False`, it skips `x` and continues filtering the rest.\n\n### Example\n\n```haskell\nmyFilter (>2) [1,2,3,4]  -- Result: [3,4]\n```\n\nThis is a custom version of Haskell’s standard `filter` function.",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM3/PDG/day01/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_5a406fce-bd73-498b-97c5-635187a7c384",
+      "result": {
+        "timings": {
+          "firstProgress": 1393,
+          "totalElapsed": 21069
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "myFilter :: (a -> Bool) -> [a] -> [a]\nmyFilter _ [] = []\nmyFilter p (x:xs)\n  | p x = x : myFilter p xs\n  | otherwise = myFilter p xs\n",
+              "language": "haskell",
+              "markdownBeforeBlock": "Here’s how `myFilter` works:\n\n"
+            },
+            {
+              "code": "myFilter (>2) [1,2,3,4]  -- Result: [3,4]\n",
+              "language": "haskell",
+              "markdownBeforeBlock": "\n### Explanation\n\n- **Purpose:**  \n  `myFilter` takes a predicate function `(a -> Bool)` and a list `[a]`, and returns a new list containing only the elements that satisfy the predicate.\n\n- **How it works:**  \n  - If the list is empty (`[]`), it returns an empty list.\n  - For a non-empty list `(x:xs)`:\n    - If `p x` is `True`, it includes `x` in the result and continues filtering the rest (`xs`).\n    - If `p x` is `False`, it skips `x` and continues filtering the rest.\n\n### Example\n\n"
+            }
+          ],
+          "modelMessageId": "46bc1495-b22b-4c51-8a7f-b39337cb9367",
+          "responseId": "9521f93a-747b-4f16-836e-8135a42cb5c7",
+          "sessionId": "e14d0361-cdac-4c88-a95e-00cfe2ddfe72",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "inkurey-22",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/146175466",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM3/PDG/day01/my.hs",
+            "external": "file:///home/curry/Workspace/SEM3/PDG/day01/my.hs",
+            "path": "/home/curry/Workspace/SEM3/PDG/day01/my.hs",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1748423048848
+    }
+  ],
+  "sessionId": "889cdb2d-32a3-43e1-8e42-df0a6d05aa81",
+  "creationDate": 1748422958549,
+  "isImported": false,
+  "lastMessageDate": 1748423048848,
+  "customTitle": "Understanding custom quicksort implementation in Haskell"
+}

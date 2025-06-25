@@ -1,0 +1,4184 @@
+{
+  "version": 3,
+  "requesterUsername": "inkurey-22",
+  "requesterAvatarIconUri": {
+    "$mid": 1,
+    "path": "/u/146175466",
+    "scheme": "https",
+    "authority": "avatars.githubusercontent.com",
+    "query": "v=4"
+  },
+  "responderUsername": "GitHub Copilot",
+  "responderAvatarIconUri": {
+    "id": "copilot"
+  },
+  "initialLocation": "panel",
+  "requests": [
+    {
+      "requestId": "request_0e60c986-7d88-4f9b-94c9-a58184b3febc",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 10
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 11
+            },
+            "agent": {
+              "extensionId": {
+                "value": "GitHub.copilot-chat",
+                "_lower": "github.copilot-chat"
+              },
+              "publisherDisplayName": "GitHub",
+              "extensionPublisherId": "GitHub",
+              "extensionDisplayName": "GitHub Copilot Chat",
+              "id": "github.copilot.workspace",
+              "description": "Ask about your workspace",
+              "metadata": {
+                "sampleRequest": "How do I build this project?",
+                "themeIcon": {
+                  "id": "code"
+                },
+                "hasFollowups": true,
+                "supportIssueReporting": false
+              },
+              "name": "workspace",
+              "fullName": "Workspace",
+              "locations": [
+                "panel"
+              ],
+              "modes": [
+                "ask"
+              ],
+              "slashCommands": [
+                {
+                  "name": "explain",
+                  "description": "Explain how the code in your active editor works"
+                },
+                {
+                  "name": "tests",
+                  "description": "Generate unit tests for the selected code",
+                  "disambiguation": [
+                    {
+                      "category": "create_tests",
+                      "description": "The user wants to generate unit tests.",
+                      "examples": [
+                        "Generate tests for my selection using pytest."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "fix",
+                  "description": "Propose a fix for the problems in the selected code",
+                  "sampleRequest": "There is a problem in this code. Rewrite the code to show it with the bug fixed."
+                },
+                {
+                  "name": "new",
+                  "description": "Scaffold code for a new file or project in a workspace",
+                  "sampleRequest": "Create a RESTful API server using typescript",
+                  "isSticky": true,
+                  "disambiguation": [
+                    {
+                      "category": "create_new_workspace_or_extension",
+                      "description": "The user wants to create a complete Visual Studio Code workspace from scratch, such as a new application or a Visual Studio Code extension. Use this category only if the question relates to generating or creating new workspaces in Visual Studio Code. Do not use this category for updating existing code or generating sample code snippets",
+                      "examples": [
+                        "Scaffold a Node server.",
+                        "Create a sample project which uses the fileSystemProvider API.",
+                        "react application"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "newNotebook",
+                  "description": "Create a new Jupyter Notebook",
+                  "sampleRequest": "How do I create a notebook to load data from a csv file?",
+                  "disambiguation": [
+                    {
+                      "category": "create_jupyter_notebook",
+                      "description": "The user wants to create a new Jupyter notebook in Visual Studio Code.",
+                      "examples": [
+                        "Create a notebook to analyze this CSV file."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "setupTests",
+                  "description": "Set up tests in your project (Experimental)",
+                  "sampleRequest": "add playwright tests to my project",
+                  "when": "config.github.copilot.chat.setupTests.enabled",
+                  "disambiguation": [
+                    {
+                      "category": "set_up_tests",
+                      "description": "The user wants to configure project test setup, framework, or test runner. The user does not want to fix their existing tests.",
+                      "examples": [
+                        "Set up tests for this project."
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "disambiguation": [
+                {
+                  "category": "workspace_project_questions",
+                  "description": "The user wants to learn about or update the code or files in their current workspace. Questions in this category may be about understanding what the whole workspace does or locating the implementation of some code. This does not include generating or updating tests.",
+                  "examples": [
+                    "What does this project do?"
+                  ]
+                },
+                {
+                  "category": "find_code_in_workspace",
+                  "description": "The user wants to locate the implementation of some functionality in their current workspace.",
+                  "examples": [
+                    "Where is the tree widget implemented?"
+                  ]
+                },
+                {
+                  "category": "generate_with_workspace_context",
+                  "description": "The user wants to generate code based on multiple files in the workspace and did not specify which files to reference.",
+                  "examples": [
+                    "Create a README for this project."
+                  ]
+                }
+              ]
+            },
+            "kind": "agent"
+          },
+          {
+            "range": {
+              "start": 10,
+              "endExclusive": 11
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 11,
+              "endLineNumber": 1,
+              "endColumn": 12
+            },
+            "text": " ",
+            "kind": "text"
+          },
+          {
+            "range": {
+              "start": 11,
+              "endExclusive": 17
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 12,
+              "endLineNumber": 1,
+              "endColumn": 18
+            },
+            "command": {
+              "name": "tests",
+              "description": "Generate unit tests for the selected code",
+              "disambiguation": [
+                {
+                  "category": "create_tests",
+                  "description": "The user wants to generate unit tests.",
+                  "examples": [
+                    "Generate tests for my selection using pytest."
+                  ]
+                }
+              ]
+            },
+            "kind": "subcommand"
+          },
+          {
+            "range": {
+              "start": 17,
+              "endExclusive": 18
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 18,
+              "endLineNumber": 1,
+              "endColumn": 19
+            },
+            "text": " ",
+            "kind": "text"
+          }
+        ],
+        "text": "@workspace /tests "
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:my_strlowcase.c",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_strlowcase.c",
+                "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/my_strlowcase.c",
+                "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_strlowcase.c",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 15,
+                "endColumn": 1
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "kind": "textEditGroup",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strlowcase.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strlowcase.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strlowcase.c",
+            "scheme": "file"
+          },
+          "edits": [
+            [
+              {
+                "text": "#include <criterion/criterion.h>",
+                "range": {
+                  "startLineNumber": 8,
+                  "startColumn": 1,
+                  "endLineNumber": 8,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 8,
+                  "startColumn": 33,
+                  "endLineNumber": 8,
+                  "endColumn": 33
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nchar *my_strlowcase(char *str);",
+                "range": {
+                  "startLineNumber": 9,
+                  "startColumn": 1,
+                  "endLineNumber": 9,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 10,
+                  "startColumn": 32,
+                  "endLineNumber": 10,
+                  "endColumn": 32
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strlowcase, converts_uppercase_to_lowercase)",
+                "range": {
+                  "startLineNumber": 11,
+                  "startColumn": 1,
+                  "endLineNumber": 11,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 12,
+                  "startColumn": 53,
+                  "endLineNumber": 12,
+                  "endColumn": 53
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char str[] = \"HELLO\";",
+                "range": {
+                  "startLineNumber": 13,
+                  "startColumn": 2,
+                  "endLineNumber": 13,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_str_eq(my_strlowcase(str), \"hello\");",
+                "range": {
+                  "startLineNumber": 14,
+                  "startColumn": 26,
+                  "endLineNumber": 14,
+                  "endColumn": 26
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 15,
+                  "startColumn": 51,
+                  "endLineNumber": 15,
+                  "endColumn": 51
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 16,
+                  "startColumn": 2,
+                  "endLineNumber": 16,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strlowcase, leaves_lowercase_unchanged)",
+                "range": {
+                  "startLineNumber": 17,
+                  "startColumn": 1,
+                  "endLineNumber": 17,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 18,
+                  "startColumn": 48,
+                  "endLineNumber": 18,
+                  "endColumn": 48
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char str[] = \"world\";",
+                "range": {
+                  "startLineNumber": 19,
+                  "startColumn": 2,
+                  "endLineNumber": 19,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_str_eq(my_strlowcase(str), \"world\");",
+                "range": {
+                  "startLineNumber": 20,
+                  "startColumn": 26,
+                  "endLineNumber": 20,
+                  "endColumn": 26
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 21,
+                  "startColumn": 51,
+                  "endLineNumber": 21,
+                  "endColumn": 51
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 22,
+                  "startColumn": 2,
+                  "endLineNumber": 22,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strlowcase, handles_mixed_case)",
+                "range": {
+                  "startLineNumber": 23,
+                  "startColumn": 1,
+                  "endLineNumber": 23,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 24,
+                  "startColumn": 40,
+                  "endLineNumber": 24,
+                  "endColumn": 40
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char str[] = \"HeLLoWoRLd\";",
+                "range": {
+                  "startLineNumber": 25,
+                  "startColumn": 2,
+                  "endLineNumber": 25,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_str_eq(my_strlowcase(str), \"helloworld\");",
+                "range": {
+                  "startLineNumber": 26,
+                  "startColumn": 31,
+                  "endLineNumber": 26,
+                  "endColumn": 31
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 27,
+                  "startColumn": 56,
+                  "endLineNumber": 27,
+                  "endColumn": 56
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 28,
+                  "startColumn": 2,
+                  "endLineNumber": 28,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strlowcase, handles_empty_string)",
+                "range": {
+                  "startLineNumber": 29,
+                  "startColumn": 1,
+                  "endLineNumber": 29,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 30,
+                  "startColumn": 42,
+                  "endLineNumber": 30,
+                  "endColumn": 42
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char str[] = \"\";",
+                "range": {
+                  "startLineNumber": 31,
+                  "startColumn": 2,
+                  "endLineNumber": 31,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_str_eq(my_strlowcase(str), \"\");",
+                "range": {
+                  "startLineNumber": 32,
+                  "startColumn": 21,
+                  "endLineNumber": 32,
+                  "endColumn": 21
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 33,
+                  "startColumn": 46,
+                  "endLineNumber": 33,
+                  "endColumn": 46
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 34,
+                  "startColumn": 2,
+                  "endLineNumber": 34,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strlowcase, handles_non_alpha_characters)",
+                "range": {
+                  "startLineNumber": 35,
+                  "startColumn": 1,
+                  "endLineNumber": 35,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 36,
+                  "startColumn": 50,
+                  "endLineNumber": 36,
+                  "endColumn": 50
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char str[] = \"1234!@# ABC xyz\";",
+                "range": {
+                  "startLineNumber": 37,
+                  "startColumn": 2,
+                  "endLineNumber": 37,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_str_eq(my_strlowcase(str), \"1234!@# abc xyz\");",
+                "range": {
+                  "startLineNumber": 38,
+                  "startColumn": 36,
+                  "endLineNumber": 38,
+                  "endColumn": 36
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 39,
+                  "startColumn": 61,
+                  "endLineNumber": 39,
+                  "endColumn": 61
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 40,
+                  "startColumn": 2,
+                  "endLineNumber": 40,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strlowcase, handles_only_uppercase)",
+                "range": {
+                  "startLineNumber": 41,
+                  "startColumn": 1,
+                  "endLineNumber": 41,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 42,
+                  "startColumn": 44,
+                  "endLineNumber": 42,
+                  "endColumn": 44
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char str[] = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\";",
+                "range": {
+                  "startLineNumber": 43,
+                  "startColumn": 2,
+                  "endLineNumber": 43,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_str_eq(my_strlowcase(str), \"abcdefghijklmnopqrstuvwxyz\");",
+                "range": {
+                  "startLineNumber": 44,
+                  "startColumn": 47,
+                  "endLineNumber": 44,
+                  "endColumn": 47
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 45,
+                  "startColumn": 72,
+                  "endLineNumber": 45,
+                  "endColumn": 72
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 46,
+                  "startColumn": 2,
+                  "endLineNumber": 46,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strlowcase, handles_only_lowercase)",
+                "range": {
+                  "startLineNumber": 47,
+                  "startColumn": 1,
+                  "endLineNumber": 47,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 48,
+                  "startColumn": 44,
+                  "endLineNumber": 48,
+                  "endColumn": 44
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char str[] = \"abcdefghijklmnopqrstuvwxyz\";",
+                "range": {
+                  "startLineNumber": 49,
+                  "startColumn": 2,
+                  "endLineNumber": 49,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_str_eq(my_strlowcase(str), \"abcdefghijklmnopqrstuvwxyz\");",
+                "range": {
+                  "startLineNumber": 50,
+                  "startColumn": 47,
+                  "endLineNumber": 50,
+                  "endColumn": 47
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 51,
+                  "startColumn": 72,
+                  "endLineNumber": 51,
+                  "endColumn": 72
+                }
+              }
+            ],
+            []
+          ]
+        }
+      ],
+      "responseId": "response_424d2aea-4e19-4adb-83b0-a9a7783930e4",
+      "result": {
+        "timings": {
+          "totalElapsed": 11682
+        },
+        "metadata": {
+          "codeBlocks": [],
+          "modelMessageId": "a48ce10f-aece-49da-91a8-9ca918678b01",
+          "responseId": "f3185ab0-24c4-4cdf-8da2-adee940a10b1",
+          "sessionId": "03b8da73-b2a4-4900-a064-f338e19ddc30",
+          "agentId": "github.copilot.workspace",
+          "command": "tests"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.workspace",
+        "description": "Ask about your workspace",
+        "metadata": {
+          "sampleRequest": "How do I build this project?",
+          "themeIcon": {
+            "id": "code"
+          },
+          "hasFollowups": true,
+          "supportIssueReporting": false
+        },
+        "name": "workspace",
+        "fullName": "Workspace",
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [
+          {
+            "name": "explain",
+            "description": "Explain how the code in your active editor works"
+          },
+          {
+            "name": "tests",
+            "description": "Generate unit tests for the selected code",
+            "disambiguation": [
+              {
+                "category": "create_tests",
+                "description": "The user wants to generate unit tests.",
+                "examples": [
+                  "Generate tests for my selection using pytest."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "fix",
+            "description": "Propose a fix for the problems in the selected code",
+            "sampleRequest": "There is a problem in this code. Rewrite the code to show it with the bug fixed."
+          },
+          {
+            "name": "new",
+            "description": "Scaffold code for a new file or project in a workspace",
+            "sampleRequest": "Create a RESTful API server using typescript",
+            "isSticky": true,
+            "disambiguation": [
+              {
+                "category": "create_new_workspace_or_extension",
+                "description": "The user wants to create a complete Visual Studio Code workspace from scratch, such as a new application or a Visual Studio Code extension. Use this category only if the question relates to generating or creating new workspaces in Visual Studio Code. Do not use this category for updating existing code or generating sample code snippets",
+                "examples": [
+                  "Scaffold a Node server.",
+                  "Create a sample project which uses the fileSystemProvider API.",
+                  "react application"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "newNotebook",
+            "description": "Create a new Jupyter Notebook",
+            "sampleRequest": "How do I create a notebook to load data from a csv file?",
+            "disambiguation": [
+              {
+                "category": "create_jupyter_notebook",
+                "description": "The user wants to create a new Jupyter notebook in Visual Studio Code.",
+                "examples": [
+                  "Create a notebook to analyze this CSV file."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "setupTests",
+            "description": "Set up tests in your project (Experimental)",
+            "sampleRequest": "add playwright tests to my project",
+            "when": "config.github.copilot.chat.setupTests.enabled",
+            "disambiguation": [
+              {
+                "category": "set_up_tests",
+                "description": "The user wants to configure project test setup, framework, or test runner. The user does not want to fix their existing tests.",
+                "examples": [
+                  "Set up tests for this project."
+                ]
+              }
+            ]
+          }
+        ],
+        "disambiguation": [
+          {
+            "category": "workspace_project_questions",
+            "description": "The user wants to learn about or update the code or files in their current workspace. Questions in this category may be about understanding what the whole workspace does or locating the implementation of some code. This does not include generating or updating tests.",
+            "examples": [
+              "What does this project do?"
+            ]
+          },
+          {
+            "category": "find_code_in_workspace",
+            "description": "The user wants to locate the implementation of some functionality in their current workspace.",
+            "examples": [
+              "Where is the tree widget implemented?"
+            ]
+          },
+          {
+            "category": "generate_with_workspace_context",
+            "description": "The user wants to generate code based on multiple files in the workspace and did not specify which files to reference.",
+            "examples": [
+              "Create a README for this project."
+            ]
+          }
+        ]
+      },
+      "slashCommand": {
+        "name": "tests",
+        "description": "Generate unit tests for the selected code",
+        "disambiguation": [
+          {
+            "category": "create_tests",
+            "description": "The user wants to generate unit tests.",
+            "examples": [
+              "Generate tests for my selection using pytest."
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_strlowcase.c",
+              "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/my_strlowcase.c",
+              "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_strlowcase.c",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 15,
+              "endColumn": 1
+            }
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strlowcase.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strlowcase.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strlowcase.c",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1749454035737
+    },
+    {
+      "requestId": "request_88c92f0c-98a3-42ab-9591-832dc02862e2",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 10
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 11
+            },
+            "agent": {
+              "extensionId": {
+                "value": "GitHub.copilot-chat",
+                "_lower": "github.copilot-chat"
+              },
+              "publisherDisplayName": "GitHub",
+              "extensionPublisherId": "GitHub",
+              "extensionDisplayName": "GitHub Copilot Chat",
+              "id": "github.copilot.workspace",
+              "description": "Ask about your workspace",
+              "metadata": {
+                "sampleRequest": "How do I build this project?",
+                "themeIcon": {
+                  "id": "code"
+                },
+                "hasFollowups": true,
+                "supportIssueReporting": false
+              },
+              "name": "workspace",
+              "fullName": "Workspace",
+              "locations": [
+                "panel"
+              ],
+              "modes": [
+                "ask"
+              ],
+              "slashCommands": [
+                {
+                  "name": "explain",
+                  "description": "Explain how the code in your active editor works"
+                },
+                {
+                  "name": "tests",
+                  "description": "Generate unit tests for the selected code",
+                  "disambiguation": [
+                    {
+                      "category": "create_tests",
+                      "description": "The user wants to generate unit tests.",
+                      "examples": [
+                        "Generate tests for my selection using pytest."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "fix",
+                  "description": "Propose a fix for the problems in the selected code",
+                  "sampleRequest": "There is a problem in this code. Rewrite the code to show it with the bug fixed."
+                },
+                {
+                  "name": "new",
+                  "description": "Scaffold code for a new file or project in a workspace",
+                  "sampleRequest": "Create a RESTful API server using typescript",
+                  "isSticky": true,
+                  "disambiguation": [
+                    {
+                      "category": "create_new_workspace_or_extension",
+                      "description": "The user wants to create a complete Visual Studio Code workspace from scratch, such as a new application or a Visual Studio Code extension. Use this category only if the question relates to generating or creating new workspaces in Visual Studio Code. Do not use this category for updating existing code or generating sample code snippets",
+                      "examples": [
+                        "Scaffold a Node server.",
+                        "Create a sample project which uses the fileSystemProvider API.",
+                        "react application"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "newNotebook",
+                  "description": "Create a new Jupyter Notebook",
+                  "sampleRequest": "How do I create a notebook to load data from a csv file?",
+                  "disambiguation": [
+                    {
+                      "category": "create_jupyter_notebook",
+                      "description": "The user wants to create a new Jupyter notebook in Visual Studio Code.",
+                      "examples": [
+                        "Create a notebook to analyze this CSV file."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "setupTests",
+                  "description": "Set up tests in your project (Experimental)",
+                  "sampleRequest": "add playwright tests to my project",
+                  "when": "config.github.copilot.chat.setupTests.enabled",
+                  "disambiguation": [
+                    {
+                      "category": "set_up_tests",
+                      "description": "The user wants to configure project test setup, framework, or test runner. The user does not want to fix their existing tests.",
+                      "examples": [
+                        "Set up tests for this project."
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "disambiguation": [
+                {
+                  "category": "workspace_project_questions",
+                  "description": "The user wants to learn about or update the code or files in their current workspace. Questions in this category may be about understanding what the whole workspace does or locating the implementation of some code. This does not include generating or updating tests.",
+                  "examples": [
+                    "What does this project do?"
+                  ]
+                },
+                {
+                  "category": "find_code_in_workspace",
+                  "description": "The user wants to locate the implementation of some functionality in their current workspace.",
+                  "examples": [
+                    "Where is the tree widget implemented?"
+                  ]
+                },
+                {
+                  "category": "generate_with_workspace_context",
+                  "description": "The user wants to generate code based on multiple files in the workspace and did not specify which files to reference.",
+                  "examples": [
+                    "Create a README for this project."
+                  ]
+                }
+              ]
+            },
+            "kind": "agent"
+          },
+          {
+            "range": {
+              "start": 10,
+              "endExclusive": 11
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 11,
+              "endLineNumber": 1,
+              "endColumn": 12
+            },
+            "text": " ",
+            "kind": "text"
+          },
+          {
+            "range": {
+              "start": 11,
+              "endExclusive": 17
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 12,
+              "endLineNumber": 1,
+              "endColumn": 18
+            },
+            "command": {
+              "name": "tests",
+              "description": "Generate unit tests for the selected code",
+              "disambiguation": [
+                {
+                  "category": "create_tests",
+                  "description": "The user wants to generate unit tests.",
+                  "examples": [
+                    "Generate tests for my selection using pytest."
+                  ]
+                }
+              ]
+            },
+            "kind": "subcommand"
+          },
+          {
+            "range": {
+              "start": 17,
+              "endExclusive": 61
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 18,
+              "endLineNumber": 1,
+              "endColumn": 62
+            },
+            "text": " i'm missing coverage on lines 13, 15 and 17",
+            "kind": "text"
+          }
+        ],
+        "text": "@workspace /tests i'm missing coverage on lines 13, 15 and 17"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:my_strncmp.c",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_strncmp.c",
+                "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/my_strncmp.c",
+                "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_strncmp.c",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 26,
+                "endColumn": 1
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "kind": "textEditGroup",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strncmp.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strncmp.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strncmp.c",
+            "scheme": "file"
+          },
+          "edits": [
+            [
+              {
+                "text": "Test(my_strncmp, both_null)",
+                "range": {
+                  "startLineNumber": 56,
+                  "startColumn": 1,
+                  "endLineNumber": 56,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 56,
+                  "startColumn": 28,
+                  "endLineNumber": 56,
+                  "endColumn": 28
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_eq(my_strncmp(NULL, NULL, 5), 0);",
+                "range": {
+                  "startLineNumber": 57,
+                  "startColumn": 2,
+                  "endLineNumber": 57,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 58,
+                  "startColumn": 48,
+                  "endLineNumber": 58,
+                  "endColumn": 48
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 59,
+                  "startColumn": 2,
+                  "endLineNumber": 59,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strncmp, s1_null)",
+                "range": {
+                  "startLineNumber": 60,
+                  "startColumn": 1,
+                  "endLineNumber": 60,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 61,
+                  "startColumn": 26,
+                  "endLineNumber": 61,
+                  "endColumn": 26
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_eq(my_strncmp(NULL, \"abc\", 2), -'a');",
+                "range": {
+                  "startLineNumber": 62,
+                  "startColumn": 2,
+                  "endLineNumber": 62,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 63,
+                  "startColumn": 52,
+                  "endLineNumber": 63,
+                  "endColumn": 52
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 64,
+                  "startColumn": 2,
+                  "endLineNumber": 64,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strncmp, s2_null)",
+                "range": {
+                  "startLineNumber": 65,
+                  "startColumn": 1,
+                  "endLineNumber": 65,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 66,
+                  "startColumn": 26,
+                  "endLineNumber": 66,
+                  "endColumn": 26
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_eq(my_strncmp(\"abc\", NULL, 2), 'a');",
+                "range": {
+                  "startLineNumber": 67,
+                  "startColumn": 2,
+                  "endLineNumber": 67,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 68,
+                  "startColumn": 51,
+                  "endLineNumber": 68,
+                  "endColumn": 51
+                }
+              }
+            ],
+            []
+          ]
+        }
+      ],
+      "responseId": "response_2dff9c59-84ad-4090-aa2f-25815d8ad533",
+      "result": {
+        "timings": {
+          "totalElapsed": 5336
+        },
+        "metadata": {
+          "codeBlocks": [],
+          "modelMessageId": "9485d2f2-7e8b-43b0-9e7d-1574a81c48d9",
+          "responseId": "eba624b1-7148-4ee1-be89-789dab6f7e81",
+          "sessionId": "03b8da73-b2a4-4900-a064-f338e19ddc30",
+          "agentId": "github.copilot.workspace",
+          "command": "tests"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.workspace",
+        "description": "Ask about your workspace",
+        "metadata": {
+          "sampleRequest": "How do I build this project?",
+          "themeIcon": {
+            "id": "code"
+          },
+          "hasFollowups": true,
+          "supportIssueReporting": false
+        },
+        "name": "workspace",
+        "fullName": "Workspace",
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [
+          {
+            "name": "explain",
+            "description": "Explain how the code in your active editor works"
+          },
+          {
+            "name": "tests",
+            "description": "Generate unit tests for the selected code",
+            "disambiguation": [
+              {
+                "category": "create_tests",
+                "description": "The user wants to generate unit tests.",
+                "examples": [
+                  "Generate tests for my selection using pytest."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "fix",
+            "description": "Propose a fix for the problems in the selected code",
+            "sampleRequest": "There is a problem in this code. Rewrite the code to show it with the bug fixed."
+          },
+          {
+            "name": "new",
+            "description": "Scaffold code for a new file or project in a workspace",
+            "sampleRequest": "Create a RESTful API server using typescript",
+            "isSticky": true,
+            "disambiguation": [
+              {
+                "category": "create_new_workspace_or_extension",
+                "description": "The user wants to create a complete Visual Studio Code workspace from scratch, such as a new application or a Visual Studio Code extension. Use this category only if the question relates to generating or creating new workspaces in Visual Studio Code. Do not use this category for updating existing code or generating sample code snippets",
+                "examples": [
+                  "Scaffold a Node server.",
+                  "Create a sample project which uses the fileSystemProvider API.",
+                  "react application"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "newNotebook",
+            "description": "Create a new Jupyter Notebook",
+            "sampleRequest": "How do I create a notebook to load data from a csv file?",
+            "disambiguation": [
+              {
+                "category": "create_jupyter_notebook",
+                "description": "The user wants to create a new Jupyter notebook in Visual Studio Code.",
+                "examples": [
+                  "Create a notebook to analyze this CSV file."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "setupTests",
+            "description": "Set up tests in your project (Experimental)",
+            "sampleRequest": "add playwright tests to my project",
+            "when": "config.github.copilot.chat.setupTests.enabled",
+            "disambiguation": [
+              {
+                "category": "set_up_tests",
+                "description": "The user wants to configure project test setup, framework, or test runner. The user does not want to fix their existing tests.",
+                "examples": [
+                  "Set up tests for this project."
+                ]
+              }
+            ]
+          }
+        ],
+        "disambiguation": [
+          {
+            "category": "workspace_project_questions",
+            "description": "The user wants to learn about or update the code or files in their current workspace. Questions in this category may be about understanding what the whole workspace does or locating the implementation of some code. This does not include generating or updating tests.",
+            "examples": [
+              "What does this project do?"
+            ]
+          },
+          {
+            "category": "find_code_in_workspace",
+            "description": "The user wants to locate the implementation of some functionality in their current workspace.",
+            "examples": [
+              "Where is the tree widget implemented?"
+            ]
+          },
+          {
+            "category": "generate_with_workspace_context",
+            "description": "The user wants to generate code based on multiple files in the workspace and did not specify which files to reference.",
+            "examples": [
+              "Create a README for this project."
+            ]
+          }
+        ]
+      },
+      "slashCommand": {
+        "name": "tests",
+        "description": "Generate unit tests for the selected code",
+        "disambiguation": [
+          {
+            "category": "create_tests",
+            "description": "The user wants to generate unit tests.",
+            "examples": [
+              "Generate tests for my selection using pytest."
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_strncmp.c",
+              "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/my_strncmp.c",
+              "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_strncmp.c",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 26,
+              "endColumn": 1
+            }
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strncmp.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strncmp.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strncmp.c",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1749454127890,
+      "editedFileEvents": [
+        {
+          "eventKind": 1,
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strlowcase.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strlowcase.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strlowcase.c",
+            "scheme": "file"
+          }
+        }
+      ]
+    },
+    {
+      "requestId": "request_39abce62-8175-4e01-bb90-5cef5043adfc",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 10
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 11
+            },
+            "agent": {
+              "extensionId": {
+                "value": "GitHub.copilot-chat",
+                "_lower": "github.copilot-chat"
+              },
+              "publisherDisplayName": "GitHub",
+              "extensionPublisherId": "GitHub",
+              "extensionDisplayName": "GitHub Copilot Chat",
+              "id": "github.copilot.workspace",
+              "description": "Ask about your workspace",
+              "metadata": {
+                "sampleRequest": "How do I build this project?",
+                "themeIcon": {
+                  "id": "code"
+                },
+                "hasFollowups": true,
+                "supportIssueReporting": false
+              },
+              "name": "workspace",
+              "fullName": "Workspace",
+              "locations": [
+                "panel"
+              ],
+              "modes": [
+                "ask"
+              ],
+              "slashCommands": [
+                {
+                  "name": "explain",
+                  "description": "Explain how the code in your active editor works"
+                },
+                {
+                  "name": "tests",
+                  "description": "Generate unit tests for the selected code",
+                  "disambiguation": [
+                    {
+                      "category": "create_tests",
+                      "description": "The user wants to generate unit tests.",
+                      "examples": [
+                        "Generate tests for my selection using pytest."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "fix",
+                  "description": "Propose a fix for the problems in the selected code",
+                  "sampleRequest": "There is a problem in this code. Rewrite the code to show it with the bug fixed."
+                },
+                {
+                  "name": "new",
+                  "description": "Scaffold code for a new file or project in a workspace",
+                  "sampleRequest": "Create a RESTful API server using typescript",
+                  "isSticky": true,
+                  "disambiguation": [
+                    {
+                      "category": "create_new_workspace_or_extension",
+                      "description": "The user wants to create a complete Visual Studio Code workspace from scratch, such as a new application or a Visual Studio Code extension. Use this category only if the question relates to generating or creating new workspaces in Visual Studio Code. Do not use this category for updating existing code or generating sample code snippets",
+                      "examples": [
+                        "Scaffold a Node server.",
+                        "Create a sample project which uses the fileSystemProvider API.",
+                        "react application"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "newNotebook",
+                  "description": "Create a new Jupyter Notebook",
+                  "sampleRequest": "How do I create a notebook to load data from a csv file?",
+                  "disambiguation": [
+                    {
+                      "category": "create_jupyter_notebook",
+                      "description": "The user wants to create a new Jupyter notebook in Visual Studio Code.",
+                      "examples": [
+                        "Create a notebook to analyze this CSV file."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "setupTests",
+                  "description": "Set up tests in your project (Experimental)",
+                  "sampleRequest": "add playwright tests to my project",
+                  "when": "config.github.copilot.chat.setupTests.enabled",
+                  "disambiguation": [
+                    {
+                      "category": "set_up_tests",
+                      "description": "The user wants to configure project test setup, framework, or test runner. The user does not want to fix their existing tests.",
+                      "examples": [
+                        "Set up tests for this project."
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "disambiguation": [
+                {
+                  "category": "workspace_project_questions",
+                  "description": "The user wants to learn about or update the code or files in their current workspace. Questions in this category may be about understanding what the whole workspace does or locating the implementation of some code. This does not include generating or updating tests.",
+                  "examples": [
+                    "What does this project do?"
+                  ]
+                },
+                {
+                  "category": "find_code_in_workspace",
+                  "description": "The user wants to locate the implementation of some functionality in their current workspace.",
+                  "examples": [
+                    "Where is the tree widget implemented?"
+                  ]
+                },
+                {
+                  "category": "generate_with_workspace_context",
+                  "description": "The user wants to generate code based on multiple files in the workspace and did not specify which files to reference.",
+                  "examples": [
+                    "Create a README for this project."
+                  ]
+                }
+              ]
+            },
+            "kind": "agent"
+          },
+          {
+            "range": {
+              "start": 10,
+              "endExclusive": 11
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 11,
+              "endLineNumber": 1,
+              "endColumn": 12
+            },
+            "text": " ",
+            "kind": "text"
+          },
+          {
+            "range": {
+              "start": 11,
+              "endExclusive": 17
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 12,
+              "endLineNumber": 1,
+              "endColumn": 18
+            },
+            "command": {
+              "name": "tests",
+              "description": "Generate unit tests for the selected code",
+              "disambiguation": [
+                {
+                  "category": "create_tests",
+                  "description": "The user wants to generate unit tests.",
+                  "examples": [
+                    "Generate tests for my selection using pytest."
+                  ]
+                }
+              ]
+            },
+            "kind": "subcommand"
+          },
+          {
+            "range": {
+              "start": 17,
+              "endExclusive": 18
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 18,
+              "endLineNumber": 1,
+              "endColumn": 19
+            },
+            "text": " ",
+            "kind": "text"
+          }
+        ],
+        "text": "@workspace /tests "
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:my_strupcase.c",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_strupcase.c",
+                "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/my_strupcase.c",
+                "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_strupcase.c",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 15,
+                "endColumn": 1
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "kind": "textEditGroup",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strupcase.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strupcase.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strupcase.c",
+            "scheme": "file"
+          },
+          "edits": [
+            [
+              {
+                "text": "Test(my_strupcase, converts_lowercase_to_uppercase)",
+                "range": {
+                  "startLineNumber": 8,
+                  "startColumn": 1,
+                  "endLineNumber": 8,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 8,
+                  "startColumn": 52,
+                  "endLineNumber": 8,
+                  "endColumn": 52
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char str[] = \"hello\";",
+                "range": {
+                  "startLineNumber": 9,
+                  "startColumn": 2,
+                  "endLineNumber": 9,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_str_eq(my_strupcase(str), \"HELLO\");",
+                "range": {
+                  "startLineNumber": 10,
+                  "startColumn": 26,
+                  "endLineNumber": 10,
+                  "endColumn": 26
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 11,
+                  "startColumn": 50,
+                  "endLineNumber": 11,
+                  "endColumn": 50
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 12,
+                  "startColumn": 2,
+                  "endLineNumber": 12,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strupcase, leaves_uppercase_unchanged)",
+                "range": {
+                  "startLineNumber": 13,
+                  "startColumn": 1,
+                  "endLineNumber": 13,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 14,
+                  "startColumn": 47,
+                  "endLineNumber": 14,
+                  "endColumn": 47
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char str[] = \"WORLD\";",
+                "range": {
+                  "startLineNumber": 15,
+                  "startColumn": 2,
+                  "endLineNumber": 15,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_str_eq(my_strupcase(str), \"WORLD\");",
+                "range": {
+                  "startLineNumber": 16,
+                  "startColumn": 26,
+                  "endLineNumber": 16,
+                  "endColumn": 26
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 17,
+                  "startColumn": 50,
+                  "endLineNumber": 17,
+                  "endColumn": 50
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 18,
+                  "startColumn": 2,
+                  "endLineNumber": 18,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strupcase, handles_mixed_case)",
+                "range": {
+                  "startLineNumber": 19,
+                  "startColumn": 1,
+                  "endLineNumber": 19,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 20,
+                  "startColumn": 39,
+                  "endLineNumber": 20,
+                  "endColumn": 39
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char str[] = \"HeLLoWoRLd\";",
+                "range": {
+                  "startLineNumber": 21,
+                  "startColumn": 2,
+                  "endLineNumber": 21,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_str_eq(my_strupcase(str), \"HELLOWORLD\");",
+                "range": {
+                  "startLineNumber": 22,
+                  "startColumn": 31,
+                  "endLineNumber": 22,
+                  "endColumn": 31
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 23,
+                  "startColumn": 55,
+                  "endLineNumber": 23,
+                  "endColumn": 55
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 24,
+                  "startColumn": 2,
+                  "endLineNumber": 24,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strupcase, handles_empty_string)",
+                "range": {
+                  "startLineNumber": 25,
+                  "startColumn": 1,
+                  "endLineNumber": 25,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 26,
+                  "startColumn": 41,
+                  "endLineNumber": 26,
+                  "endColumn": 41
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char str[] = \"\";",
+                "range": {
+                  "startLineNumber": 27,
+                  "startColumn": 2,
+                  "endLineNumber": 27,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_str_eq(my_strupcase(str), \"\");",
+                "range": {
+                  "startLineNumber": 28,
+                  "startColumn": 21,
+                  "endLineNumber": 28,
+                  "endColumn": 21
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 29,
+                  "startColumn": 45,
+                  "endLineNumber": 29,
+                  "endColumn": 45
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 30,
+                  "startColumn": 2,
+                  "endLineNumber": 30,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strupcase, handles_non_alpha_characters)",
+                "range": {
+                  "startLineNumber": 31,
+                  "startColumn": 1,
+                  "endLineNumber": 31,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 32,
+                  "startColumn": 49,
+                  "endLineNumber": 32,
+                  "endColumn": 49
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char str[] = \"1234!@# abc XYZ\";",
+                "range": {
+                  "startLineNumber": 33,
+                  "startColumn": 2,
+                  "endLineNumber": 33,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_str_eq(my_strupcase(str), \"1234!@# ABC XYZ\");",
+                "range": {
+                  "startLineNumber": 34,
+                  "startColumn": 36,
+                  "endLineNumber": 34,
+                  "endColumn": 36
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 35,
+                  "startColumn": 60,
+                  "endLineNumber": 35,
+                  "endColumn": 60
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 36,
+                  "startColumn": 2,
+                  "endLineNumber": 36,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strupcase, handles_only_lowercase)",
+                "range": {
+                  "startLineNumber": 37,
+                  "startColumn": 1,
+                  "endLineNumber": 37,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 38,
+                  "startColumn": 43,
+                  "endLineNumber": 38,
+                  "endColumn": 43
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char str[] = \"abcdefghijklmnopqrstuvwxyz\";",
+                "range": {
+                  "startLineNumber": 39,
+                  "startColumn": 2,
+                  "endLineNumber": 39,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_str_eq(my_strupcase(str), \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\");",
+                "range": {
+                  "startLineNumber": 40,
+                  "startColumn": 47,
+                  "endLineNumber": 40,
+                  "endColumn": 47
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 41,
+                  "startColumn": 71,
+                  "endLineNumber": 41,
+                  "endColumn": 71
+                }
+              }
+            ],
+            []
+          ]
+        }
+      ],
+      "responseId": "response_bf555053-3140-4c0a-ab60-d0c47db9f72d",
+      "result": {
+        "timings": {
+          "totalElapsed": 15551
+        },
+        "metadata": {
+          "codeBlocks": [],
+          "modelMessageId": "9277a03d-b927-4627-b53b-e0d57b6174ad",
+          "responseId": "d4bb93e0-c3ee-4101-a63d-9b32b754b4ec",
+          "sessionId": "03b8da73-b2a4-4900-a064-f338e19ddc30",
+          "agentId": "github.copilot.workspace",
+          "command": "tests"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.workspace",
+        "description": "Ask about your workspace",
+        "metadata": {
+          "sampleRequest": "How do I build this project?",
+          "themeIcon": {
+            "id": "code"
+          },
+          "hasFollowups": true,
+          "supportIssueReporting": false
+        },
+        "name": "workspace",
+        "fullName": "Workspace",
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [
+          {
+            "name": "explain",
+            "description": "Explain how the code in your active editor works"
+          },
+          {
+            "name": "tests",
+            "description": "Generate unit tests for the selected code",
+            "disambiguation": [
+              {
+                "category": "create_tests",
+                "description": "The user wants to generate unit tests.",
+                "examples": [
+                  "Generate tests for my selection using pytest."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "fix",
+            "description": "Propose a fix for the problems in the selected code",
+            "sampleRequest": "There is a problem in this code. Rewrite the code to show it with the bug fixed."
+          },
+          {
+            "name": "new",
+            "description": "Scaffold code for a new file or project in a workspace",
+            "sampleRequest": "Create a RESTful API server using typescript",
+            "isSticky": true,
+            "disambiguation": [
+              {
+                "category": "create_new_workspace_or_extension",
+                "description": "The user wants to create a complete Visual Studio Code workspace from scratch, such as a new application or a Visual Studio Code extension. Use this category only if the question relates to generating or creating new workspaces in Visual Studio Code. Do not use this category for updating existing code or generating sample code snippets",
+                "examples": [
+                  "Scaffold a Node server.",
+                  "Create a sample project which uses the fileSystemProvider API.",
+                  "react application"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "newNotebook",
+            "description": "Create a new Jupyter Notebook",
+            "sampleRequest": "How do I create a notebook to load data from a csv file?",
+            "disambiguation": [
+              {
+                "category": "create_jupyter_notebook",
+                "description": "The user wants to create a new Jupyter notebook in Visual Studio Code.",
+                "examples": [
+                  "Create a notebook to analyze this CSV file."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "setupTests",
+            "description": "Set up tests in your project (Experimental)",
+            "sampleRequest": "add playwright tests to my project",
+            "when": "config.github.copilot.chat.setupTests.enabled",
+            "disambiguation": [
+              {
+                "category": "set_up_tests",
+                "description": "The user wants to configure project test setup, framework, or test runner. The user does not want to fix their existing tests.",
+                "examples": [
+                  "Set up tests for this project."
+                ]
+              }
+            ]
+          }
+        ],
+        "disambiguation": [
+          {
+            "category": "workspace_project_questions",
+            "description": "The user wants to learn about or update the code or files in their current workspace. Questions in this category may be about understanding what the whole workspace does or locating the implementation of some code. This does not include generating or updating tests.",
+            "examples": [
+              "What does this project do?"
+            ]
+          },
+          {
+            "category": "find_code_in_workspace",
+            "description": "The user wants to locate the implementation of some functionality in their current workspace.",
+            "examples": [
+              "Where is the tree widget implemented?"
+            ]
+          },
+          {
+            "category": "generate_with_workspace_context",
+            "description": "The user wants to generate code based on multiple files in the workspace and did not specify which files to reference.",
+            "examples": [
+              "Create a README for this project."
+            ]
+          }
+        ]
+      },
+      "slashCommand": {
+        "name": "tests",
+        "description": "Generate unit tests for the selected code",
+        "disambiguation": [
+          {
+            "category": "create_tests",
+            "description": "The user wants to generate unit tests.",
+            "examples": [
+              "Generate tests for my selection using pytest."
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_strupcase.c",
+              "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/my_strupcase.c",
+              "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_strupcase.c",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 15,
+              "endColumn": 1
+            }
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strupcase.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strupcase.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strupcase.c",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1749454180748,
+      "editedFileEvents": [
+        {
+          "eventKind": 3,
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strncmp.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strncmp.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strncmp.c",
+            "scheme": "file"
+          }
+        }
+      ]
+    },
+    {
+      "requestId": "request_c88d415f-a10a-4cf3-9f8b-a985bdf21048",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 10
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 11
+            },
+            "agent": {
+              "extensionId": {
+                "value": "GitHub.copilot-chat",
+                "_lower": "github.copilot-chat"
+              },
+              "publisherDisplayName": "GitHub",
+              "extensionPublisherId": "GitHub",
+              "extensionDisplayName": "GitHub Copilot Chat",
+              "id": "github.copilot.workspace",
+              "description": "Ask about your workspace",
+              "metadata": {
+                "sampleRequest": "How do I build this project?",
+                "themeIcon": {
+                  "id": "code"
+                },
+                "hasFollowups": true,
+                "supportIssueReporting": false
+              },
+              "name": "workspace",
+              "fullName": "Workspace",
+              "locations": [
+                "panel"
+              ],
+              "modes": [
+                "ask"
+              ],
+              "slashCommands": [
+                {
+                  "name": "explain",
+                  "description": "Explain how the code in your active editor works"
+                },
+                {
+                  "name": "tests",
+                  "description": "Generate unit tests for the selected code",
+                  "disambiguation": [
+                    {
+                      "category": "create_tests",
+                      "description": "The user wants to generate unit tests.",
+                      "examples": [
+                        "Generate tests for my selection using pytest."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "fix",
+                  "description": "Propose a fix for the problems in the selected code",
+                  "sampleRequest": "There is a problem in this code. Rewrite the code to show it with the bug fixed."
+                },
+                {
+                  "name": "new",
+                  "description": "Scaffold code for a new file or project in a workspace",
+                  "sampleRequest": "Create a RESTful API server using typescript",
+                  "isSticky": true,
+                  "disambiguation": [
+                    {
+                      "category": "create_new_workspace_or_extension",
+                      "description": "The user wants to create a complete Visual Studio Code workspace from scratch, such as a new application or a Visual Studio Code extension. Use this category only if the question relates to generating or creating new workspaces in Visual Studio Code. Do not use this category for updating existing code or generating sample code snippets",
+                      "examples": [
+                        "Scaffold a Node server.",
+                        "Create a sample project which uses the fileSystemProvider API.",
+                        "react application"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "newNotebook",
+                  "description": "Create a new Jupyter Notebook",
+                  "sampleRequest": "How do I create a notebook to load data from a csv file?",
+                  "disambiguation": [
+                    {
+                      "category": "create_jupyter_notebook",
+                      "description": "The user wants to create a new Jupyter notebook in Visual Studio Code.",
+                      "examples": [
+                        "Create a notebook to analyze this CSV file."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "setupTests",
+                  "description": "Set up tests in your project (Experimental)",
+                  "sampleRequest": "add playwright tests to my project",
+                  "when": "config.github.copilot.chat.setupTests.enabled",
+                  "disambiguation": [
+                    {
+                      "category": "set_up_tests",
+                      "description": "The user wants to configure project test setup, framework, or test runner. The user does not want to fix their existing tests.",
+                      "examples": [
+                        "Set up tests for this project."
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "disambiguation": [
+                {
+                  "category": "workspace_project_questions",
+                  "description": "The user wants to learn about or update the code or files in their current workspace. Questions in this category may be about understanding what the whole workspace does or locating the implementation of some code. This does not include generating or updating tests.",
+                  "examples": [
+                    "What does this project do?"
+                  ]
+                },
+                {
+                  "category": "find_code_in_workspace",
+                  "description": "The user wants to locate the implementation of some functionality in their current workspace.",
+                  "examples": [
+                    "Where is the tree widget implemented?"
+                  ]
+                },
+                {
+                  "category": "generate_with_workspace_context",
+                  "description": "The user wants to generate code based on multiple files in the workspace and did not specify which files to reference.",
+                  "examples": [
+                    "Create a README for this project."
+                  ]
+                }
+              ]
+            },
+            "kind": "agent"
+          },
+          {
+            "range": {
+              "start": 10,
+              "endExclusive": 11
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 11,
+              "endLineNumber": 1,
+              "endColumn": 12
+            },
+            "text": " ",
+            "kind": "text"
+          },
+          {
+            "range": {
+              "start": 11,
+              "endExclusive": 17
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 12,
+              "endLineNumber": 1,
+              "endColumn": 18
+            },
+            "command": {
+              "name": "tests",
+              "description": "Generate unit tests for the selected code",
+              "disambiguation": [
+                {
+                  "category": "create_tests",
+                  "description": "The user wants to generate unit tests.",
+                  "examples": [
+                    "Generate tests for my selection using pytest."
+                  ]
+                }
+              ]
+            },
+            "kind": "subcommand"
+          },
+          {
+            "range": {
+              "start": 17,
+              "endExclusive": 50
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 18,
+              "endLineNumber": 1,
+              "endColumn": 51
+            },
+            "text": " i'm missing branch coverage here",
+            "kind": "text"
+          }
+        ],
+        "text": "@workspace /tests i'm missing branch coverage here"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.selection",
+            "name": "file:my_strupcase.c",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_strupcase.c",
+                "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/my_strupcase.c",
+                "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_strupcase.c",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 11,
+                "startColumn": 9,
+                "endLineNumber": 11,
+                "endColumn": 44,
+                "selectionStartLineNumber": 11,
+                "selectionStartColumn": 9,
+                "positionLineNumber": 11,
+                "positionColumn": 44
+              }
+            },
+            "modelDescription": "User's active selection"
+          }
+        ]
+      },
+      "response": [
+        {
+          "kind": "textEditGroup",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strupcase.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strupcase.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strupcase.c",
+            "scheme": "file"
+          },
+          "edits": [
+            [
+              {
+                "text": "\nTest(my_strupcase, does_not_modify_non_lowercase)",
+                "range": {
+                  "startLineNumber": 46,
+                  "startColumn": 2,
+                  "endLineNumber": 46,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 47,
+                  "startColumn": 50,
+                  "endLineNumber": 47,
+                  "endColumn": 50
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char str[] = \"1234!@# XYZ\";",
+                "range": {
+                  "startLineNumber": 48,
+                  "startColumn": 2,
+                  "endLineNumber": 48,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_str_eq(my_strupcase(str), \"1234!@# XYZ\");",
+                "range": {
+                  "startLineNumber": 49,
+                  "startColumn": 32,
+                  "endLineNumber": 49,
+                  "endColumn": 32
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 50,
+                  "startColumn": 56,
+                  "endLineNumber": 50,
+                  "endColumn": 56
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 51,
+                  "startColumn": 2,
+                  "endLineNumber": 51,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strupcase, modifies_only_lowercase)",
+                "range": {
+                  "startLineNumber": 52,
+                  "startColumn": 1,
+                  "endLineNumber": 52,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 53,
+                  "startColumn": 44,
+                  "endLineNumber": 53,
+                  "endColumn": 44
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char str[] = \"aBcDeF\";",
+                "range": {
+                  "startLineNumber": 54,
+                  "startColumn": 2,
+                  "endLineNumber": 54,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_str_eq(my_strupcase(str), \"ABCDEF\");",
+                "range": {
+                  "startLineNumber": 55,
+                  "startColumn": 27,
+                  "endLineNumber": 55,
+                  "endColumn": 27
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 56,
+                  "startColumn": 51,
+                  "endLineNumber": 56,
+                  "endColumn": 51
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 57,
+                  "startColumn": 2,
+                  "endLineNumber": 57,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strupcase, all_ascii_below_a)",
+                "range": {
+                  "startLineNumber": 58,
+                  "startColumn": 1,
+                  "endLineNumber": 58,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 59,
+                  "startColumn": 38,
+                  "endLineNumber": 59,
+                  "endColumn": 38
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char str[] = \"Z[\\\\]^_`\";",
+                "range": {
+                  "startLineNumber": 60,
+                  "startColumn": 2,
+                  "endLineNumber": 60,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_str_eq(my_strupcase(str), \"Z[\\\\]^_`\");",
+                "range": {
+                  "startLineNumber": 61,
+                  "startColumn": 29,
+                  "endLineNumber": 61,
+                  "endColumn": 29
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 62,
+                  "startColumn": 53,
+                  "endLineNumber": 62,
+                  "endColumn": 53
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 63,
+                  "startColumn": 2,
+                  "endLineNumber": 63,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strupcase, all_ascii_above_z)",
+                "range": {
+                  "startLineNumber": 64,
+                  "startColumn": 1,
+                  "endLineNumber": 64,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 65,
+                  "startColumn": 38,
+                  "endLineNumber": 65,
+                  "endColumn": 38
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char str[] = \"{|}~\";",
+                "range": {
+                  "startLineNumber": 66,
+                  "startColumn": 2,
+                  "endLineNumber": 66,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_str_eq(my_strupcase(str), \"{|}~\");",
+                "range": {
+                  "startLineNumber": 67,
+                  "startColumn": 25,
+                  "endLineNumber": 67,
+                  "endColumn": 25
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 68,
+                  "startColumn": 49,
+                  "endLineNumber": 68,
+                  "endColumn": 49
+                }
+              }
+            ],
+            []
+          ]
+        }
+      ],
+      "responseId": "response_ec175908-6f1e-4bb9-841e-5fce6591b13b",
+      "result": {
+        "timings": {
+          "totalElapsed": 4406
+        },
+        "metadata": {
+          "codeBlocks": [],
+          "modelMessageId": "810b499d-1999-4f3b-a498-b41e9f650d54",
+          "responseId": "eb0eb9e0-c0ff-48c0-97aa-24b92c963526",
+          "sessionId": "03b8da73-b2a4-4900-a064-f338e19ddc30",
+          "agentId": "github.copilot.workspace",
+          "command": "tests"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.workspace",
+        "description": "Ask about your workspace",
+        "metadata": {
+          "sampleRequest": "How do I build this project?",
+          "themeIcon": {
+            "id": "code"
+          },
+          "hasFollowups": true,
+          "supportIssueReporting": false
+        },
+        "name": "workspace",
+        "fullName": "Workspace",
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [
+          {
+            "name": "explain",
+            "description": "Explain how the code in your active editor works"
+          },
+          {
+            "name": "tests",
+            "description": "Generate unit tests for the selected code",
+            "disambiguation": [
+              {
+                "category": "create_tests",
+                "description": "The user wants to generate unit tests.",
+                "examples": [
+                  "Generate tests for my selection using pytest."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "fix",
+            "description": "Propose a fix for the problems in the selected code",
+            "sampleRequest": "There is a problem in this code. Rewrite the code to show it with the bug fixed."
+          },
+          {
+            "name": "new",
+            "description": "Scaffold code for a new file or project in a workspace",
+            "sampleRequest": "Create a RESTful API server using typescript",
+            "isSticky": true,
+            "disambiguation": [
+              {
+                "category": "create_new_workspace_or_extension",
+                "description": "The user wants to create a complete Visual Studio Code workspace from scratch, such as a new application or a Visual Studio Code extension. Use this category only if the question relates to generating or creating new workspaces in Visual Studio Code. Do not use this category for updating existing code or generating sample code snippets",
+                "examples": [
+                  "Scaffold a Node server.",
+                  "Create a sample project which uses the fileSystemProvider API.",
+                  "react application"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "newNotebook",
+            "description": "Create a new Jupyter Notebook",
+            "sampleRequest": "How do I create a notebook to load data from a csv file?",
+            "disambiguation": [
+              {
+                "category": "create_jupyter_notebook",
+                "description": "The user wants to create a new Jupyter notebook in Visual Studio Code.",
+                "examples": [
+                  "Create a notebook to analyze this CSV file."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "setupTests",
+            "description": "Set up tests in your project (Experimental)",
+            "sampleRequest": "add playwright tests to my project",
+            "when": "config.github.copilot.chat.setupTests.enabled",
+            "disambiguation": [
+              {
+                "category": "set_up_tests",
+                "description": "The user wants to configure project test setup, framework, or test runner. The user does not want to fix their existing tests.",
+                "examples": [
+                  "Set up tests for this project."
+                ]
+              }
+            ]
+          }
+        ],
+        "disambiguation": [
+          {
+            "category": "workspace_project_questions",
+            "description": "The user wants to learn about or update the code or files in their current workspace. Questions in this category may be about understanding what the whole workspace does or locating the implementation of some code. This does not include generating or updating tests.",
+            "examples": [
+              "What does this project do?"
+            ]
+          },
+          {
+            "category": "find_code_in_workspace",
+            "description": "The user wants to locate the implementation of some functionality in their current workspace.",
+            "examples": [
+              "Where is the tree widget implemented?"
+            ]
+          },
+          {
+            "category": "generate_with_workspace_context",
+            "description": "The user wants to generate code based on multiple files in the workspace and did not specify which files to reference.",
+            "examples": [
+              "Create a README for this project."
+            ]
+          }
+        ]
+      },
+      "slashCommand": {
+        "name": "tests",
+        "description": "Generate unit tests for the selected code",
+        "disambiguation": [
+          {
+            "category": "create_tests",
+            "description": "The user wants to generate unit tests.",
+            "examples": [
+              "Generate tests for my selection using pytest."
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_strupcase.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/my_strupcase.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_strupcase.c",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strupcase.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strupcase.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strupcase.c",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1749454429880,
+      "editedFileEvents": [
+        {
+          "eventKind": 3,
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strupcase.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strupcase.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strupcase.c",
+            "scheme": "file"
+          }
+        }
+      ]
+    },
+    {
+      "requestId": "request_6929a17b-163f-4ff5-aa24-21d5369e557a",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 10
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 11
+            },
+            "agent": {
+              "extensionId": {
+                "value": "GitHub.copilot-chat",
+                "_lower": "github.copilot-chat"
+              },
+              "publisherDisplayName": "GitHub",
+              "extensionPublisherId": "GitHub",
+              "extensionDisplayName": "GitHub Copilot Chat",
+              "id": "github.copilot.workspace",
+              "description": "Ask about your workspace",
+              "metadata": {
+                "sampleRequest": "How do I build this project?",
+                "themeIcon": {
+                  "id": "code"
+                },
+                "hasFollowups": true,
+                "supportIssueReporting": false
+              },
+              "name": "workspace",
+              "fullName": "Workspace",
+              "locations": [
+                "panel"
+              ],
+              "modes": [
+                "ask"
+              ],
+              "slashCommands": [
+                {
+                  "name": "explain",
+                  "description": "Explain how the code in your active editor works"
+                },
+                {
+                  "name": "tests",
+                  "description": "Generate unit tests for the selected code",
+                  "disambiguation": [
+                    {
+                      "category": "create_tests",
+                      "description": "The user wants to generate unit tests.",
+                      "examples": [
+                        "Generate tests for my selection using pytest."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "fix",
+                  "description": "Propose a fix for the problems in the selected code",
+                  "sampleRequest": "There is a problem in this code. Rewrite the code to show it with the bug fixed."
+                },
+                {
+                  "name": "new",
+                  "description": "Scaffold code for a new file or project in a workspace",
+                  "sampleRequest": "Create a RESTful API server using typescript",
+                  "isSticky": true,
+                  "disambiguation": [
+                    {
+                      "category": "create_new_workspace_or_extension",
+                      "description": "The user wants to create a complete Visual Studio Code workspace from scratch, such as a new application or a Visual Studio Code extension. Use this category only if the question relates to generating or creating new workspaces in Visual Studio Code. Do not use this category for updating existing code or generating sample code snippets",
+                      "examples": [
+                        "Scaffold a Node server.",
+                        "Create a sample project which uses the fileSystemProvider API.",
+                        "react application"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "newNotebook",
+                  "description": "Create a new Jupyter Notebook",
+                  "sampleRequest": "How do I create a notebook to load data from a csv file?",
+                  "disambiguation": [
+                    {
+                      "category": "create_jupyter_notebook",
+                      "description": "The user wants to create a new Jupyter notebook in Visual Studio Code.",
+                      "examples": [
+                        "Create a notebook to analyze this CSV file."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "setupTests",
+                  "description": "Set up tests in your project (Experimental)",
+                  "sampleRequest": "add playwright tests to my project",
+                  "when": "config.github.copilot.chat.setupTests.enabled",
+                  "disambiguation": [
+                    {
+                      "category": "set_up_tests",
+                      "description": "The user wants to configure project test setup, framework, or test runner. The user does not want to fix their existing tests.",
+                      "examples": [
+                        "Set up tests for this project."
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "disambiguation": [
+                {
+                  "category": "workspace_project_questions",
+                  "description": "The user wants to learn about or update the code or files in their current workspace. Questions in this category may be about understanding what the whole workspace does or locating the implementation of some code. This does not include generating or updating tests.",
+                  "examples": [
+                    "What does this project do?"
+                  ]
+                },
+                {
+                  "category": "find_code_in_workspace",
+                  "description": "The user wants to locate the implementation of some functionality in their current workspace.",
+                  "examples": [
+                    "Where is the tree widget implemented?"
+                  ]
+                },
+                {
+                  "category": "generate_with_workspace_context",
+                  "description": "The user wants to generate code based on multiple files in the workspace and did not specify which files to reference.",
+                  "examples": [
+                    "Create a README for this project."
+                  ]
+                }
+              ]
+            },
+            "kind": "agent"
+          },
+          {
+            "range": {
+              "start": 10,
+              "endExclusive": 11
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 11,
+              "endLineNumber": 1,
+              "endColumn": 12
+            },
+            "text": " ",
+            "kind": "text"
+          },
+          {
+            "range": {
+              "start": 11,
+              "endExclusive": 17
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 12,
+              "endLineNumber": 1,
+              "endColumn": 18
+            },
+            "command": {
+              "name": "tests",
+              "description": "Generate unit tests for the selected code",
+              "disambiguation": [
+                {
+                  "category": "create_tests",
+                  "description": "The user wants to generate unit tests.",
+                  "examples": [
+                    "Generate tests for my selection using pytest."
+                  ]
+                }
+              ]
+            },
+            "kind": "subcommand"
+          },
+          {
+            "range": {
+              "start": 17,
+              "endExclusive": 54
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 18,
+              "endLineNumber": 1,
+              "endColumn": 55
+            },
+            "text": " missing coverage for this branch too",
+            "kind": "text"
+          }
+        ],
+        "text": "@workspace /tests missing coverage for this branch too"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.selection",
+            "name": "file:my_strncpy.c",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_strncpy.c",
+                "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/my_strncpy.c",
+                "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_strncpy.c",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 14,
+                "startColumn": 5,
+                "endLineNumber": 14,
+                "endColumn": 46,
+                "selectionStartLineNumber": 14,
+                "selectionStartColumn": 5,
+                "positionLineNumber": 14,
+                "positionColumn": 46
+              }
+            },
+            "modelDescription": "User's active selection"
+          }
+        ]
+      },
+      "response": [
+        {
+          "kind": "textEditGroup",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strncpy.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strncpy.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strncpy.c",
+            "scheme": "file"
+          },
+          "edits": [
+            [
+              {
+                "text": "Test(my_strncpy, null_dest)",
+                "range": {
+                  "startLineNumber": 29,
+                  "startColumn": 1,
+                  "endLineNumber": 29,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 29,
+                  "startColumn": 28,
+                  "endLineNumber": 29,
+                  "endColumn": 28
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_null(my_strncpy(NULL, \"abc\", 3));",
+                "range": {
+                  "startLineNumber": 30,
+                  "startColumn": 2,
+                  "endLineNumber": 30,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 31,
+                  "startColumn": 48,
+                  "endLineNumber": 31,
+                  "endColumn": 48
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 32,
+                  "startColumn": 2,
+                  "endLineNumber": 32,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strncpy, n_less_than_one)",
+                "range": {
+                  "startLineNumber": 33,
+                  "startColumn": 1,
+                  "endLineNumber": 33,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 34,
+                  "startColumn": 34,
+                  "endLineNumber": 34,
+                  "endColumn": 34
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char dest[10] = \"xxxx\";",
+                "range": {
+                  "startLineNumber": 35,
+                  "startColumn": 2,
+                  "endLineNumber": 35,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_null(my_strncpy(dest, \"abc\", 0));",
+                "range": {
+                  "startLineNumber": 36,
+                  "startColumn": 28,
+                  "endLineNumber": 36,
+                  "endColumn": 28
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 37,
+                  "startColumn": 48,
+                  "endLineNumber": 37,
+                  "endColumn": 48
+                }
+              }
+            ],
+            []
+          ]
+        }
+      ],
+      "responseId": "response_dbd83e2a-0a91-4c68-8862-68b8d93c2591",
+      "result": {
+        "timings": {
+          "totalElapsed": 3776
+        },
+        "metadata": {
+          "codeBlocks": [],
+          "modelMessageId": "3284f3f7-b439-4a82-866a-3425eab0b050",
+          "responseId": "28686a6e-a7cd-4a26-9257-9b5054a181d5",
+          "sessionId": "03b8da73-b2a4-4900-a064-f338e19ddc30",
+          "agentId": "github.copilot.workspace",
+          "command": "tests"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.workspace",
+        "description": "Ask about your workspace",
+        "metadata": {
+          "sampleRequest": "How do I build this project?",
+          "themeIcon": {
+            "id": "code"
+          },
+          "hasFollowups": true,
+          "supportIssueReporting": false
+        },
+        "name": "workspace",
+        "fullName": "Workspace",
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [
+          {
+            "name": "explain",
+            "description": "Explain how the code in your active editor works"
+          },
+          {
+            "name": "tests",
+            "description": "Generate unit tests for the selected code",
+            "disambiguation": [
+              {
+                "category": "create_tests",
+                "description": "The user wants to generate unit tests.",
+                "examples": [
+                  "Generate tests for my selection using pytest."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "fix",
+            "description": "Propose a fix for the problems in the selected code",
+            "sampleRequest": "There is a problem in this code. Rewrite the code to show it with the bug fixed."
+          },
+          {
+            "name": "new",
+            "description": "Scaffold code for a new file or project in a workspace",
+            "sampleRequest": "Create a RESTful API server using typescript",
+            "isSticky": true,
+            "disambiguation": [
+              {
+                "category": "create_new_workspace_or_extension",
+                "description": "The user wants to create a complete Visual Studio Code workspace from scratch, such as a new application or a Visual Studio Code extension. Use this category only if the question relates to generating or creating new workspaces in Visual Studio Code. Do not use this category for updating existing code or generating sample code snippets",
+                "examples": [
+                  "Scaffold a Node server.",
+                  "Create a sample project which uses the fileSystemProvider API.",
+                  "react application"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "newNotebook",
+            "description": "Create a new Jupyter Notebook",
+            "sampleRequest": "How do I create a notebook to load data from a csv file?",
+            "disambiguation": [
+              {
+                "category": "create_jupyter_notebook",
+                "description": "The user wants to create a new Jupyter notebook in Visual Studio Code.",
+                "examples": [
+                  "Create a notebook to analyze this CSV file."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "setupTests",
+            "description": "Set up tests in your project (Experimental)",
+            "sampleRequest": "add playwright tests to my project",
+            "when": "config.github.copilot.chat.setupTests.enabled",
+            "disambiguation": [
+              {
+                "category": "set_up_tests",
+                "description": "The user wants to configure project test setup, framework, or test runner. The user does not want to fix their existing tests.",
+                "examples": [
+                  "Set up tests for this project."
+                ]
+              }
+            ]
+          }
+        ],
+        "disambiguation": [
+          {
+            "category": "workspace_project_questions",
+            "description": "The user wants to learn about or update the code or files in their current workspace. Questions in this category may be about understanding what the whole workspace does or locating the implementation of some code. This does not include generating or updating tests.",
+            "examples": [
+              "What does this project do?"
+            ]
+          },
+          {
+            "category": "find_code_in_workspace",
+            "description": "The user wants to locate the implementation of some functionality in their current workspace.",
+            "examples": [
+              "Where is the tree widget implemented?"
+            ]
+          },
+          {
+            "category": "generate_with_workspace_context",
+            "description": "The user wants to generate code based on multiple files in the workspace and did not specify which files to reference.",
+            "examples": [
+              "Create a README for this project."
+            ]
+          }
+        ]
+      },
+      "slashCommand": {
+        "name": "tests",
+        "description": "Generate unit tests for the selected code",
+        "disambiguation": [
+          {
+            "category": "create_tests",
+            "description": "The user wants to generate unit tests.",
+            "examples": [
+              "Generate tests for my selection using pytest."
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_strncpy.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/my_strncpy.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_strncpy.c",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strncpy.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strncpy.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strncpy.c",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1749454504054,
+      "editedFileEvents": [
+        {
+          "eventKind": 3,
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strupcase.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strupcase.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strupcase.c",
+            "scheme": "file"
+          }
+        }
+      ]
+    },
+    {
+      "requestId": "request_1c1d157b-ce0d-49ab-bfc9-3b6c78a84c64",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 10
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 11
+            },
+            "agent": {
+              "extensionId": {
+                "value": "GitHub.copilot-chat",
+                "_lower": "github.copilot-chat"
+              },
+              "publisherDisplayName": "GitHub",
+              "extensionPublisherId": "GitHub",
+              "extensionDisplayName": "GitHub Copilot Chat",
+              "id": "github.copilot.workspace",
+              "description": "Ask about your workspace",
+              "metadata": {
+                "sampleRequest": "How do I build this project?",
+                "themeIcon": {
+                  "id": "code"
+                },
+                "hasFollowups": true,
+                "supportIssueReporting": false
+              },
+              "name": "workspace",
+              "fullName": "Workspace",
+              "locations": [
+                "panel"
+              ],
+              "modes": [
+                "ask"
+              ],
+              "slashCommands": [
+                {
+                  "name": "explain",
+                  "description": "Explain how the code in your active editor works"
+                },
+                {
+                  "name": "tests",
+                  "description": "Generate unit tests for the selected code",
+                  "disambiguation": [
+                    {
+                      "category": "create_tests",
+                      "description": "The user wants to generate unit tests.",
+                      "examples": [
+                        "Generate tests for my selection using pytest."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "fix",
+                  "description": "Propose a fix for the problems in the selected code",
+                  "sampleRequest": "There is a problem in this code. Rewrite the code to show it with the bug fixed."
+                },
+                {
+                  "name": "new",
+                  "description": "Scaffold code for a new file or project in a workspace",
+                  "sampleRequest": "Create a RESTful API server using typescript",
+                  "isSticky": true,
+                  "disambiguation": [
+                    {
+                      "category": "create_new_workspace_or_extension",
+                      "description": "The user wants to create a complete Visual Studio Code workspace from scratch, such as a new application or a Visual Studio Code extension. Use this category only if the question relates to generating or creating new workspaces in Visual Studio Code. Do not use this category for updating existing code or generating sample code snippets",
+                      "examples": [
+                        "Scaffold a Node server.",
+                        "Create a sample project which uses the fileSystemProvider API.",
+                        "react application"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "newNotebook",
+                  "description": "Create a new Jupyter Notebook",
+                  "sampleRequest": "How do I create a notebook to load data from a csv file?",
+                  "disambiguation": [
+                    {
+                      "category": "create_jupyter_notebook",
+                      "description": "The user wants to create a new Jupyter notebook in Visual Studio Code.",
+                      "examples": [
+                        "Create a notebook to analyze this CSV file."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "setupTests",
+                  "description": "Set up tests in your project (Experimental)",
+                  "sampleRequest": "add playwright tests to my project",
+                  "when": "config.github.copilot.chat.setupTests.enabled",
+                  "disambiguation": [
+                    {
+                      "category": "set_up_tests",
+                      "description": "The user wants to configure project test setup, framework, or test runner. The user does not want to fix their existing tests.",
+                      "examples": [
+                        "Set up tests for this project."
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "disambiguation": [
+                {
+                  "category": "workspace_project_questions",
+                  "description": "The user wants to learn about or update the code or files in their current workspace. Questions in this category may be about understanding what the whole workspace does or locating the implementation of some code. This does not include generating or updating tests.",
+                  "examples": [
+                    "What does this project do?"
+                  ]
+                },
+                {
+                  "category": "find_code_in_workspace",
+                  "description": "The user wants to locate the implementation of some functionality in their current workspace.",
+                  "examples": [
+                    "Where is the tree widget implemented?"
+                  ]
+                },
+                {
+                  "category": "generate_with_workspace_context",
+                  "description": "The user wants to generate code based on multiple files in the workspace and did not specify which files to reference.",
+                  "examples": [
+                    "Create a README for this project."
+                  ]
+                }
+              ]
+            },
+            "kind": "agent"
+          },
+          {
+            "range": {
+              "start": 10,
+              "endExclusive": 11
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 11,
+              "endLineNumber": 1,
+              "endColumn": 12
+            },
+            "text": " ",
+            "kind": "text"
+          },
+          {
+            "range": {
+              "start": 11,
+              "endExclusive": 17
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 12,
+              "endLineNumber": 1,
+              "endColumn": 18
+            },
+            "command": {
+              "name": "tests",
+              "description": "Generate unit tests for the selected code",
+              "disambiguation": [
+                {
+                  "category": "create_tests",
+                  "description": "The user wants to generate unit tests.",
+                  "examples": [
+                    "Generate tests for my selection using pytest."
+                  ]
+                }
+              ]
+            },
+            "kind": "subcommand"
+          },
+          {
+            "range": {
+              "start": 17,
+              "endExclusive": 40
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 18,
+              "endLineNumber": 1,
+              "endColumn": 41
+            },
+            "text": "  and same for this one",
+            "kind": "text"
+          }
+        ],
+        "text": "@workspace /tests  and same for this one"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.selection",
+            "name": "file:my_str_islower.c",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_str_islower.c",
+                "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/my_str_islower.c",
+                "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_str_islower.c",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 10,
+                "startColumn": 5,
+                "endLineNumber": 10,
+                "endColumn": 30,
+                "selectionStartLineNumber": 10,
+                "selectionStartColumn": 5,
+                "positionLineNumber": 10,
+                "positionColumn": 30
+              }
+            },
+            "modelDescription": "User's active selection"
+          }
+        ]
+      },
+      "response": [
+        {
+          "kind": "textEditGroup",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_islower.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_islower.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_islower.c",
+            "scheme": "file"
+          },
+          "edits": [
+            [
+              {
+                "text": "Test(my_islower, returns_1_for_lowercase)",
+                "range": {
+                  "startLineNumber": 56,
+                  "startColumn": 1,
+                  "endLineNumber": 56,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 56,
+                  "startColumn": 42,
+                  "endLineNumber": 56,
+                  "endColumn": 42
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_eq(my_islower('a'), 1);",
+                "range": {
+                  "startLineNumber": 57,
+                  "startColumn": 2,
+                  "endLineNumber": 57,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_eq(my_islower('z'), 1);",
+                "range": {
+                  "startLineNumber": 58,
+                  "startColumn": 38,
+                  "endLineNumber": 58,
+                  "endColumn": 38
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_eq(my_islower('m'), 1);",
+                "range": {
+                  "startLineNumber": 59,
+                  "startColumn": 38,
+                  "endLineNumber": 59,
+                  "endColumn": 38
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 60,
+                  "startColumn": 38,
+                  "endLineNumber": 60,
+                  "endColumn": 38
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 61,
+                  "startColumn": 2,
+                  "endLineNumber": 61,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_islower, returns_0_for_uppercase)",
+                "range": {
+                  "startLineNumber": 62,
+                  "startColumn": 1,
+                  "endLineNumber": 62,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 63,
+                  "startColumn": 42,
+                  "endLineNumber": 63,
+                  "endColumn": 42
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_eq(my_islower('A'), 0);",
+                "range": {
+                  "startLineNumber": 64,
+                  "startColumn": 2,
+                  "endLineNumber": 64,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_eq(my_islower('Z'), 0);",
+                "range": {
+                  "startLineNumber": 65,
+                  "startColumn": 38,
+                  "endLineNumber": 65,
+                  "endColumn": 38
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 66,
+                  "startColumn": 38,
+                  "endLineNumber": 66,
+                  "endColumn": 38
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 67,
+                  "startColumn": 2,
+                  "endLineNumber": 67,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_islower, returns_0_for_non_alpha)",
+                "range": {
+                  "startLineNumber": 68,
+                  "startColumn": 1,
+                  "endLineNumber": 68,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 69,
+                  "startColumn": 42,
+                  "endLineNumber": 69,
+                  "endColumn": 42
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_eq(my_islower('1'), 0);",
+                "range": {
+                  "startLineNumber": 70,
+                  "startColumn": 2,
+                  "endLineNumber": 70,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_eq(my_islower('!'), 0);",
+                "range": {
+                  "startLineNumber": 71,
+                  "startColumn": 38,
+                  "endLineNumber": 71,
+                  "endColumn": 38
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_eq(my_islower(' '), 0);",
+                "range": {
+                  "startLineNumber": 72,
+                  "startColumn": 38,
+                  "endLineNumber": 72,
+                  "endColumn": 38
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_eq(my_islower('\\0'), 0);",
+                "range": {
+                  "startLineNumber": 73,
+                  "startColumn": 38,
+                  "endLineNumber": 73,
+                  "endColumn": 38
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 74,
+                  "startColumn": 39,
+                  "endLineNumber": 74,
+                  "endColumn": 39
+                }
+              }
+            ],
+            []
+          ]
+        }
+      ],
+      "responseId": "response_26ac0e50-4b8a-40f7-9dc7-abade80333da",
+      "result": {
+        "timings": {
+          "totalElapsed": 5594
+        },
+        "metadata": {
+          "codeBlocks": [],
+          "modelMessageId": "d636bb22-2728-40be-9116-1e7af14fc1d5",
+          "responseId": "aa78ff32-0e86-4e22-81a1-188ef1aec1dc",
+          "sessionId": "03b8da73-b2a4-4900-a064-f338e19ddc30",
+          "agentId": "github.copilot.workspace",
+          "command": "tests"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.workspace",
+        "description": "Ask about your workspace",
+        "metadata": {
+          "sampleRequest": "How do I build this project?",
+          "themeIcon": {
+            "id": "code"
+          },
+          "hasFollowups": true,
+          "supportIssueReporting": false
+        },
+        "name": "workspace",
+        "fullName": "Workspace",
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [
+          {
+            "name": "explain",
+            "description": "Explain how the code in your active editor works"
+          },
+          {
+            "name": "tests",
+            "description": "Generate unit tests for the selected code",
+            "disambiguation": [
+              {
+                "category": "create_tests",
+                "description": "The user wants to generate unit tests.",
+                "examples": [
+                  "Generate tests for my selection using pytest."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "fix",
+            "description": "Propose a fix for the problems in the selected code",
+            "sampleRequest": "There is a problem in this code. Rewrite the code to show it with the bug fixed."
+          },
+          {
+            "name": "new",
+            "description": "Scaffold code for a new file or project in a workspace",
+            "sampleRequest": "Create a RESTful API server using typescript",
+            "isSticky": true,
+            "disambiguation": [
+              {
+                "category": "create_new_workspace_or_extension",
+                "description": "The user wants to create a complete Visual Studio Code workspace from scratch, such as a new application or a Visual Studio Code extension. Use this category only if the question relates to generating or creating new workspaces in Visual Studio Code. Do not use this category for updating existing code or generating sample code snippets",
+                "examples": [
+                  "Scaffold a Node server.",
+                  "Create a sample project which uses the fileSystemProvider API.",
+                  "react application"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "newNotebook",
+            "description": "Create a new Jupyter Notebook",
+            "sampleRequest": "How do I create a notebook to load data from a csv file?",
+            "disambiguation": [
+              {
+                "category": "create_jupyter_notebook",
+                "description": "The user wants to create a new Jupyter notebook in Visual Studio Code.",
+                "examples": [
+                  "Create a notebook to analyze this CSV file."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "setupTests",
+            "description": "Set up tests in your project (Experimental)",
+            "sampleRequest": "add playwright tests to my project",
+            "when": "config.github.copilot.chat.setupTests.enabled",
+            "disambiguation": [
+              {
+                "category": "set_up_tests",
+                "description": "The user wants to configure project test setup, framework, or test runner. The user does not want to fix their existing tests.",
+                "examples": [
+                  "Set up tests for this project."
+                ]
+              }
+            ]
+          }
+        ],
+        "disambiguation": [
+          {
+            "category": "workspace_project_questions",
+            "description": "The user wants to learn about or update the code or files in their current workspace. Questions in this category may be about understanding what the whole workspace does or locating the implementation of some code. This does not include generating or updating tests.",
+            "examples": [
+              "What does this project do?"
+            ]
+          },
+          {
+            "category": "find_code_in_workspace",
+            "description": "The user wants to locate the implementation of some functionality in their current workspace.",
+            "examples": [
+              "Where is the tree widget implemented?"
+            ]
+          },
+          {
+            "category": "generate_with_workspace_context",
+            "description": "The user wants to generate code based on multiple files in the workspace and did not specify which files to reference.",
+            "examples": [
+              "Create a README for this project."
+            ]
+          }
+        ]
+      },
+      "slashCommand": {
+        "name": "tests",
+        "description": "Generate unit tests for the selected code",
+        "disambiguation": [
+          {
+            "category": "create_tests",
+            "description": "The user wants to generate unit tests.",
+            "examples": [
+              "Generate tests for my selection using pytest."
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_str_islower.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/my_str_islower.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_str_islower.c",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_islower.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_islower.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_islower.c",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1749454565594,
+      "editedFileEvents": [
+        {
+          "eventKind": 3,
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strncpy.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strncpy.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strncpy.c",
+            "scheme": "file"
+          }
+        }
+      ]
+    }
+  ],
+  "sessionId": "f3d469f2-e052-41f5-b438-55e15aa340ab",
+  "creationDate": 1749454033218,
+  "isImported": false,
+  "lastMessageDate": 1749454565594,
+  "customTitle": "Converting uppercase to lowercase in C code"
+}

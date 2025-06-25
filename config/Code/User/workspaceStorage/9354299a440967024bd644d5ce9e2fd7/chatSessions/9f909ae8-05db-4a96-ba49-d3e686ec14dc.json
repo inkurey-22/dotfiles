@@ -1,0 +1,461 @@
+{
+  "version": 3,
+  "requesterUsername": "inkurey-22",
+  "requesterAvatarIconUri": {
+    "$mid": 1,
+    "path": "/u/146175466",
+    "scheme": "https",
+    "authority": "avatars.githubusercontent.com",
+    "query": "v=4"
+  },
+  "responderUsername": "",
+  "responderAvatarIconUri": {
+    "id": "copilot"
+  },
+  "initialLocation": "panel",
+  "requests": [
+    {
+      "requestId": "request_e3da8a0f-435d-48f6-9412-d96cb60a760c",
+      "message": {
+        "text": "my_showmem.c:55\nMAJOR C-C1: Conditional branching\nA conditionnal block must not contain more than 3 branches.\n\nmy_showmem.c:57\nMAJOR C-C1: Conditional branching\nA conditionnal block must not contain more than 3 branches.\n\nmy_showmem.c:61\nMAJOR C-C1: Conditional branching\nA conditionnal block must not contain more than 3 branches",
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 330
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 11,
+              "endColumn": 59
+            },
+            "text": "my_showmem.c:55\nMAJOR C-C1: Conditional branching\nA conditionnal block must not contain more than 3 branches.\n\nmy_showmem.c:57\nMAJOR C-C1: Conditional branching\nA conditionnal block must not contain more than 3 branches.\n\nmy_showmem.c:61\nMAJOR C-C1: Conditional branching\nA conditionnal block must not contain more than 3 branches",
+            "kind": "text"
+          }
+        ]
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:my_showmem.c",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_showmem.c",
+                "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/my_showmem.c",
+                "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_showmem.c",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 41,
+                "startColumn": 1,
+                "endLineNumber": 76,
+                "endColumn": 1
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "You are getting the \"A conditional block must not contain more than 3 branches\" warning because your code has `if-else` chains with more than 3 branches in a single block. In your code, this mainly happens in the `my_showmem` function and possibly in `print_ascii`.\n\nTo fix this, you can refactor the code to reduce the number of branches per conditional block. Here’s how you can do it:\n\n#### 1. Refactor the inner loop in `my_showmem`\nSplit the logic for printing hex bytes and spaces into separate `if` statements.\n\n#### 2. Refactor `print_ascii`\nNo change needed here, as it only has an `if-else` (2 branches).\n\nHere’s the refactored code for the relevant part:\n\n````c\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_showmem.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/my_showmem.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_showmem.c",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "int my_showmem(char const *str, int size)\n{\n    for (int i = 0; i < size; i += 16) {\n        print_address(i);\n        my_putchar(':');\n        my_putchar(' ');\n        for (int j = 0; j < 16; j++) {\n            if (i + j < size) {\n                print_hex_byte((unsigned char)str[i + j]);\n            }\n            if (i + j >= size) {\n                my_putchar(' ');\n                my_putchar(' ');\n            }\n            if (j % 2 == 1)\n                my_putchar(' ');\n        }\n        print_ascii(str, i, size);\n        my_putchar('\\n');\n    }\n    return 0;\n}\n````\n\nThis way, each `if` is independent and never has more than 2 branches, resolving the C-C1 warning.",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_614dd766-5b30-4ec4-968a-d158859d1d6d",
+      "result": {
+        "timings": {
+          "firstProgress": 933,
+          "totalElapsed": 6156
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "int my_showmem(char const *str, int size)\n{\n    for (int i = 0; i < size; i += 16) {\n        print_address(i);\n        my_putchar(':');\n        my_putchar(' ');\n        for (int j = 0; j < 16; j++) {\n            if (i + j < size) {\n                print_hex_byte((unsigned char)str[i + j]);\n            }\n            if (i + j >= size) {\n                my_putchar(' ');\n                my_putchar(' ');\n            }\n            if (j % 2 == 1)\n                my_putchar(' ');\n        }\n        print_ascii(str, i, size);\n        my_putchar('\\n');\n    }\n    return 0;\n}\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_showmem.c",
+                "scheme": "file"
+              },
+              "language": "c",
+              "markdownBeforeBlock": "You are getting the \"A conditional block must not contain more than 3 branches\" warning because your code has `if-else` chains with more than 3 branches in a single block. In your code, this mainly happens in the `my_showmem` function and possibly in `print_ascii`.\n\nTo fix this, you can refactor the code to reduce the number of branches per conditional block. Here’s how you can do it:\n\n#### 1. Refactor the inner loop in `my_showmem`\nSplit the logic for printing hex bytes and spaces into separate `if` statements.\n\n#### 2. Refactor `print_ascii`\nNo change needed here, as it only has an `if-else` (2 branches).\n\nHere’s the refactored code for the relevant part:\n\n"
+            }
+          ],
+          "modelMessageId": "baca74e2-693a-415d-b518-0f8ee1446996",
+          "responseId": "f8c59fc6-9fa0-4f20-9546-46a8288887ef",
+          "sessionId": "d5319c57-9542-42c8-bbd0-979204711e48",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "inkurey-22",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/146175466",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_showmem.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/my_showmem.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_showmem.c",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1749284032780
+    },
+    {
+      "requestId": "request_4721317f-3fd8-417b-ae26-78c7b11911f2",
+      "message": {
+        "text": "I need to get the second for loop in a helper function",
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 54
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 55
+            },
+            "text": "I need to get the second for loop in a helper function",
+            "kind": "text"
+          }
+        ]
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:my_showmem.c",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_showmem.c",
+                "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/my_showmem.c",
+                "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_showmem.c",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 43,
+                "startColumn": 1,
+                "endLineNumber": 76,
+                "endColumn": 1
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "Certainly! You can move the inner `for` loop (which prints the hex bytes and spaces) into a helper function, for example `print_hex_line`. Here’s how you can refactor your code:\n\n````c\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_showmem.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/my_showmem.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_showmem.c",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "static void print_hex_line(const char *str, int start, int size)\n{\n    for (int j = 0; j < 16; j++) {\n        if (start + j < size) {\n            print_hex_byte((unsigned char)str[start + j]);\n        } else {\n            my_putchar(' ');\n            my_putchar(' ');\n        }\n        if (j % 2 == 1)\n            my_putchar(' ');\n    }\n}\n\nint my_showmem(char const *str, int size)\n{\n    for (int i = 0; i < size; i += 16) {\n        print_address(i);\n        my_putchar(':');\n        my_putchar(' ');\n        print_hex_line(str, i, size);\n        print_ascii(str, i, size);\n        my_putchar('\\n');\n    }\n    return 0;\n}\n````\n\nThis keeps your main function clean and modular.",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_fb8eef2c-7e1c-46d5-b509-f9060f718f49",
+      "result": {
+        "timings": {
+          "firstProgress": 813,
+          "totalElapsed": 5760
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "static void print_hex_line(const char *str, int start, int size)\n{\n    for (int j = 0; j < 16; j++) {\n        if (start + j < size) {\n            print_hex_byte((unsigned char)str[start + j]);\n        } else {\n            my_putchar(' ');\n            my_putchar(' ');\n        }\n        if (j % 2 == 1)\n            my_putchar(' ');\n    }\n}\n\nint my_showmem(char const *str, int size)\n{\n    for (int i = 0; i < size; i += 16) {\n        print_address(i);\n        my_putchar(':');\n        my_putchar(' ');\n        print_hex_line(str, i, size);\n        print_ascii(str, i, size);\n        my_putchar('\\n');\n    }\n    return 0;\n}\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_showmem.c",
+                "scheme": "file"
+              },
+              "language": "c",
+              "markdownBeforeBlock": "Certainly! You can move the inner `for` loop (which prints the hex bytes and spaces) into a helper function, for example `print_hex_line`. Here’s how you can refactor your code:\n\n"
+            }
+          ],
+          "modelMessageId": "46fdc0e8-a443-493b-a2d2-b9863d97ac49",
+          "responseId": "8476ceea-e8e3-4296-a393-8c14c0b6399e",
+          "sessionId": "d5319c57-9542-42c8-bbd0-979204711e48",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "inkurey-22",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/146175466",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_showmem.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/my_showmem.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_showmem.c",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1749284073766
+    }
+  ],
+  "sessionId": "9f909ae8-05db-4a96-ba49-d3e686ec14dc",
+  "creationDate": 1749284031460,
+  "isImported": false,
+  "lastMessageDate": 1749284073766,
+  "customTitle": "Refactoring code to reduce conditional branches"
+}

@@ -1,0 +1,211 @@
+{
+  "version": 3,
+  "requesterUsername": "inkurey-22",
+  "requesterAvatarIconUri": {
+    "$mid": 1,
+    "path": "/u/146175466",
+    "scheme": "https",
+    "authority": "avatars.githubusercontent.com",
+    "query": "v=4"
+  },
+  "responderUsername": "GitHub Copilot",
+  "responderAvatarIconUri": {
+    "id": "copilot"
+  },
+  "initialLocation": "panel",
+  "requests": [
+    {
+      "requestId": "request_51b800fa-cadf-4676-ba74-0da9e9edae20",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 50
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 51
+            },
+            "text": "Which version is faster ? Iterative or recursive ?",
+            "kind": "text"
+          }
+        ],
+        "text": "Which version is faster ? Iterative or recursive ?"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:my_put_nbr.c",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day03/my_put_nbr.c",
+                "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day03/my_put_nbr.c",
+                "path": "/home/curry/Workspace/SEM1/POOL/PART1/day03/my_put_nbr.c",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 26,
+                "startColumn": 1,
+                "endLineNumber": 66,
+                "endColumn": 15
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "The **iterative version** (`my_put_nbr_it`) is generally faster than the **recursive version** (`my_put_nbr2` used in `my_put_nbr`). \n\n### Why?\n- **Recursive version**: Each recursive call adds a new frame to the call stack, which has overhead for function calls and stack management.\n- **Iterative version**: Uses a simple loop and array, avoiding function call overhead.\n\n### In practice\nFor small numbers, the difference is negligible. For very large numbers or in performance-critical code, the iterative version is more efficient and safer (no risk of stack overflow).\n\n**Summary:**  \n`my_put_nbr_it` (iterative) is faster and more efficient than the recursive approach.",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day03/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_b7812182-336b-4340-8c0c-45e2b4acd617",
+      "result": {
+        "timings": {
+          "firstProgress": 971,
+          "totalElapsed": 2244
+        },
+        "metadata": {
+          "codeBlocks": [],
+          "modelMessageId": "c4f84a06-3670-4ccd-8124-b8dce02b42c6",
+          "responseId": "d8f64614-2661-47b4-96e6-ec5160ae7248",
+          "sessionId": "fb17055e-44d2-4a73-9d92-641d644f4a45",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "inkurey-22",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/146175466",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day03/my_put_nbr.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day03/my_put_nbr.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day03/my_put_nbr.c",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1749640081597
+    }
+  ],
+  "sessionId": "8dae4cb7-5f00-449b-a181-887d70d4a7ad",
+  "creationDate": 1749640073762,
+  "isImported": false,
+  "lastMessageDate": 1749640081597,
+  "customTitle": "Iterative vs Recursive Function Performance"
+}

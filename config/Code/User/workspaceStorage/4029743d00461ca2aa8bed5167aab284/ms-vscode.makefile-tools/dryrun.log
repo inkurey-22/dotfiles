@@ -1,0 +1,14 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/curry/Workspace/SEM1/MUL/myhunter'
+gcc -W -Wall -Wextra -Iinclude -Llib -lmy -g   -c -o src/main.o src/main.c
+gcc -W -Wall -Wextra -Iinclude -Llib -lmy -g   -c -o src/game.o src/game.c
+gcc -W -Wall -Wextra -Iinclude -Llib -lmy -g   -c -o src/draw.o src/draw.c
+gcc -W -Wall -Wextra -Iinclude -Llib -lmy -g   -c -o src/birds.o src/birds.c
+gcc -W -Wall -Wextra -Iinclude -Llib -lmy -g   -c -o src/events.o src/events.c
+gcc -W -Wall -Wextra -Iinclude -Llib -lmy -g   -c -o src/textures.o src/textures.c
+gcc -W -Wall -Wextra -Iinclude -Llib -lmy -g   -c -o src/istty.o src/istty.c
+gcc -W -Wall -Wextra -Iinclude -Llib -lmy -g   -c -o src/trigger_end.o src/trigger_end.c
+make -C lib
+gcc -o my_hunter src/main.o src/game.o src/draw.o src/birds.o src/events.o src/textures.o src/istty.o src/trigger_end.o -W -Wall -Wextra -Iinclude -Llib -lmy -g -lcsfml-graphics -lcsfml-window -lcsfml-system -lcsfml-audio
+make: Leaving directory '/home/curry/Workspace/SEM1/MUL/myhunter'
+ 

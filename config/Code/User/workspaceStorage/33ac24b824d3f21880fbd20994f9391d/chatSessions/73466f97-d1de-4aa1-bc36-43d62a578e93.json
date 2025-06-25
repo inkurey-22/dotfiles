@@ -1,0 +1,903 @@
+{
+  "version": 3,
+  "requesterUsername": "inkurey-22",
+  "requesterAvatarIconUri": {
+    "$mid": 1,
+    "path": "/u/146175466",
+    "scheme": "https",
+    "authority": "avatars.githubusercontent.com",
+    "query": "v=4"
+  },
+  "responderUsername": "GitHub Copilot",
+  "responderAvatarIconUri": {
+    "id": "copilot"
+  },
+  "initialLocation": "panel",
+  "requests": [
+    {
+      "requestId": "request_f7330b03-ec93-4ba3-9083-e359488ed311",
+      "message": {
+        "text": "There are 3 kinds of mobs in this game: Mummy, Skeleton and Witch\n✓ All the mummies come bare handed.\n✓ The skeleton always holds an item.\n✓ A witch can either Just hold an item or Nothing.",
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 189
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 4,
+              "endColumn": 51
+            },
+            "text": "There are 3 kinds of mobs in this game: Mummy, Skeleton and Witch\n✓ All the mummies come bare handed.\n✓ The skeleton always holds an item.\n✓ A witch can either Just hold an item or Nothing.",
+            "kind": "text"
+          }
+        ]
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:Game.hs",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+                "external": "file:///home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+                "path": "/home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 19,
+                "endColumn": 1
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "To represent these requirements, you should define a function that returns the item (if any) held by a given mob. Here’s how you can model this in Haskell:\n\n````haskell\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM3/PDG/day03/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+            "external": "file:///home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+            "path": "/home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "-- ...existing code...\n\nmobItem :: Mob -> Maybe Item\nmobItem Mummy     = Nothing\nmobItem Skeleteon = Just Sword    -- or any Item, as per your game logic\nmobItem Witch     = Nothing       -- or Just <item>, depending on the situation\n\n-- Example usage:\n-- mobItem Mummy     == Nothing\n-- mobItem Skeleteon == Just Sword\n-- mobItem Witch     == Nothing\n-- ...existing code...\n````\n\nYou can adjust the logic for `Skeleteon` and `Witch` as needed (e.g., pass the item as a parameter or use a more complex data structure if witches can have variable items). This approach uses `Maybe Item` to represent whether a mob holds an item or not.",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM3/PDG/day03/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_7c745855-bfb5-46be-8e9b-41c1c6e6086c",
+      "result": {
+        "timings": {
+          "firstProgress": 1224,
+          "totalElapsed": 10394
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "-- ...existing code...\n\nmobItem :: Mob -> Maybe Item\nmobItem Mummy     = Nothing\nmobItem Skeleteon = Just Sword    -- or any Item, as per your game logic\nmobItem Witch     = Nothing       -- or Just <item>, depending on the situation\n\n-- Example usage:\n-- mobItem Mummy     == Nothing\n-- mobItem Skeleteon == Just Sword\n-- mobItem Witch     == Nothing\n-- ...existing code...\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+                "scheme": "file"
+              },
+              "language": "haskell",
+              "markdownBeforeBlock": "To represent these requirements, you should define a function that returns the item (if any) held by a given mob. Here’s how you can model this in Haskell:\n\n"
+            }
+          ],
+          "modelMessageId": "8785c068-1d42-4b34-b741-2d70e7eac517",
+          "responseId": "cfb3d29e-c4ad-4899-aeaa-8faa2ffa42d9",
+          "sessionId": "fd74288f-804b-4eee-bafe-3df340fc9689",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "inkurey-22",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/146175466",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+              "external": "file:///home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+              "path": "/home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 19,
+              "endColumn": 1
+            }
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1748523049205
+    },
+    {
+      "requestId": "request_b445a09d-bb93-42af-8fff-3735e506bd4c",
+      "message": {
+        "text": "Isn't it possible via modifying the data structures themselves ?",
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 64
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 65
+            },
+            "text": "Isn't it possible via modifying the data structures themselves ?",
+            "kind": "text"
+          }
+        ]
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:Game.hs",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+                "external": "file:///home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+                "path": "/home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 19,
+                "endColumn": 1
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "Yes, you can encode the item-holding rules directly in your data structures. Here’s how you can do it:\n\n````haskell\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM3/PDG/day03/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+            "external": "file:///home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+            "path": "/home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "-- ...existing code...\n\ndata Mob\n    = Mummy\n    | Skeleteon Item      -- Skeleton always holds an Item\n    | Witch (Maybe Item)  -- Witch may hold an Item or Nothing\n    deriving (Eq, Show)\n\n-- ...existing code...\n````\n\n**Explanation:**\n- `Mummy` has no item.\n- `Skeleteon` always has an `Item`.\n- `Witch` can have `Nothing` or `Just Item`.\n\nThis approach enforces the rules at the type level, making invalid states (like a Mummy with an item) impossible.",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM3/PDG/day03/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_79ead3fa-d6a9-4465-9576-d7f3a1916582",
+      "result": {
+        "timings": {
+          "firstProgress": 919,
+          "totalElapsed": 2901
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "-- ...existing code...\n\ndata Mob\n    = Mummy\n    | Skeleteon Item      -- Skeleton always holds an Item\n    | Witch (Maybe Item)  -- Witch may hold an Item or Nothing\n    deriving (Eq, Show)\n\n-- ...existing code...\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+                "scheme": "file"
+              },
+              "language": "haskell",
+              "markdownBeforeBlock": "Yes, you can encode the item-holding rules directly in your data structures. Here’s how you can do it:\n\n"
+            }
+          ],
+          "modelMessageId": "55e15a49-8133-4e90-abfd-fe3c9aafabf8",
+          "responseId": "d093c833-0379-4549-95a1-37e6a572337a",
+          "sessionId": "fd74288f-804b-4eee-bafe-3df340fc9689",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "inkurey-22",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/146175466",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+              "external": "file:///home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+              "path": "/home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 19,
+              "endColumn": 1
+            }
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1748523084313
+    },
+    {
+      "requestId": "request_78c34939-369f-47cc-8463-c60a3364cf67",
+      "message": {
+        "text": "But some also come in different varieties, therefore you must implement the following functions\nto create each specific type of mob:\n\ncreateMummy :: Mob\ncreateArcher :: Mob (skeleton with bow)\ncreateKnight :: Mob (skeleton with sword)\ncreateWitch :: Mob (witch with Nothing)\ncreateSorceress :: Mob (witch with magicwand)",
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 320
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 8,
+              "endColumn": 46
+            },
+            "text": "But some also come in different varieties, therefore you must implement the following functions\nto create each specific type of mob:\n\ncreateMummy :: Mob\ncreateArcher :: Mob (skeleton with bow)\ncreateKnight :: Mob (skeleton with sword)\ncreateWitch :: Mob (witch with Nothing)\ncreateSorceress :: Mob (witch with magicwand)",
+            "kind": "text"
+          }
+        ]
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:Game.hs",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+                "external": "file:///home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+                "path": "/home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 21,
+                "endColumn": 1
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "Here’s how you can implement the requested constructors for each specific mob type:\n\n````haskell\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM3/PDG/day03/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+            "external": "file:///home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+            "path": "/home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "-- ...existing code...\n\ncreateMummy :: Mob\ncreateMummy = Mummy\n\ncreateArcher :: Mob\ncreateArcher = Skeleteon Bow\n\ncreateKnight :: Mob\ncreateKnight = Skeleteon Sword\n\ncreateWitch :: Mob\ncreateWitch = Witch Nothing\n\ncreateSorceress :: Mob\ncreateSorceress = Witch (Just MagicWand)\n\n-- ...existing code...\n````",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM3/PDG/day03/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_108cb596-6452-4bbd-8165-22f627076c27",
+      "result": {
+        "timings": {
+          "firstProgress": 1327,
+          "totalElapsed": 3375
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "-- ...existing code...\n\ncreateMummy :: Mob\ncreateMummy = Mummy\n\ncreateArcher :: Mob\ncreateArcher = Skeleteon Bow\n\ncreateKnight :: Mob\ncreateKnight = Skeleteon Sword\n\ncreateWitch :: Mob\ncreateWitch = Witch Nothing\n\ncreateSorceress :: Mob\ncreateSorceress = Witch (Just MagicWand)\n\n-- ...existing code...\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+                "scheme": "file"
+              },
+              "language": "haskell",
+              "markdownBeforeBlock": "Here’s how you can implement the requested constructors for each specific mob type:\n\n"
+            }
+          ],
+          "modelMessageId": "8d05a694-3fde-402a-88d0-a3f18e69db26",
+          "responseId": "75e60e96-244a-429a-ba00-ba262e1ad482",
+          "sessionId": "fd74288f-804b-4eee-bafe-3df340fc9689",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "inkurey-22",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/146175466",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+              "external": "file:///home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+              "path": "/home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 21,
+              "endColumn": 1
+            }
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1748523232896
+    },
+    {
+      "requestId": "request_c9b6d0c2-6ea8-49f4-a6c1-b57de260c853",
+      "message": {
+        "text": "ghci> equip Bow Witch \n<interactive>:2:11: error: [GHC-83865]\n    • Couldn't match expected type ‘Mob’\n                  with actual type ‘Maybe Item -> Mob’\n    • Probable cause: ‘Witch’ is applied to too few arguments\n      In the second argument of ‘equip’, namely ‘Witch’\n      In the expression: equip Bow Witch\n      In an equation for ‘it’: it = equip Bow Witch",
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 368
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 8,
+              "endColumn": 52
+            },
+            "text": "ghci> equip Bow Witch \n<interactive>:2:11: error: [GHC-83865]\n    • Couldn't match expected type ‘Mob’\n                  with actual type ‘Maybe Item -> Mob’\n    • Probable cause: ‘Witch’ is applied to too few arguments\n      In the second argument of ‘equip’, namely ‘Witch’\n      In the expression: equip Bow Witch\n      In an equation for ‘it’: it = equip Bow Witch",
+            "kind": "text"
+          }
+        ]
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:Game.hs",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+                "external": "file:///home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+                "path": "/home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 12,
+                "startColumn": 1,
+                "endLineNumber": 48,
+                "endColumn": 1
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "The error occurs because `Witch` is a data constructor that requires a `Maybe Item` argument.  \nYou should pass a value like `Witch Nothing` or `Witch (Just Bow)` instead of just `Witch`.\n\nFor example, this works:\n```haskell\nequip Bow (Witch Nothing)\n```\nor\n```haskell\nequip Bow (Witch (Just MagicWand))\n```\n\nIf you want to create a witch without an item, use `Witch Nothing`.  \nIf you want to equip a witch, pass an existing `Mob` value, not just the constructor.",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM3/PDG/day03/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_f12dea99-156e-472b-ba25-852167d9e4ce",
+      "result": {
+        "timings": {
+          "firstProgress": 993,
+          "totalElapsed": 3033
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "equip Bow (Witch Nothing)\n",
+              "language": "haskell",
+              "markdownBeforeBlock": "The error occurs because `Witch` is a data constructor that requires a `Maybe Item` argument.  \nYou should pass a value like `Witch Nothing` or `Witch (Just Bow)` instead of just `Witch`.\n\nFor example, this works:\n"
+            },
+            {
+              "code": "equip Bow (Witch (Just MagicWand))\n",
+              "language": "haskell",
+              "markdownBeforeBlock": "or\n"
+            }
+          ],
+          "modelMessageId": "9cc384ab-04f7-4dd3-a274-13401abc84cc",
+          "responseId": "b07e73f4-9032-4b50-bc92-f32069fac10f",
+          "sessionId": "fd74288f-804b-4eee-bafe-3df340fc9689",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "inkurey-22",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/146175466",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+            "external": "file:///home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+            "path": "/home/curry/Workspace/SEM3/PDG/day03/Game.hs",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1748523885701
+    }
+  ],
+  "sessionId": "73466f97-d1de-4aa1-bc36-43d62a578e93",
+  "creationDate": 1748523048051,
+  "isImported": false,
+  "lastMessageDate": 1748523885701,
+  "customTitle": "Modeling mob item possession in Haskell"
+}

@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/curry/Workspace/SEM3/PDG/day02'
+ghc -o doop DoOp.hs
+make: Leaving directory '/home/curry/Workspace/SEM3/PDG/day02'
+ 

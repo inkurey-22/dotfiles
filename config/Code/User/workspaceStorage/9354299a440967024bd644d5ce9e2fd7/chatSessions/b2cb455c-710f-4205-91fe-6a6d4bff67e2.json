@@ -1,0 +1,3827 @@
+{
+  "version": 3,
+  "requesterUsername": "inkurey-22",
+  "requesterAvatarIconUri": {
+    "$mid": 1,
+    "path": "/u/146175466",
+    "scheme": "https",
+    "authority": "avatars.githubusercontent.com",
+    "query": "v=4"
+  },
+  "responderUsername": "GitHub Copilot",
+  "responderAvatarIconUri": {
+    "id": "copilot"
+  },
+  "initialLocation": "panel",
+  "requests": [
+    {
+      "requestId": "request_08f425a8-9a1c-4a92-8211-8d13fdd74054",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 14
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 15
+            },
+            "text": "my_str_islower",
+            "kind": "text"
+          }
+        ],
+        "text": "my_str_islower"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:test_my_str_islower.c",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_islower.c",
+                "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_islower.c",
+                "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_islower.c",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 25,
+                "endColumn": 1
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "Here is a typical implementation for `my_str_islower`. It returns `1` if the string is empty or contains only lowercase letters, and `0` otherwise:\n\n````c\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/my_str_islower.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_str_islower.c",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "int my_str_islower(char const *str)\n{\n    if (!str)\n        return 1;\n    for (int i = 0; str[i] != '\\0'; i++) {\n        if (str[i] < 'a' || str[i] > 'z')\n            return 0;\n    }\n    return 1;\n}\n````",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_7b9e400f-44fb-474f-a628-dffc126f3885",
+      "result": {
+        "timings": {
+          "firstProgress": 905,
+          "totalElapsed": 1971
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "int my_str_islower(char const *str)\n{\n    if (!str)\n        return 1;\n    for (int i = 0; str[i] != '\\0'; i++) {\n        if (str[i] < 'a' || str[i] > 'z')\n            return 0;\n    }\n    return 1;\n}\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_str_islower.c",
+                "scheme": "file"
+              },
+              "language": "c",
+              "markdownBeforeBlock": "Here is a typical implementation for `my_str_islower`. It returns `1` if the string is empty or contains only lowercase letters, and `0` otherwise:\n\n"
+            }
+          ],
+          "modelMessageId": "ab187c7a-d4c9-477d-995b-85557a9bb6d7",
+          "responseId": "bcef0611-2db3-47e7-a56d-b2732652e01d",
+          "sessionId": "35ece595-4cc3-41a4-bfd0-5aa0f82b51c1",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "inkurey-22",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/146175466",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_islower.c",
+              "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_islower.c",
+              "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_islower.c",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 25,
+              "endColumn": 1
+            }
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1749403189004
+    },
+    {
+      "requestId": "request_85bbb4c5-a1e6-4bff-b767-f3661bfbd56f",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 37
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 38
+            },
+            "text": "Yes; but what about unit tests for it",
+            "kind": "text"
+          }
+        ],
+        "text": "Yes; but what about unit tests for it"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:test_my_str_islower.c",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_islower.c",
+                "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_islower.c",
+                "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_islower.c",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 25,
+                "endColumn": 1
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "kind": "textEditGroup",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_islower.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_islower.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_islower.c",
+            "scheme": "file"
+          },
+          "edits": [
+            [
+              {
+                "text": "#include <criterion/criterion.h>",
+                "range": {
+                  "startLineNumber": 1,
+                  "startColumn": 1,
+                  "endLineNumber": 1,
+                  "endColumn": 3
+                }
+              }
+            ],
+            [
+              {
+                "text": "int my_str_islower(char const *str);",
+                "range": {
+                  "startLineNumber": 2,
+                  "startColumn": 1,
+                  "endLineNumber": 2,
+                  "endColumn": 25
+                }
+              }
+            ],
+            [
+              {
+                "text": "",
+                "range": {
+                  "startLineNumber": 3,
+                  "startColumn": 1,
+                  "endLineNumber": 3,
+                  "endColumn": 48
+                }
+              }
+            ],
+            [
+              {
+                "text": "Test(my_str_islower, all_lower)",
+                "range": {
+                  "startLineNumber": 4,
+                  "startColumn": 1,
+                  "endLineNumber": 4,
+                  "endColumn": 21
+                }
+              }
+            ],
+            [
+              {
+                "text": "{",
+                "range": {
+                  "startLineNumber": 5,
+                  "startColumn": 1,
+                  "endLineNumber": 5,
+                  "endColumn": 21
+                }
+              }
+            ],
+            [
+              {
+                "text": "    cr_assert_eq(my_str_islower(\"hello\"), 1);",
+                "range": {
+                  "startLineNumber": 6,
+                  "startColumn": 1,
+                  "endLineNumber": 6,
+                  "endColumn": 3
+                }
+              }
+            ],
+            [
+              {
+                "text": "}",
+                "range": {
+                  "startLineNumber": 7,
+                  "startColumn": 1,
+                  "endLineNumber": 7,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "",
+                "range": {
+                  "startLineNumber": 8,
+                  "startColumn": 1,
+                  "endLineNumber": 8,
+                  "endColumn": 33
+                }
+              }
+            ],
+            [
+              {
+                "text": "Test(my_str_islower, mixed_case)",
+                "range": {
+                  "startLineNumber": 9,
+                  "startColumn": 1,
+                  "endLineNumber": 9,
+                  "endColumn": 37
+                }
+              }
+            ],
+            [
+              {
+                "text": "{",
+                "range": {
+                  "startLineNumber": 10,
+                  "startColumn": 1,
+                  "endLineNumber": 10,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "    cr_assert_eq(my_str_islower(\"heLlo\"), 0);",
+                "range": {
+                  "startLineNumber": 11,
+                  "startColumn": 1,
+                  "endLineNumber": 11,
+                  "endColumn": 32
+                }
+              }
+            ],
+            [
+              {
+                "text": "}",
+                "range": {
+                  "startLineNumber": 12,
+                  "startColumn": 1,
+                  "endLineNumber": 12,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "",
+                "range": {
+                  "startLineNumber": 13,
+                  "startColumn": 1,
+                  "endLineNumber": 13,
+                  "endColumn": 46
+                }
+              }
+            ],
+            [
+              {
+                "text": "Test(my_str_islower, empty_string)",
+                "range": {
+                  "startLineNumber": 14,
+                  "startColumn": 1,
+                  "endLineNumber": 14,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "{",
+                "range": {
+                  "startLineNumber": 15,
+                  "startColumn": 1,
+                  "endLineNumber": 15,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "    cr_assert_eq(my_str_islower(\"\"), 1);",
+                "range": {
+                  "startLineNumber": 16,
+                  "startColumn": 1,
+                  "endLineNumber": 16,
+                  "endColumn": 33
+                }
+              }
+            ],
+            [
+              {
+                "text": "}",
+                "range": {
+                  "startLineNumber": 17,
+                  "startColumn": 1,
+                  "endLineNumber": 17,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "",
+                "range": {
+                  "startLineNumber": 18,
+                  "startColumn": 1,
+                  "endLineNumber": 18,
+                  "endColumn": 46
+                }
+              }
+            ],
+            [
+              {
+                "text": "Test(my_str_islower, all_uppercase)",
+                "range": {
+                  "startLineNumber": 19,
+                  "startColumn": 1,
+                  "endLineNumber": 19,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "{",
+                "range": {
+                  "startLineNumber": 20,
+                  "startColumn": 1,
+                  "endLineNumber": 20,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "    cr_assert_eq(my_str_islower(\"HELLO\"), 0);",
+                "range": {
+                  "startLineNumber": 21,
+                  "startColumn": 1,
+                  "endLineNumber": 21,
+                  "endColumn": 35
+                }
+              }
+            ],
+            [
+              {
+                "text": "}",
+                "range": {
+                  "startLineNumber": 22,
+                  "startColumn": 1,
+                  "endLineNumber": 22,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "",
+                "range": {
+                  "startLineNumber": 23,
+                  "startColumn": 1,
+                  "endLineNumber": 23,
+                  "endColumn": 41
+                }
+              }
+            ],
+            [
+              {
+                "text": "Test(my_str_islower, numbers_and_symbols)",
+                "range": {
+                  "startLineNumber": 24,
+                  "startColumn": 1,
+                  "endLineNumber": 24,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 24,
+                  "startColumn": 42,
+                  "endLineNumber": 24,
+                  "endColumn": 42
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_eq(my_str_islower(\"hello123\"), 0);",
+                "range": {
+                  "startLineNumber": 25,
+                  "startColumn": 2,
+                  "endLineNumber": 25,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_eq(my_str_islower(\"hello!\"), 0);",
+                "range": {
+                  "startLineNumber": 26,
+                  "startColumn": 49,
+                  "endLineNumber": 26,
+                  "endColumn": 49
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 27,
+                  "startColumn": 47,
+                  "endLineNumber": 27,
+                  "endColumn": 47
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 28,
+                  "startColumn": 2,
+                  "endLineNumber": 28,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_str_islower, single_lowercase_char)",
+                "range": {
+                  "startLineNumber": 29,
+                  "startColumn": 1,
+                  "endLineNumber": 29,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 30,
+                  "startColumn": 44,
+                  "endLineNumber": 30,
+                  "endColumn": 44
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_eq(my_str_islower(\"a\"), 1);",
+                "range": {
+                  "startLineNumber": 31,
+                  "startColumn": 2,
+                  "endLineNumber": 31,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 32,
+                  "startColumn": 42,
+                  "endLineNumber": 32,
+                  "endColumn": 42
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 33,
+                  "startColumn": 2,
+                  "endLineNumber": 33,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_str_islower, single_uppercase_char)",
+                "range": {
+                  "startLineNumber": 34,
+                  "startColumn": 1,
+                  "endLineNumber": 34,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 35,
+                  "startColumn": 44,
+                  "endLineNumber": 35,
+                  "endColumn": 44
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_eq(my_str_islower(\"A\"), 0);",
+                "range": {
+                  "startLineNumber": 36,
+                  "startColumn": 2,
+                  "endLineNumber": 36,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 37,
+                  "startColumn": 42,
+                  "endLineNumber": 37,
+                  "endColumn": 42
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 38,
+                  "startColumn": 2,
+                  "endLineNumber": 38,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_str_islower, only_symbols)",
+                "range": {
+                  "startLineNumber": 39,
+                  "startColumn": 1,
+                  "endLineNumber": 39,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 40,
+                  "startColumn": 35,
+                  "endLineNumber": 40,
+                  "endColumn": 35
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_eq(my_str_islower(\"!@#$\"), 0);",
+                "range": {
+                  "startLineNumber": 41,
+                  "startColumn": 2,
+                  "endLineNumber": 41,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 42,
+                  "startColumn": 45,
+                  "endLineNumber": 42,
+                  "endColumn": 45
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 43,
+                  "startColumn": 2,
+                  "endLineNumber": 43,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_str_islower, long_lowercase_string)",
+                "range": {
+                  "startLineNumber": 44,
+                  "startColumn": 1,
+                  "endLineNumber": 44,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 45,
+                  "startColumn": 44,
+                  "endLineNumber": 45,
+                  "endColumn": 44
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_eq(my_str_islower(\"abcdefghijklmnopqrstuvwxyz\"), 1);",
+                "range": {
+                  "startLineNumber": 46,
+                  "startColumn": 2,
+                  "endLineNumber": 46,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 47,
+                  "startColumn": 67,
+                  "endLineNumber": 47,
+                  "endColumn": 67
+                }
+              }
+            ],
+            []
+          ]
+        }
+      ],
+      "responseId": "response_2891e754-0cfd-4407-b8de-2508a020cb82",
+      "result": {
+        "timings": {
+          "totalElapsed": 2620
+        },
+        "metadata": {
+          "codeBlocks": [],
+          "modelMessageId": "812c9164-364d-407e-a09f-ac1ba38be42c",
+          "responseId": "26cba28b-e8bd-4895-bae5-dcac9f6a1c4b",
+          "sessionId": "f1de9c60-d570-4c11-a268-0661e172e561",
+          "agentId": "github.copilot.workspace",
+          "command": "tests"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.workspace",
+        "description": "Ask about your workspace",
+        "metadata": {
+          "sampleRequest": "How do I build this project?",
+          "themeIcon": {
+            "id": "code"
+          },
+          "hasFollowups": true,
+          "supportIssueReporting": false
+        },
+        "name": "workspace",
+        "fullName": "Workspace",
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [
+          {
+            "name": "explain",
+            "description": "Explain how the code in your active editor works"
+          },
+          {
+            "name": "tests",
+            "description": "Generate unit tests for the selected code",
+            "disambiguation": [
+              {
+                "category": "create_tests",
+                "description": "The user wants to generate unit tests.",
+                "examples": [
+                  "Generate tests for my selection using pytest."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "fix",
+            "description": "Propose a fix for the problems in the selected code",
+            "sampleRequest": "There is a problem in this code. Rewrite the code to show it with the bug fixed."
+          },
+          {
+            "name": "new",
+            "description": "Scaffold code for a new file or project in a workspace",
+            "sampleRequest": "Create a RESTful API server using typescript",
+            "isSticky": true,
+            "disambiguation": [
+              {
+                "category": "create_new_workspace_or_extension",
+                "description": "The user wants to create a complete Visual Studio Code workspace from scratch, such as a new application or a Visual Studio Code extension. Use this category only if the question relates to generating or creating new workspaces in Visual Studio Code. Do not use this category for updating existing code or generating sample code snippets",
+                "examples": [
+                  "Scaffold a Node server.",
+                  "Create a sample project which uses the fileSystemProvider API.",
+                  "react application"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "newNotebook",
+            "description": "Create a new Jupyter Notebook",
+            "sampleRequest": "How do I create a notebook to load data from a csv file?",
+            "disambiguation": [
+              {
+                "category": "create_jupyter_notebook",
+                "description": "The user wants to create a new Jupyter notebook in Visual Studio Code.",
+                "examples": [
+                  "Create a notebook to analyze this CSV file."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "setupTests",
+            "description": "Set up tests in your project (Experimental)",
+            "sampleRequest": "add playwright tests to my project",
+            "when": "config.github.copilot.chat.setupTests.enabled",
+            "disambiguation": [
+              {
+                "category": "set_up_tests",
+                "description": "The user wants to configure project test setup, framework, or test runner. The user does not want to fix their existing tests.",
+                "examples": [
+                  "Set up tests for this project."
+                ]
+              }
+            ]
+          }
+        ],
+        "disambiguation": [
+          {
+            "category": "workspace_project_questions",
+            "description": "The user wants to learn about or update the code or files in their current workspace. Questions in this category may be about understanding what the whole workspace does or locating the implementation of some code. This does not include generating or updating tests.",
+            "examples": [
+              "What does this project do?"
+            ]
+          },
+          {
+            "category": "find_code_in_workspace",
+            "description": "The user wants to locate the implementation of some functionality in their current workspace.",
+            "examples": [
+              "Where is the tree widget implemented?"
+            ]
+          },
+          {
+            "category": "generate_with_workspace_context",
+            "description": "The user wants to generate code based on multiple files in the workspace and did not specify which files to reference.",
+            "examples": [
+              "Create a README for this project."
+            ]
+          }
+        ]
+      },
+      "slashCommand": {
+        "name": "tests",
+        "description": "Generate unit tests for the selected code",
+        "disambiguation": [
+          {
+            "category": "create_tests",
+            "description": "The user wants to generate unit tests.",
+            "examples": [
+              "Generate tests for my selection using pytest."
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_str_islower.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/my_str_islower.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_str_islower.c",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_islower.c",
+              "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_islower.c",
+              "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_islower.c",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 25,
+              "endColumn": 1
+            }
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1749403211887
+    },
+    {
+      "requestId": "request_9b9f604f-7413-4822-93b2-6fe170e1adfe",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 31
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 32
+            },
+            "text": "What about my_str_isprintable .",
+            "kind": "text"
+          }
+        ],
+        "text": "What about my_str_isprintable ."
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:test_my_str_isprintable.c",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_isprintable.c",
+                "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_isprintable.c",
+                "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_isprintable.c",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 26,
+                "endColumn": 1
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "kind": "textEditGroup",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_isprintable.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_isprintable.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_isprintable.c",
+            "scheme": "file"
+          },
+          "edits": [
+            [
+              {
+                "text": "#include <criterion/criterion.h>",
+                "range": {
+                  "startLineNumber": 1,
+                  "startColumn": 1,
+                  "endLineNumber": 1,
+                  "endColumn": 3
+                }
+              }
+            ],
+            [
+              {
+                "text": "int my_str_isprintable(char const *str);",
+                "range": {
+                  "startLineNumber": 2,
+                  "startColumn": 1,
+                  "endLineNumber": 2,
+                  "endColumn": 25
+                }
+              }
+            ],
+            [
+              {
+                "text": "",
+                "range": {
+                  "startLineNumber": 3,
+                  "startColumn": 1,
+                  "endLineNumber": 3,
+                  "endColumn": 48
+                }
+              }
+            ],
+            [
+              {
+                "text": "Test(my_str_isprintable, all_printable)",
+                "range": {
+                  "startLineNumber": 4,
+                  "startColumn": 1,
+                  "endLineNumber": 4,
+                  "endColumn": 21
+                }
+              }
+            ],
+            [
+              {
+                "text": "{",
+                "range": {
+                  "startLineNumber": 5,
+                  "startColumn": 1,
+                  "endLineNumber": 5,
+                  "endColumn": 21
+                }
+              }
+            ],
+            [
+              {
+                "text": "    cr_assert_eq(my_str_isprintable(\"Hello, World!\"), 1);",
+                "range": {
+                  "startLineNumber": 6,
+                  "startColumn": 1,
+                  "endLineNumber": 6,
+                  "endColumn": 3
+                }
+              }
+            ],
+            [
+              {
+                "text": "}",
+                "range": {
+                  "startLineNumber": 7,
+                  "startColumn": 1,
+                  "endLineNumber": 7,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "",
+                "range": {
+                  "startLineNumber": 8,
+                  "startColumn": 1,
+                  "endLineNumber": 8,
+                  "endColumn": 33
+                }
+              }
+            ],
+            [
+              {
+                "text": "Test(my_str_isprintable, contains_non_printable)",
+                "range": {
+                  "startLineNumber": 9,
+                  "startColumn": 1,
+                  "endLineNumber": 9,
+                  "endColumn": 41
+                }
+              }
+            ],
+            [
+              {
+                "text": "{",
+                "range": {
+                  "startLineNumber": 10,
+                  "startColumn": 1,
+                  "endLineNumber": 10,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "    cr_assert_eq(my_str_isprintable(\"Hello\\x01World\"), 0);",
+                "range": {
+                  "startLineNumber": 11,
+                  "startColumn": 1,
+                  "endLineNumber": 11,
+                  "endColumn": 40
+                }
+              }
+            ],
+            [
+              {
+                "text": "    cr_assert_eq(my_str_isprintable(\"Hello\\x7FWorld\"), 0);",
+                "range": {
+                  "startLineNumber": 12,
+                  "startColumn": 1,
+                  "endLineNumber": 12,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "}",
+                "range": {
+                  "startLineNumber": 13,
+                  "startColumn": 1,
+                  "endLineNumber": 13,
+                  "endColumn": 58
+                }
+              }
+            ],
+            [
+              {
+                "text": "",
+                "range": {
+                  "startLineNumber": 14,
+                  "startColumn": 1,
+                  "endLineNumber": 14,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "Test(my_str_isprintable, empty_string)",
+                "range": {
+                  "startLineNumber": 15,
+                  "startColumn": 1,
+                  "endLineNumber": 15,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "{",
+                "range": {
+                  "startLineNumber": 16,
+                  "startColumn": 1,
+                  "endLineNumber": 16,
+                  "endColumn": 49
+                }
+              }
+            ],
+            [
+              {
+                "text": "    cr_assert_eq(my_str_isprintable(\"\"), 1);",
+                "range": {
+                  "startLineNumber": 17,
+                  "startColumn": 1,
+                  "endLineNumber": 17,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "}",
+                "range": {
+                  "startLineNumber": 18,
+                  "startColumn": 1,
+                  "endLineNumber": 18,
+                  "endColumn": 59
+                }
+              }
+            ],
+            [
+              {
+                "text": "",
+                "range": {
+                  "startLineNumber": 19,
+                  "startColumn": 1,
+                  "endLineNumber": 19,
+                  "endColumn": 59
+                }
+              }
+            ],
+            [
+              {
+                "text": "Test(my_str_isprintable, only_printable_ascii)",
+                "range": {
+                  "startLineNumber": 20,
+                  "startColumn": 1,
+                  "endLineNumber": 20,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "{",
+                "range": {
+                  "startLineNumber": 21,
+                  "startColumn": 1,
+                  "endLineNumber": 21,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "    cr_assert_eq(my_str_isprintable(\"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+-=[]{}|;':,.<>/?`~\\\"\\\\ \"), 1);",
+                "range": {
+                  "startLineNumber": 22,
+                  "startColumn": 1,
+                  "endLineNumber": 22,
+                  "endColumn": 39
+                }
+              }
+            ],
+            [
+              {
+                "text": "}",
+                "range": {
+                  "startLineNumber": 23,
+                  "startColumn": 1,
+                  "endLineNumber": 23,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "",
+                "range": {
+                  "startLineNumber": 24,
+                  "startColumn": 1,
+                  "endLineNumber": 24,
+                  "endColumn": 45
+                }
+              }
+            ],
+            [
+              {
+                "text": "Test(my_str_isprintable, only_non_printable_ascii)",
+                "range": {
+                  "startLineNumber": 25,
+                  "startColumn": 1,
+                  "endLineNumber": 25,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 25,
+                  "startColumn": 51,
+                  "endLineNumber": 25,
+                  "endColumn": 51
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_eq(my_str_isprintable(\"\\x01\\x02\\x03\\x04\\x05\"), 0);",
+                "range": {
+                  "startLineNumber": 26,
+                  "startColumn": 2,
+                  "endLineNumber": 26,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 27,
+                  "startColumn": 65,
+                  "endLineNumber": 27,
+                  "endColumn": 65
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 28,
+                  "startColumn": 2,
+                  "endLineNumber": 28,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_str_isprintable, printable_and_non_printable_mix)",
+                "range": {
+                  "startLineNumber": 29,
+                  "startColumn": 1,
+                  "endLineNumber": 29,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 30,
+                  "startColumn": 58,
+                  "endLineNumber": 30,
+                  "endColumn": 58
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_eq(my_str_isprintable(\"abc\\x10def\"), 0);",
+                "range": {
+                  "startLineNumber": 31,
+                  "startColumn": 2,
+                  "endLineNumber": 31,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 32,
+                  "startColumn": 55,
+                  "endLineNumber": 32,
+                  "endColumn": 55
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 33,
+                  "startColumn": 2,
+                  "endLineNumber": 33,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_str_isprintable, single_printable_char)",
+                "range": {
+                  "startLineNumber": 34,
+                  "startColumn": 1,
+                  "endLineNumber": 34,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 35,
+                  "startColumn": 48,
+                  "endLineNumber": 35,
+                  "endColumn": 48
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_eq(my_str_isprintable(\"A\"), 1);",
+                "range": {
+                  "startLineNumber": 36,
+                  "startColumn": 2,
+                  "endLineNumber": 36,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 37,
+                  "startColumn": 46,
+                  "endLineNumber": 37,
+                  "endColumn": 46
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 38,
+                  "startColumn": 2,
+                  "endLineNumber": 38,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_str_isprintable, single_non_printable_char)",
+                "range": {
+                  "startLineNumber": 39,
+                  "startColumn": 1,
+                  "endLineNumber": 39,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 40,
+                  "startColumn": 52,
+                  "endLineNumber": 40,
+                  "endColumn": 52
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_eq(my_str_isprintable(\"\\x1F\"), 0);",
+                "range": {
+                  "startLineNumber": 41,
+                  "startColumn": 2,
+                  "endLineNumber": 41,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 42,
+                  "startColumn": 49,
+                  "endLineNumber": 42,
+                  "endColumn": 49
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 43,
+                  "startColumn": 2,
+                  "endLineNumber": 43,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_str_isprintable, string_with_space)",
+                "range": {
+                  "startLineNumber": 44,
+                  "startColumn": 1,
+                  "endLineNumber": 44,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 45,
+                  "startColumn": 44,
+                  "endLineNumber": 45,
+                  "endColumn": 44
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_eq(my_str_isprintable(\" \"), 1);",
+                "range": {
+                  "startLineNumber": 46,
+                  "startColumn": 2,
+                  "endLineNumber": 46,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 47,
+                  "startColumn": 46,
+                  "endLineNumber": 47,
+                  "endColumn": 46
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 48,
+                  "startColumn": 2,
+                  "endLineNumber": 48,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_str_isprintable, string_with_del)",
+                "range": {
+                  "startLineNumber": 49,
+                  "startColumn": 1,
+                  "endLineNumber": 49,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 50,
+                  "startColumn": 42,
+                  "endLineNumber": 50,
+                  "endColumn": 42
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_eq(my_str_isprintable(\"abc\\x7F\"), 0);",
+                "range": {
+                  "startLineNumber": 51,
+                  "startColumn": 2,
+                  "endLineNumber": 51,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 52,
+                  "startColumn": 52,
+                  "endLineNumber": 52,
+                  "endColumn": 52
+                }
+              }
+            ],
+            []
+          ]
+        }
+      ],
+      "responseId": "response_f3b3632c-4fae-4446-8f4a-7585a272ac27",
+      "result": {
+        "timings": {
+          "totalElapsed": 4128
+        },
+        "metadata": {
+          "codeBlocks": [],
+          "modelMessageId": "11d52cad-be7e-4522-ab9d-9004ffddb651",
+          "responseId": "9aa42423-ce52-4184-8b4d-b4e7cb4ee6af",
+          "sessionId": "f1de9c60-d570-4c11-a268-0661e172e561",
+          "agentId": "github.copilot.workspace",
+          "command": "tests"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.workspace",
+        "description": "Ask about your workspace",
+        "metadata": {
+          "sampleRequest": "How do I build this project?",
+          "themeIcon": {
+            "id": "code"
+          },
+          "hasFollowups": true,
+          "supportIssueReporting": false
+        },
+        "name": "workspace",
+        "fullName": "Workspace",
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [
+          {
+            "name": "explain",
+            "description": "Explain how the code in your active editor works"
+          },
+          {
+            "name": "tests",
+            "description": "Generate unit tests for the selected code",
+            "disambiguation": [
+              {
+                "category": "create_tests",
+                "description": "The user wants to generate unit tests.",
+                "examples": [
+                  "Generate tests for my selection using pytest."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "fix",
+            "description": "Propose a fix for the problems in the selected code",
+            "sampleRequest": "There is a problem in this code. Rewrite the code to show it with the bug fixed."
+          },
+          {
+            "name": "new",
+            "description": "Scaffold code for a new file or project in a workspace",
+            "sampleRequest": "Create a RESTful API server using typescript",
+            "isSticky": true,
+            "disambiguation": [
+              {
+                "category": "create_new_workspace_or_extension",
+                "description": "The user wants to create a complete Visual Studio Code workspace from scratch, such as a new application or a Visual Studio Code extension. Use this category only if the question relates to generating or creating new workspaces in Visual Studio Code. Do not use this category for updating existing code or generating sample code snippets",
+                "examples": [
+                  "Scaffold a Node server.",
+                  "Create a sample project which uses the fileSystemProvider API.",
+                  "react application"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "newNotebook",
+            "description": "Create a new Jupyter Notebook",
+            "sampleRequest": "How do I create a notebook to load data from a csv file?",
+            "disambiguation": [
+              {
+                "category": "create_jupyter_notebook",
+                "description": "The user wants to create a new Jupyter notebook in Visual Studio Code.",
+                "examples": [
+                  "Create a notebook to analyze this CSV file."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "setupTests",
+            "description": "Set up tests in your project (Experimental)",
+            "sampleRequest": "add playwright tests to my project",
+            "when": "config.github.copilot.chat.setupTests.enabled",
+            "disambiguation": [
+              {
+                "category": "set_up_tests",
+                "description": "The user wants to configure project test setup, framework, or test runner. The user does not want to fix their existing tests.",
+                "examples": [
+                  "Set up tests for this project."
+                ]
+              }
+            ]
+          }
+        ],
+        "disambiguation": [
+          {
+            "category": "workspace_project_questions",
+            "description": "The user wants to learn about or update the code or files in their current workspace. Questions in this category may be about understanding what the whole workspace does or locating the implementation of some code. This does not include generating or updating tests.",
+            "examples": [
+              "What does this project do?"
+            ]
+          },
+          {
+            "category": "find_code_in_workspace",
+            "description": "The user wants to locate the implementation of some functionality in their current workspace.",
+            "examples": [
+              "Where is the tree widget implemented?"
+            ]
+          },
+          {
+            "category": "generate_with_workspace_context",
+            "description": "The user wants to generate code based on multiple files in the workspace and did not specify which files to reference.",
+            "examples": [
+              "Create a README for this project."
+            ]
+          }
+        ]
+      },
+      "slashCommand": {
+        "name": "tests",
+        "description": "Generate unit tests for the selected code",
+        "disambiguation": [
+          {
+            "category": "create_tests",
+            "description": "The user wants to generate unit tests.",
+            "examples": [
+              "Generate tests for my selection using pytest."
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_str_isprintable.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/my_str_isprintable.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_str_isprintable.c",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_isprintable.c",
+              "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_isprintable.c",
+              "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_isprintable.c",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 26,
+              "endColumn": 1
+            }
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1749403240767,
+      "editedFileEvents": [
+        {
+          "eventKind": 3,
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_islower.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_islower.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_islower.c",
+            "scheme": "file"
+          }
+        }
+      ]
+    },
+    {
+      "requestId": "request_4f2e18db-9b81-4274-abf5-ececaa52d8d6",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 22
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 23
+            },
+            "text": "And my_strcapitalize ?",
+            "kind": "text"
+          }
+        ],
+        "text": "And my_strcapitalize ?"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/my_strcapitalize.c",
+            "value": {
+              "$mid": 1,
+              "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_strcapitalize.c",
+              "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/my_strcapitalize.c",
+              "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_strcapitalize.c",
+              "scheme": "file"
+            },
+            "name": "my_strcapitalize.c",
+            "omittedState": 0
+          },
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:test_my_strcapitalize.c",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strcapitalize.c",
+                "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strcapitalize.c",
+                "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strcapitalize.c",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 26,
+                "endColumn": 1
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "kind": "textEditGroup",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strcapitalize.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strcapitalize.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strcapitalize.c",
+            "scheme": "file"
+          },
+          "edits": [
+            [
+              {
+                "text": "#include <criterion/criterion.h>",
+                "range": {
+                  "startLineNumber": 1,
+                  "startColumn": 1,
+                  "endLineNumber": 1,
+                  "endColumn": 3
+                }
+              }
+            ],
+            [
+              {
+                "text": "char *my_strcapitalize(char *str);",
+                "range": {
+                  "startLineNumber": 2,
+                  "startColumn": 1,
+                  "endLineNumber": 2,
+                  "endColumn": 25
+                }
+              }
+            ],
+            [
+              {
+                "text": "",
+                "range": {
+                  "startLineNumber": 3,
+                  "startColumn": 1,
+                  "endLineNumber": 3,
+                  "endColumn": 48
+                }
+              }
+            ],
+            [
+              {
+                "text": "Test(my_strcapitalize, basic)",
+                "range": {
+                  "startLineNumber": 4,
+                  "startColumn": 1,
+                  "endLineNumber": 4,
+                  "endColumn": 21
+                }
+              }
+            ],
+            [
+              {
+                "text": "{",
+                "range": {
+                  "startLineNumber": 5,
+                  "startColumn": 1,
+                  "endLineNumber": 5,
+                  "endColumn": 23
+                }
+              }
+            ],
+            [
+              {
+                "text": "    char sentence[] = \"hey, how are you? 42WORds forty-two; fifty+one\";",
+                "range": {
+                  "startLineNumber": 6,
+                  "startColumn": 1,
+                  "endLineNumber": 6,
+                  "endColumn": 3
+                }
+              }
+            ],
+            [
+              {
+                "text": "    my_strcapitalize(sentence);",
+                "range": {
+                  "startLineNumber": 7,
+                  "startColumn": 1,
+                  "endLineNumber": 7,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "    cr_assert_str_eq(sentence,",
+                "range": {
+                  "startLineNumber": 8,
+                  "startColumn": 1,
+                  "endLineNumber": 8,
+                  "endColumn": 35
+                }
+              }
+            ],
+            [
+              {
+                "text": "                     \"Hey, How Are You? 42words Forty-Two; Fifty+One\");",
+                "range": {
+                  "startLineNumber": 9,
+                  "startColumn": 1,
+                  "endLineNumber": 9,
+                  "endColumn": 20
+                }
+              }
+            ],
+            [
+              {
+                "text": "}",
+                "range": {
+                  "startLineNumber": 10,
+                  "startColumn": 1,
+                  "endLineNumber": 10,
+                  "endColumn": 33
+                }
+              }
+            ],
+            [
+              {
+                "text": "Test(my_strcapitalize, null_string)",
+                "range": {
+                  "startLineNumber": 12,
+                  "startColumn": 1,
+                  "endLineNumber": 12,
+                  "endColumn": 30
+                }
+              }
+            ],
+            [
+              {
+                "text": "    char sentence[] = {0};",
+                "range": {
+                  "startLineNumber": 14,
+                  "startColumn": 1,
+                  "endLineNumber": 14,
+                  "endColumn": 72
+                }
+              }
+            ],
+            [
+              {
+                "text": "    cr_assert_str_eq(sentence, \"\");",
+                "range": {
+                  "startLineNumber": 16,
+                  "startColumn": 1,
+                  "endLineNumber": 16,
+                  "endColumn": 31
+                }
+              }
+            ],
+            [
+              {
+                "text": "}",
+                "range": {
+                  "startLineNumber": 17,
+                  "startColumn": 1,
+                  "endLineNumber": 17,
+                  "endColumn": 72
+                }
+              }
+            ],
+            [
+              {
+                "text": "",
+                "range": {
+                  "startLineNumber": 18,
+                  "startColumn": 1,
+                  "endLineNumber": 18,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "Test(my_strcapitalize, already_capitalized)",
+                "range": {
+                  "startLineNumber": 19,
+                  "startColumn": 1,
+                  "endLineNumber": 19,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "{",
+                "range": {
+                  "startLineNumber": 20,
+                  "startColumn": 1,
+                  "endLineNumber": 20,
+                  "endColumn": 37
+                }
+              }
+            ],
+            [
+              {
+                "text": "    char sentence[] = \"Hello World\";",
+                "range": {
+                  "startLineNumber": 21,
+                  "startColumn": 1,
+                  "endLineNumber": 21,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "    my_strcapitalize(sentence);",
+                "range": {
+                  "startLineNumber": 22,
+                  "startColumn": 1,
+                  "endLineNumber": 22,
+                  "endColumn": 27
+                }
+              }
+            ],
+            [
+              {
+                "text": "    cr_assert_str_eq(sentence, \"Hello World\");",
+                "range": {
+                  "startLineNumber": 23,
+                  "startColumn": 1,
+                  "endLineNumber": 23,
+                  "endColumn": 32
+                }
+              }
+            ],
+            [
+              {
+                "text": "}",
+                "range": {
+                  "startLineNumber": 24,
+                  "startColumn": 1,
+                  "endLineNumber": 24,
+                  "endColumn": 36
+                }
+              }
+            ],
+            [
+              {
+                "text": "",
+                "range": {
+                  "startLineNumber": 25,
+                  "startColumn": 1,
+                  "endLineNumber": 25,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strcapitalize, all_uppercase)",
+                "range": {
+                  "startLineNumber": 25,
+                  "startColumn": 1,
+                  "endLineNumber": 25,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 26,
+                  "startColumn": 38,
+                  "endLineNumber": 26,
+                  "endColumn": 38
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char sentence[] = \"ALL UPPERCASE SENTENCE\";",
+                "range": {
+                  "startLineNumber": 27,
+                  "startColumn": 2,
+                  "endLineNumber": 27,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    my_strcapitalize(sentence);",
+                "range": {
+                  "startLineNumber": 28,
+                  "startColumn": 48,
+                  "endLineNumber": 28,
+                  "endColumn": 48
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_str_eq(sentence, \"All Uppercase Sentence\");",
+                "range": {
+                  "startLineNumber": 29,
+                  "startColumn": 32,
+                  "endLineNumber": 29,
+                  "endColumn": 32
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 30,
+                  "startColumn": 58,
+                  "endLineNumber": 30,
+                  "endColumn": 58
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 31,
+                  "startColumn": 2,
+                  "endLineNumber": 31,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strcapitalize, all_lowercase)",
+                "range": {
+                  "startLineNumber": 32,
+                  "startColumn": 1,
+                  "endLineNumber": 32,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 33,
+                  "startColumn": 38,
+                  "endLineNumber": 33,
+                  "endColumn": 38
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char sentence[] = \"all lowercase sentence\";",
+                "range": {
+                  "startLineNumber": 34,
+                  "startColumn": 2,
+                  "endLineNumber": 34,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    my_strcapitalize(sentence);",
+                "range": {
+                  "startLineNumber": 35,
+                  "startColumn": 48,
+                  "endLineNumber": 35,
+                  "endColumn": 48
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_str_eq(sentence, \"All Lowercase Sentence\");",
+                "range": {
+                  "startLineNumber": 36,
+                  "startColumn": 32,
+                  "endLineNumber": 36,
+                  "endColumn": 32
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 37,
+                  "startColumn": 58,
+                  "endLineNumber": 37,
+                  "endColumn": 58
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 38,
+                  "startColumn": 2,
+                  "endLineNumber": 38,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strcapitalize, numbers_and_letters)",
+                "range": {
+                  "startLineNumber": 39,
+                  "startColumn": 1,
+                  "endLineNumber": 39,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 40,
+                  "startColumn": 44,
+                  "endLineNumber": 40,
+                  "endColumn": 44
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char sentence[] = \"123abc 456DEF\";",
+                "range": {
+                  "startLineNumber": 41,
+                  "startColumn": 2,
+                  "endLineNumber": 41,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    my_strcapitalize(sentence);",
+                "range": {
+                  "startLineNumber": 42,
+                  "startColumn": 39,
+                  "endLineNumber": 42,
+                  "endColumn": 39
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_str_eq(sentence, \"123abc 456def\");",
+                "range": {
+                  "startLineNumber": 43,
+                  "startColumn": 32,
+                  "endLineNumber": 43,
+                  "endColumn": 32
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 44,
+                  "startColumn": 49,
+                  "endLineNumber": 44,
+                  "endColumn": 49
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 45,
+                  "startColumn": 2,
+                  "endLineNumber": 45,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strcapitalize, only_symbols)",
+                "range": {
+                  "startLineNumber": 46,
+                  "startColumn": 1,
+                  "endLineNumber": 46,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 47,
+                  "startColumn": 37,
+                  "endLineNumber": 47,
+                  "endColumn": 37
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char sentence[] = \"!@#$%^&*()\";",
+                "range": {
+                  "startLineNumber": 48,
+                  "startColumn": 2,
+                  "endLineNumber": 48,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    my_strcapitalize(sentence);",
+                "range": {
+                  "startLineNumber": 49,
+                  "startColumn": 36,
+                  "endLineNumber": 49,
+                  "endColumn": 36
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_str_eq(sentence, \"!@#$%^&*()\");",
+                "range": {
+                  "startLineNumber": 50,
+                  "startColumn": 32,
+                  "endLineNumber": 50,
+                  "endColumn": 32
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 51,
+                  "startColumn": 46,
+                  "endLineNumber": 51,
+                  "endColumn": 46
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 52,
+                  "startColumn": 2,
+                  "endLineNumber": 52,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strcapitalize, empty_string)",
+                "range": {
+                  "startLineNumber": 53,
+                  "startColumn": 1,
+                  "endLineNumber": 53,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 54,
+                  "startColumn": 37,
+                  "endLineNumber": 54,
+                  "endColumn": 37
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char sentence[] = \"\";",
+                "range": {
+                  "startLineNumber": 55,
+                  "startColumn": 2,
+                  "endLineNumber": 55,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    my_strcapitalize(sentence);",
+                "range": {
+                  "startLineNumber": 56,
+                  "startColumn": 26,
+                  "endLineNumber": 56,
+                  "endColumn": 26
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_str_eq(sentence, \"\");",
+                "range": {
+                  "startLineNumber": 57,
+                  "startColumn": 32,
+                  "endLineNumber": 57,
+                  "endColumn": 32
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 58,
+                  "startColumn": 36,
+                  "endLineNumber": 58,
+                  "endColumn": 36
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 59,
+                  "startColumn": 2,
+                  "endLineNumber": 59,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strcapitalize, single_letter)",
+                "range": {
+                  "startLineNumber": 60,
+                  "startColumn": 1,
+                  "endLineNumber": 60,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 61,
+                  "startColumn": 38,
+                  "endLineNumber": 61,
+                  "endColumn": 38
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char sentence[] = \"a\";",
+                "range": {
+                  "startLineNumber": 62,
+                  "startColumn": 2,
+                  "endLineNumber": 62,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    my_strcapitalize(sentence);",
+                "range": {
+                  "startLineNumber": 63,
+                  "startColumn": 27,
+                  "endLineNumber": 63,
+                  "endColumn": 27
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_str_eq(sentence, \"A\");",
+                "range": {
+                  "startLineNumber": 64,
+                  "startColumn": 32,
+                  "endLineNumber": 64,
+                  "endColumn": 32
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 65,
+                  "startColumn": 37,
+                  "endLineNumber": 65,
+                  "endColumn": 37
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 66,
+                  "startColumn": 2,
+                  "endLineNumber": 66,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strcapitalize, single_non_alnum)",
+                "range": {
+                  "startLineNumber": 67,
+                  "startColumn": 1,
+                  "endLineNumber": 67,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 68,
+                  "startColumn": 41,
+                  "endLineNumber": 68,
+                  "endColumn": 41
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char sentence[] = \"-\";",
+                "range": {
+                  "startLineNumber": 69,
+                  "startColumn": 2,
+                  "endLineNumber": 69,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    my_strcapitalize(sentence);",
+                "range": {
+                  "startLineNumber": 70,
+                  "startColumn": 27,
+                  "endLineNumber": 70,
+                  "endColumn": 27
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_str_eq(sentence, \"-\");",
+                "range": {
+                  "startLineNumber": 71,
+                  "startColumn": 32,
+                  "endLineNumber": 71,
+                  "endColumn": 32
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 72,
+                  "startColumn": 37,
+                  "endLineNumber": 72,
+                  "endColumn": 37
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 73,
+                  "startColumn": 2,
+                  "endLineNumber": 73,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strcapitalize, mixed_separators)",
+                "range": {
+                  "startLineNumber": 74,
+                  "startColumn": 1,
+                  "endLineNumber": 74,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n{",
+                "range": {
+                  "startLineNumber": 75,
+                  "startColumn": 41,
+                  "endLineNumber": 75,
+                  "endColumn": 41
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char sentence[] = \"hello-world+foo_bar\";",
+                "range": {
+                  "startLineNumber": 76,
+                  "startColumn": 2,
+                  "endLineNumber": 76,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    my_strcapitalize(sentence);",
+                "range": {
+                  "startLineNumber": 77,
+                  "startColumn": 45,
+                  "endLineNumber": 77,
+                  "endColumn": 45
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_str_eq(sentence, \"Hello-World+Foo_Bar\");",
+                "range": {
+                  "startLineNumber": 78,
+                  "startColumn": 32,
+                  "endLineNumber": 78,
+                  "endColumn": 32
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 79,
+                  "startColumn": 55,
+                  "endLineNumber": 79,
+                  "endColumn": 55
+                }
+              }
+            ],
+            []
+          ]
+        }
+      ],
+      "responseId": "response_767444c9-017b-4a39-9495-548344cbc922",
+      "result": {
+        "timings": {
+          "totalElapsed": 13519
+        },
+        "metadata": {
+          "codeBlocks": [],
+          "modelMessageId": "4bda5932-e938-4878-9836-01914d9704d2",
+          "responseId": "32fc971f-1324-4682-b60c-d58cc14cc5cf",
+          "sessionId": "f1de9c60-d570-4c11-a268-0661e172e561",
+          "agentId": "github.copilot.workspace",
+          "command": "tests"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.workspace",
+        "description": "Ask about your workspace",
+        "metadata": {
+          "sampleRequest": "How do I build this project?",
+          "themeIcon": {
+            "id": "code"
+          },
+          "hasFollowups": true,
+          "supportIssueReporting": false
+        },
+        "name": "workspace",
+        "fullName": "Workspace",
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [
+          {
+            "name": "explain",
+            "description": "Explain how the code in your active editor works"
+          },
+          {
+            "name": "tests",
+            "description": "Generate unit tests for the selected code",
+            "disambiguation": [
+              {
+                "category": "create_tests",
+                "description": "The user wants to generate unit tests.",
+                "examples": [
+                  "Generate tests for my selection using pytest."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "fix",
+            "description": "Propose a fix for the problems in the selected code",
+            "sampleRequest": "There is a problem in this code. Rewrite the code to show it with the bug fixed."
+          },
+          {
+            "name": "new",
+            "description": "Scaffold code for a new file or project in a workspace",
+            "sampleRequest": "Create a RESTful API server using typescript",
+            "isSticky": true,
+            "disambiguation": [
+              {
+                "category": "create_new_workspace_or_extension",
+                "description": "The user wants to create a complete Visual Studio Code workspace from scratch, such as a new application or a Visual Studio Code extension. Use this category only if the question relates to generating or creating new workspaces in Visual Studio Code. Do not use this category for updating existing code or generating sample code snippets",
+                "examples": [
+                  "Scaffold a Node server.",
+                  "Create a sample project which uses the fileSystemProvider API.",
+                  "react application"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "newNotebook",
+            "description": "Create a new Jupyter Notebook",
+            "sampleRequest": "How do I create a notebook to load data from a csv file?",
+            "disambiguation": [
+              {
+                "category": "create_jupyter_notebook",
+                "description": "The user wants to create a new Jupyter notebook in Visual Studio Code.",
+                "examples": [
+                  "Create a notebook to analyze this CSV file."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "setupTests",
+            "description": "Set up tests in your project (Experimental)",
+            "sampleRequest": "add playwright tests to my project",
+            "when": "config.github.copilot.chat.setupTests.enabled",
+            "disambiguation": [
+              {
+                "category": "set_up_tests",
+                "description": "The user wants to configure project test setup, framework, or test runner. The user does not want to fix their existing tests.",
+                "examples": [
+                  "Set up tests for this project."
+                ]
+              }
+            ]
+          }
+        ],
+        "disambiguation": [
+          {
+            "category": "workspace_project_questions",
+            "description": "The user wants to learn about or update the code or files in their current workspace. Questions in this category may be about understanding what the whole workspace does or locating the implementation of some code. This does not include generating or updating tests.",
+            "examples": [
+              "What does this project do?"
+            ]
+          },
+          {
+            "category": "find_code_in_workspace",
+            "description": "The user wants to locate the implementation of some functionality in their current workspace.",
+            "examples": [
+              "Where is the tree widget implemented?"
+            ]
+          },
+          {
+            "category": "generate_with_workspace_context",
+            "description": "The user wants to generate code based on multiple files in the workspace and did not specify which files to reference.",
+            "examples": [
+              "Create a README for this project."
+            ]
+          }
+        ]
+      },
+      "slashCommand": {
+        "name": "tests",
+        "description": "Generate unit tests for the selected code",
+        "disambiguation": [
+          {
+            "category": "create_tests",
+            "description": "The user wants to generate unit tests.",
+            "examples": [
+              "Generate tests for my selection using pytest."
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_strcapitalize.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/my_strcapitalize.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_strcapitalize.c",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strcapitalize.c",
+              "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strcapitalize.c",
+              "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strcapitalize.c",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 26,
+              "endColumn": 1
+            }
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1749403294026,
+      "editedFileEvents": [
+        {
+          "eventKind": 3,
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_isprintable.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_isprintable.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_str_isprintable.c",
+            "scheme": "file"
+          }
+        }
+      ]
+    },
+    {
+      "requestId": "request_6596ba77-0ea2-4428-b958-2287102f86fb",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 233
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 5,
+              "endColumn": 38
+            },
+            "text": "[----] tests/test_my_strstr.c:52: Assertion Failed\n[----]   \n[----]   The expression (as strings) (my_strstr(str, to_find)) == (((void *)0)) is false: actual=`(null)` expected=`(null)`.\n[----]   \n[FAIL] my_strstr::both_empty: (0.01s)",
+            "kind": "text"
+          }
+        ],
+        "text": "[----] tests/test_my_strstr.c:52: Assertion Failed\n[----]   \n[----]   The expression (as strings) (my_strstr(str, to_find)) == (((void *)0)) is false: actual=`(null)` expected=`(null)`.\n[----]   \n[FAIL] my_strstr::both_empty: (0.01s)"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/my_strstr.c",
+            "value": {
+              "$mid": 1,
+              "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_strstr.c",
+              "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/my_strstr.c",
+              "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_strstr.c",
+              "scheme": "file"
+            },
+            "name": "my_strstr.c",
+            "omittedState": 0
+          },
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:test_my_strstr.c",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strstr.c",
+                "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strstr.c",
+                "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strstr.c",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 29,
+                "startColumn": 1,
+                "endLineNumber": 54,
+                "endColumn": 1
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "kind": "textEditGroup",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strstr.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strstr.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strstr.c",
+            "scheme": "file"
+          },
+          "edits": [
+            [
+              {
+                "text": "// According to the implementation, searching for an empty string returns str",
+                "range": {
+                  "startLineNumber": 49,
+                  "startColumn": 1,
+                  "endLineNumber": 49,
+                  "endColumn": 30
+                }
+              }
+            ],
+            [
+              {
+                "text": "Test(my_strstr, both_empty) {",
+                "range": {
+                  "startLineNumber": 50,
+                  "startColumn": 1,
+                  "endLineNumber": 50,
+                  "endColumn": 21
+                }
+              }
+            ],
+            [
+              {
+                "text": "    char str[] = \"\";",
+                "range": {
+                  "startLineNumber": 51,
+                  "startColumn": 1,
+                  "endLineNumber": 51,
+                  "endColumn": 25
+                }
+              }
+            ],
+            [
+              {
+                "text": "    char to_find[] = \"\";",
+                "range": {
+                  "startLineNumber": 52,
+                  "startColumn": 1,
+                  "endLineNumber": 52,
+                  "endColumn": 53
+                }
+              }
+            ],
+            [
+              {
+                "text": "    cr_assert_str_eq(my_strstr(str, to_find), \"\");",
+                "range": {
+                  "startLineNumber": 53,
+                  "startColumn": 1,
+                  "endLineNumber": 53,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 53,
+                  "startColumn": 51,
+                  "endLineNumber": 53,
+                  "endColumn": 51
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 54,
+                  "startColumn": 2,
+                  "endLineNumber": 54,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strstr, to_find_longer_than_str) {",
+                "range": {
+                  "startLineNumber": 55,
+                  "startColumn": 1,
+                  "endLineNumber": 55,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char str[] = \"abc\";",
+                "range": {
+                  "startLineNumber": 56,
+                  "startColumn": 43,
+                  "endLineNumber": 56,
+                  "endColumn": 43
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char to_find[] = \"abcdef\";",
+                "range": {
+                  "startLineNumber": 57,
+                  "startColumn": 24,
+                  "endLineNumber": 57,
+                  "endColumn": 24
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_null(my_strstr(str, to_find));",
+                "range": {
+                  "startLineNumber": 58,
+                  "startColumn": 31,
+                  "endLineNumber": 58,
+                  "endColumn": 31
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 59,
+                  "startColumn": 45,
+                  "endLineNumber": 59,
+                  "endColumn": 45
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 60,
+                  "startColumn": 2,
+                  "endLineNumber": 60,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strstr, str_null) {",
+                "range": {
+                  "startLineNumber": 61,
+                  "startColumn": 1,
+                  "endLineNumber": 61,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char *str = NULL;",
+                "range": {
+                  "startLineNumber": 62,
+                  "startColumn": 28,
+                  "endLineNumber": 62,
+                  "endColumn": 28
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char to_find[] = \"abc\";",
+                "range": {
+                  "startLineNumber": 63,
+                  "startColumn": 22,
+                  "endLineNumber": 63,
+                  "endColumn": 22
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_null(my_strstr(str, to_find));",
+                "range": {
+                  "startLineNumber": 64,
+                  "startColumn": 28,
+                  "endLineNumber": 64,
+                  "endColumn": 28
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 65,
+                  "startColumn": 45,
+                  "endLineNumber": 65,
+                  "endColumn": 45
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 66,
+                  "startColumn": 2,
+                  "endLineNumber": 66,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strstr, to_find_null) {",
+                "range": {
+                  "startLineNumber": 67,
+                  "startColumn": 1,
+                  "endLineNumber": 67,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char str[] = \"Hello World\";",
+                "range": {
+                  "startLineNumber": 68,
+                  "startColumn": 32,
+                  "endLineNumber": 68,
+                  "endColumn": 32
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char *to_find = NULL;",
+                "range": {
+                  "startLineNumber": 69,
+                  "startColumn": 32,
+                  "endLineNumber": 69,
+                  "endColumn": 32
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_str_eq(my_strstr(str, to_find), str);",
+                "range": {
+                  "startLineNumber": 70,
+                  "startColumn": 26,
+                  "endLineNumber": 70,
+                  "endColumn": 26
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 71,
+                  "startColumn": 52,
+                  "endLineNumber": 71,
+                  "endColumn": 52
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 72,
+                  "startColumn": 2,
+                  "endLineNumber": 72,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strstr, partial_match) {",
+                "range": {
+                  "startLineNumber": 73,
+                  "startColumn": 1,
+                  "endLineNumber": 73,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char str[] = \"abcdefg\";",
+                "range": {
+                  "startLineNumber": 74,
+                  "startColumn": 33,
+                  "endLineNumber": 74,
+                  "endColumn": 33
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char to_find[] = \"cde\";",
+                "range": {
+                  "startLineNumber": 75,
+                  "startColumn": 28,
+                  "endLineNumber": 75,
+                  "endColumn": 28
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_str_eq(my_strstr(str, to_find), \"cdefg\");",
+                "range": {
+                  "startLineNumber": 76,
+                  "startColumn": 28,
+                  "endLineNumber": 76,
+                  "endColumn": 28
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 77,
+                  "startColumn": 56,
+                  "endLineNumber": 77,
+                  "endColumn": 56
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 78,
+                  "startColumn": 2,
+                  "endLineNumber": 78,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strstr, no_match_at_all) {",
+                "range": {
+                  "startLineNumber": 79,
+                  "startColumn": 1,
+                  "endLineNumber": 79,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char str[] = \"abcdefg\";",
+                "range": {
+                  "startLineNumber": 80,
+                  "startColumn": 35,
+                  "endLineNumber": 80,
+                  "endColumn": 35
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char to_find[] = \"xyz\";",
+                "range": {
+                  "startLineNumber": 81,
+                  "startColumn": 28,
+                  "endLineNumber": 81,
+                  "endColumn": 28
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_null(my_strstr(str, to_find));",
+                "range": {
+                  "startLineNumber": 82,
+                  "startColumn": 28,
+                  "endLineNumber": 82,
+                  "endColumn": 28
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 83,
+                  "startColumn": 45,
+                  "endLineNumber": 83,
+                  "endColumn": 45
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 84,
+                  "startColumn": 2,
+                  "endLineNumber": 84,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strstr, match_full_string) {",
+                "range": {
+                  "startLineNumber": 85,
+                  "startColumn": 1,
+                  "endLineNumber": 85,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char str[] = \"abcdefg\";",
+                "range": {
+                  "startLineNumber": 86,
+                  "startColumn": 37,
+                  "endLineNumber": 86,
+                  "endColumn": 37
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char to_find[] = \"abcdefg\";",
+                "range": {
+                  "startLineNumber": 87,
+                  "startColumn": 28,
+                  "endLineNumber": 87,
+                  "endColumn": 28
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_str_eq(my_strstr(str, to_find), \"abcdefg\");",
+                "range": {
+                  "startLineNumber": 88,
+                  "startColumn": 32,
+                  "endLineNumber": 88,
+                  "endColumn": 32
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 89,
+                  "startColumn": 58,
+                  "endLineNumber": 89,
+                  "endColumn": 58
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 90,
+                  "startColumn": 2,
+                  "endLineNumber": 90,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strstr, match_single_char) {",
+                "range": {
+                  "startLineNumber": 91,
+                  "startColumn": 1,
+                  "endLineNumber": 91,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char str[] = \"abcdefg\";",
+                "range": {
+                  "startLineNumber": 92,
+                  "startColumn": 37,
+                  "endLineNumber": 92,
+                  "endColumn": 37
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char to_find[] = \"d\";",
+                "range": {
+                  "startLineNumber": 93,
+                  "startColumn": 28,
+                  "endLineNumber": 93,
+                  "endColumn": 28
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_str_eq(my_strstr(str, to_find), \"defg\");",
+                "range": {
+                  "startLineNumber": 94,
+                  "startColumn": 26,
+                  "endLineNumber": 94,
+                  "endColumn": 26
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 95,
+                  "startColumn": 55,
+                  "endLineNumber": 95,
+                  "endColumn": 55
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n",
+                "range": {
+                  "startLineNumber": 96,
+                  "startColumn": 2,
+                  "endLineNumber": 96,
+                  "endColumn": 2
+                }
+              }
+            ],
+            [
+              {
+                "text": "\nTest(my_strstr, match_last_char) {",
+                "range": {
+                  "startLineNumber": 97,
+                  "startColumn": 1,
+                  "endLineNumber": 97,
+                  "endColumn": 1
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char str[] = \"abcdefg\";",
+                "range": {
+                  "startLineNumber": 98,
+                  "startColumn": 35,
+                  "endLineNumber": 98,
+                  "endColumn": 35
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    char to_find[] = \"g\";",
+                "range": {
+                  "startLineNumber": 99,
+                  "startColumn": 28,
+                  "endLineNumber": 99,
+                  "endColumn": 28
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n    cr_assert_str_eq(my_strstr(str, to_find), \"g\");",
+                "range": {
+                  "startLineNumber": 100,
+                  "startColumn": 26,
+                  "endLineNumber": 100,
+                  "endColumn": 26
+                }
+              }
+            ],
+            [
+              {
+                "text": "\n}",
+                "range": {
+                  "startLineNumber": 101,
+                  "startColumn": 52,
+                  "endLineNumber": 101,
+                  "endColumn": 52
+                }
+              }
+            ],
+            []
+          ]
+        }
+      ],
+      "responseId": "response_ee9b6521-1eaf-4b56-8a0e-684cb82b73a1",
+      "result": {
+        "timings": {
+          "totalElapsed": 12834
+        },
+        "metadata": {
+          "codeBlocks": [],
+          "modelMessageId": "3dbc862f-cd7a-4513-912d-496d51fdf849",
+          "responseId": "8515c86c-da08-4e1e-a9b6-f217855a04ac",
+          "sessionId": "f1de9c60-d570-4c11-a268-0661e172e561",
+          "agentId": "github.copilot.workspace",
+          "command": "tests"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.workspace",
+        "description": "Ask about your workspace",
+        "metadata": {
+          "sampleRequest": "How do I build this project?",
+          "themeIcon": {
+            "id": "code"
+          },
+          "hasFollowups": true,
+          "supportIssueReporting": false
+        },
+        "name": "workspace",
+        "fullName": "Workspace",
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [
+          {
+            "name": "explain",
+            "description": "Explain how the code in your active editor works"
+          },
+          {
+            "name": "tests",
+            "description": "Generate unit tests for the selected code",
+            "disambiguation": [
+              {
+                "category": "create_tests",
+                "description": "The user wants to generate unit tests.",
+                "examples": [
+                  "Generate tests for my selection using pytest."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "fix",
+            "description": "Propose a fix for the problems in the selected code",
+            "sampleRequest": "There is a problem in this code. Rewrite the code to show it with the bug fixed."
+          },
+          {
+            "name": "new",
+            "description": "Scaffold code for a new file or project in a workspace",
+            "sampleRequest": "Create a RESTful API server using typescript",
+            "isSticky": true,
+            "disambiguation": [
+              {
+                "category": "create_new_workspace_or_extension",
+                "description": "The user wants to create a complete Visual Studio Code workspace from scratch, such as a new application or a Visual Studio Code extension. Use this category only if the question relates to generating or creating new workspaces in Visual Studio Code. Do not use this category for updating existing code or generating sample code snippets",
+                "examples": [
+                  "Scaffold a Node server.",
+                  "Create a sample project which uses the fileSystemProvider API.",
+                  "react application"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "newNotebook",
+            "description": "Create a new Jupyter Notebook",
+            "sampleRequest": "How do I create a notebook to load data from a csv file?",
+            "disambiguation": [
+              {
+                "category": "create_jupyter_notebook",
+                "description": "The user wants to create a new Jupyter notebook in Visual Studio Code.",
+                "examples": [
+                  "Create a notebook to analyze this CSV file."
+                ]
+              }
+            ]
+          },
+          {
+            "name": "setupTests",
+            "description": "Set up tests in your project (Experimental)",
+            "sampleRequest": "add playwright tests to my project",
+            "when": "config.github.copilot.chat.setupTests.enabled",
+            "disambiguation": [
+              {
+                "category": "set_up_tests",
+                "description": "The user wants to configure project test setup, framework, or test runner. The user does not want to fix their existing tests.",
+                "examples": [
+                  "Set up tests for this project."
+                ]
+              }
+            ]
+          }
+        ],
+        "disambiguation": [
+          {
+            "category": "workspace_project_questions",
+            "description": "The user wants to learn about or update the code or files in their current workspace. Questions in this category may be about understanding what the whole workspace does or locating the implementation of some code. This does not include generating or updating tests.",
+            "examples": [
+              "What does this project do?"
+            ]
+          },
+          {
+            "category": "find_code_in_workspace",
+            "description": "The user wants to locate the implementation of some functionality in their current workspace.",
+            "examples": [
+              "Where is the tree widget implemented?"
+            ]
+          },
+          {
+            "category": "generate_with_workspace_context",
+            "description": "The user wants to generate code based on multiple files in the workspace and did not specify which files to reference.",
+            "examples": [
+              "Create a README for this project."
+            ]
+          }
+        ]
+      },
+      "slashCommand": {
+        "name": "tests",
+        "description": "Generate unit tests for the selected code",
+        "disambiguation": [
+          {
+            "category": "create_tests",
+            "description": "The user wants to generate unit tests.",
+            "examples": [
+              "Generate tests for my selection using pytest."
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_strstr.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/my_strstr.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/my_strstr.c",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strstr.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strstr.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strstr.c",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1749403591014,
+      "editedFileEvents": [
+        {
+          "eventKind": 3,
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strcapitalize.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strcapitalize.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day06/tests/test_my_strcapitalize.c",
+            "scheme": "file"
+          }
+        }
+      ]
+    }
+  ],
+  "sessionId": "b2cb455c-710f-4205-91fe-6a6d4bff67e2",
+  "creationDate": 1749403184215,
+  "isImported": false,
+  "lastMessageDate": 1749403591014,
+  "customTitle": "Implementation of my_str_islower function"
+}

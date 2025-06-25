@@ -1,0 +1,1516 @@
+{
+  "version": 3,
+  "requesterUsername": "inkurey-22",
+  "requesterAvatarIconUri": {
+    "$mid": 1,
+    "path": "/u/146175466",
+    "scheme": "https",
+    "authority": "avatars.githubusercontent.com",
+    "query": "v=4"
+  },
+  "responderUsername": "GitHub Copilot",
+  "responderAvatarIconUri": {
+    "id": "copilot"
+  },
+  "initialLocation": "panel",
+  "requests": [
+    {
+      "requestId": "request_d120db1d-a1e1-4f77-8aac-98aeec2190e0",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 162
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 6,
+              "endColumn": 27
+            },
+            "text": "❯ mango\nDoOp.hs:76\nMAJOR H-D1: Useless do\nThe Do notation is forbidden unless it contains a generator (a statement with a left arrow).\n\n1 Major | 0 Minor | 0 Info",
+            "kind": "text"
+          }
+        ],
+        "text": "❯ mango\nDoOp.hs:76\nMAJOR H-D1: Useless do\nThe Do notation is forbidden unless it contains a generator (a statement with a left arrow).\n\n1 Major | 0 Minor | 0 Info"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:DoOp.hs",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+                "external": "file:///home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+                "path": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 59,
+                "startColumn": 1,
+                "endLineNumber": 81,
+                "endColumn": 1
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "You are getting the \"Useless do\" warning because your `printBox` function uses a `do` block, but all the actions inside are just sequencing (`>>`), not using any generator (`<-`). In Haskell, you don't need `do` notation if you are only sequencing actions.\n\nYou can rewrite `printBox` without `do` like this:\n\n````haskell\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM3/PDG/day02/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "external": "file:///home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "path": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "printBox :: Int -> IO ()\nprintBox n\n  | n < 2 = return ()\n  | otherwise =\n      putStrLn (\"*\" ++ replicate width '-' ++ \"*\")\n      >> mapM_ (\\_ -> putStrLn (\"|\" ++ replicate width ' ' ++ \"|\")) [1 .. n - 2]\n      >> putStrLn (\"*\" ++ replicate width '-' ++ \"*\")\n  where\n    width = n * 2 - 2\n````\n\nThis removes the `do` block and uses the `>>` operator to sequence the actions, which is idiomatic for this case.",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM3/PDG/day02/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_f0d84c13-a58a-45fa-9ca7-62f965c2f27d",
+      "result": {
+        "timings": {
+          "firstProgress": 1466,
+          "totalElapsed": 5193
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "printBox :: Int -> IO ()\nprintBox n\n  | n < 2 = return ()\n  | otherwise =\n      putStrLn (\"*\" ++ replicate width '-' ++ \"*\")\n      >> mapM_ (\\_ -> putStrLn (\"|\" ++ replicate width ' ' ++ \"|\")) [1 .. n - 2]\n      >> putStrLn (\"*\" ++ replicate width '-' ++ \"*\")\n  where\n    width = n * 2 - 2\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+                "scheme": "file"
+              },
+              "language": "haskell",
+              "markdownBeforeBlock": "You are getting the \"Useless do\" warning because your `printBox` function uses a `do` block, but all the actions inside are just sequencing (`>>`), not using any generator (`<-`). In Haskell, you don't need `do` notation if you are only sequencing actions.\n\nYou can rewrite `printBox` without `do` like this:\n\n"
+            }
+          ],
+          "modelMessageId": "eab37af8-9ef2-4e31-8b5e-f2aec1543541",
+          "responseId": "e8cea6ad-fd2e-4fc8-b57f-18914fb04175",
+          "sessionId": "705b1a0c-db75-4b37-8235-9d7073b4609f",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "inkurey-22",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/146175466",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "external": "file:///home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "path": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1748511542404
+    },
+    {
+      "requestId": "request_4bb5af14-5d8a-40ae-b4e3-7c091020dbf3",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 55
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 56
+            },
+            "text": "Line 78 is too long, it should be kept under 80 columns",
+            "kind": "text"
+          }
+        ],
+        "text": "Line 78 is too long, it should be kept under 80 columns"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:DoOp.hs",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+                "external": "file:///home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+                "path": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 59,
+                "startColumn": 1,
+                "endLineNumber": 81,
+                "endColumn": 22
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "You can break line 78 into multiple lines for better readability and to keep it under 80 columns:\n\n````haskell\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM3/PDG/day02/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "external": "file:///home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "path": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "printBox :: Int -> IO ()\nprintBox n\n  | n < 2 = return ()\n  | otherwise =\n      putStrLn (\"*\" ++ replicate width '-' ++ \"*\")\n      >> mapM_ (\\_ -> putStrLn (\"|\" ++ replicate width ' ' ++ \"|\"))\n               [1 .. n - 2]\n      >> putStrLn (\"*\" ++ replicate width '-' ++ \"*\")\n  where\n    width = n * 2 - 2\n````\n\nThis keeps all lines within 80 columns.",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM3/PDG/day02/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_bc8a6309-f8fd-4208-b23f-e35d5a7904e5",
+      "result": {
+        "timings": {
+          "firstProgress": 1225,
+          "totalElapsed": 16217
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "printBox :: Int -> IO ()\nprintBox n\n  | n < 2 = return ()\n  | otherwise =\n      putStrLn (\"*\" ++ replicate width '-' ++ \"*\")\n      >> mapM_ (\\_ -> putStrLn (\"|\" ++ replicate width ' ' ++ \"|\"))\n               [1 .. n - 2]\n      >> putStrLn (\"*\" ++ replicate width '-' ++ \"*\")\n  where\n    width = n * 2 - 2\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+                "scheme": "file"
+              },
+              "language": "haskell",
+              "markdownBeforeBlock": "You can break line 78 into multiple lines for better readability and to keep it under 80 columns:\n\n"
+            }
+          ],
+          "modelMessageId": "c24bf19b-f9eb-40c1-837e-b19416f01291",
+          "responseId": "32c5e9f9-b796-4f07-bfc0-a3a34a8a08df",
+          "sessionId": "705b1a0c-db75-4b37-8235-9d7073b4609f",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "inkurey-22",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/146175466",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "external": "file:///home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "path": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1748511655598
+    },
+    {
+      "requestId": "request_12327298-a392-474c-abae-3571c8839d18",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 47
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 48
+            },
+            "text": "Explain the function please, especially line 78",
+            "kind": "text"
+          }
+        ],
+        "text": "Explain the function please, especially line 78"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:DoOp.hs",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+                "external": "file:///home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+                "path": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 63,
+                "startColumn": 1,
+                "endLineNumber": 82,
+                "endColumn": 22
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "Certainly! Here’s an explanation of the `printBox` function, focusing on line 78:\n\n```haskell\nprintBox :: Int -> IO ()\nprintBox n\n  | n < 2 = return ()\n  | otherwise =\n      putStrLn (\"*\" ++ replicate width '-' ++ \"*\")\n      >> mapM_ (\\_ -> putStrLn (\"|\" ++ replicate width ' ' ++ \"|\"))\n        [1 .. n - 2]\n      >> putStrLn (\"*\" ++ replicate width '-' ++ \"*\")\n  where\n    width = n * 2 - 2\n```\n\n### What does `printBox` do?\n- It prints a simple ASCII box of size `n` to the terminal.\n- If `n < 2`, it does nothing.\n- Otherwise, it prints:\n  1. The top border (a line of `*` and `-`)\n  2. The sides (lines with `|` and spaces)\n  3. The bottom border (same as the top)\n\n### Line 78 explained:\n```haskell\nmapM_ (\\_ -> putStrLn (\"|\" ++ replicate width ' ' ++ \"|\")) [1 .. n - 2]\n```\n- `mapM_` is used to perform an action for each element in a list, discarding the results.\n- The lambda `\\_ -> putStrLn (\"|\" ++ replicate width ' ' ++ \"|\")` prints a line like `|      |` (with `width` spaces).\n- `[1 .. n - 2]` is a list of numbers from 1 to `n-2`. This means the action is repeated `n-2` times, printing the vertical sides of the box.\n\n**In summary:**  \nLine 78 prints the middle rows of the box, each consisting of a `|`, some spaces, and another `|`, for each row between the top and bottom borders.",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM3/PDG/day02/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_476a3213-d7f7-455f-945e-5d35089ad112",
+      "result": {
+        "timings": {
+          "firstProgress": 793,
+          "totalElapsed": 7646
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "printBox :: Int -> IO ()\nprintBox n\n  | n < 2 = return ()\n  | otherwise =\n      putStrLn (\"*\" ++ replicate width '-' ++ \"*\")\n      >> mapM_ (\\_ -> putStrLn (\"|\" ++ replicate width ' ' ++ \"|\"))\n        [1 .. n - 2]\n      >> putStrLn (\"*\" ++ replicate width '-' ++ \"*\")\n  where\n    width = n * 2 - 2\n",
+              "language": "haskell",
+              "markdownBeforeBlock": "Certainly! Here’s an explanation of the `printBox` function, focusing on line 78:\n\n"
+            },
+            {
+              "code": "mapM_ (\\_ -> putStrLn (\"|\" ++ replicate width ' ' ++ \"|\")) [1 .. n - 2]\n",
+              "language": "haskell",
+              "markdownBeforeBlock": "\n### What does `printBox` do?\n- It prints a simple ASCII box of size `n` to the terminal.\n- If `n < 2`, it does nothing.\n- Otherwise, it prints:\n  1. The top border (a line of `*` and `-`)\n  2. The sides (lines with `|` and spaces)\n  3. The bottom border (same as the top)\n\n### Line 78 explained:\n"
+            }
+          ],
+          "modelMessageId": "251cbb10-1eff-4fa4-8c71-8aacac855612",
+          "responseId": "cc3d0c19-42c2-4202-8f56-d67ea9206eed",
+          "sessionId": "705b1a0c-db75-4b37-8235-9d7073b4609f",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "inkurey-22",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/146175466",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "external": "file:///home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "path": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1748511801735
+    },
+    {
+      "requestId": "request_32e82593-8c95-426f-8ad9-32ca1e92c2a6",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 23
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 24
+            },
+            "text": "I need to avoid lambdas",
+            "kind": "text"
+          }
+        ],
+        "text": "I need to avoid lambdas"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:DoOp.hs",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+                "external": "file:///home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+                "path": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 63,
+                "startColumn": 1,
+                "endLineNumber": 82,
+                "endColumn": 22
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "You can avoid the lambda in `printBox` by defining a named function for printing the side line. Here’s how you can refactor it:\n\n````haskell\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM3/PDG/day02/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "external": "file:///home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "path": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "printBox :: Int -> IO ()\nprintBox n\n  | n < 2 = return ()\n  | otherwise =\n      putStrLn (\"*\" ++ replicate width '-' ++ \"*\")\n      >> mapM_ printSide [1 .. n - 2]\n      >> putStrLn (\"*\" ++ replicate width '-' ++ \"*\")\n  where\n    width = n * 2 - 2\n    printSide _ = putStrLn (\"|\" ++ replicate width ' ' ++ \"|\")\n````\n\nNow, `mapM_ printSide [1 .. n - 2]` uses the named function `printSide` instead of a lambda.",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM3/PDG/day02/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_9a75dd91-2eab-4958-9d6c-7120907fefc6",
+      "result": {
+        "timings": {
+          "firstProgress": 1678,
+          "totalElapsed": 7497
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "printBox :: Int -> IO ()\nprintBox n\n  | n < 2 = return ()\n  | otherwise =\n      putStrLn (\"*\" ++ replicate width '-' ++ \"*\")\n      >> mapM_ printSide [1 .. n - 2]\n      >> putStrLn (\"*\" ++ replicate width '-' ++ \"*\")\n  where\n    width = n * 2 - 2\n    printSide _ = putStrLn (\"|\" ++ replicate width ' ' ++ \"|\")\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+                "scheme": "file"
+              },
+              "language": "haskell",
+              "markdownBeforeBlock": "You can avoid the lambda in `printBox` by defining a named function for printing the side line. Here’s how you can refactor it:\n\n"
+            }
+          ],
+          "modelMessageId": "da2558c5-ae42-4664-9b8d-77774c4b8e1f",
+          "responseId": "36808d40-2a0a-420c-800e-cea67c659bab",
+          "sessionId": "705b1a0c-db75-4b37-8235-9d7073b4609f",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "inkurey-22",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/146175466",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "external": "file:///home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "path": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1748511840977
+    },
+    {
+      "requestId": "request_9bd9260e-7181-4615-8fb7-b466611de95b",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 37
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 38
+            },
+            "text": "Is it possible to avoid using where ?",
+            "kind": "text"
+          }
+        ],
+        "text": "Is it possible to avoid using where ?"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:DoOp.hs",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+                "external": "file:///home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+                "path": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 63,
+                "startColumn": 1,
+                "endLineNumber": 82,
+                "endColumn": 22
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "Yes, you can avoid using `where` by defining `width` as a `let` binding inside the function body. Here’s how you can rewrite `printBox`:\n\n````haskell\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM3/PDG/day02/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "external": "file:///home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "path": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "printBox :: Int -> IO ()\nprintBox n\n  | n < 2 = return ()\n  | otherwise =\n      let width = n * 2 - 2\n          printSide _ = putStrLn (\"|\" ++ replicate width ' ' ++ \"|\")\n      in  putStrLn (\"*\" ++ replicate width '-' ++ \"*\")\n          >> mapM_ printSide [1 .. n - 2]\n          >> putStrLn (\"*\" ++ replicate width '-' ++ \"*\")\n````\n\nThis version uses `let ... in ...` to define `width` and `printSide` locally, avoiding the `where` clause.",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM3/PDG/day02/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_383dbcb4-2f29-4b31-8f20-c13420c6220c",
+      "result": {
+        "timings": {
+          "firstProgress": 1434,
+          "totalElapsed": 4219
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "printBox :: Int -> IO ()\nprintBox n\n  | n < 2 = return ()\n  | otherwise =\n      let width = n * 2 - 2\n          printSide _ = putStrLn (\"|\" ++ replicate width ' ' ++ \"|\")\n      in  putStrLn (\"*\" ++ replicate width '-' ++ \"*\")\n          >> mapM_ printSide [1 .. n - 2]\n          >> putStrLn (\"*\" ++ replicate width '-' ++ \"*\")\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+                "scheme": "file"
+              },
+              "language": "haskell",
+              "markdownBeforeBlock": "Yes, you can avoid using `where` by defining `width` as a `let` binding inside the function body. Here’s how you can rewrite `printBox`:\n\n"
+            }
+          ],
+          "modelMessageId": "292dda21-b433-4774-9a6c-08f39f210de5",
+          "responseId": "b06de73f-9fad-4bc1-93eb-e4f03488bbe8",
+          "sessionId": "705b1a0c-db75-4b37-8235-9d7073b4609f",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "inkurey-22",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/146175466",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "external": "file:///home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "path": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1748511917008
+    },
+    {
+      "requestId": "request_5f4fe5ab-e4f5-4da5-8ef9-dbf47f9cb624",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 82
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 83
+            },
+            "text": "Might as well create printSide outside of printBox, no ? Avoiding nested functions",
+            "kind": "text"
+          }
+        ],
+        "text": "Might as well create printSide outside of printBox, no ? Avoiding nested functions"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:DoOp.hs",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+                "external": "file:///home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+                "path": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 63,
+                "startColumn": 1,
+                "endLineNumber": 82,
+                "endColumn": 22
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "Yes, you can define `printSide` as a top-level function to avoid nested functions. You just need to pass `width` as a parameter:\n\n````haskell\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM3/PDG/day02/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "external": "file:///home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "path": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "printSide :: Int -> IO ()\nprintSide width = putStrLn (\"|\" ++ replicate width ' ' ++ \"|\")\n\nprintBox :: Int -> IO ()\nprintBox n\n  | n < 2 = return ()\n  | otherwise =\n      let width = n * 2 - 2\n      in  putStrLn (\"*\" ++ replicate width '-' ++ \"*\")\n          >> mapM_ (const (printSide width)) [1 .. n - 2]\n          >> putStrLn (\"*\" ++ replicate width '-' ++ \"*\")\n````\n\nThis keeps `printSide` at the top level and avoids nested functions.",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM3/PDG/day02/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_d3a0784b-ff45-4535-bfc5-8d86abc386c6",
+      "result": {
+        "timings": {
+          "firstProgress": 19854,
+          "totalElapsed": 22066
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "printSide :: Int -> IO ()\nprintSide width = putStrLn (\"|\" ++ replicate width ' ' ++ \"|\")\n\nprintBox :: Int -> IO ()\nprintBox n\n  | n < 2 = return ()\n  | otherwise =\n      let width = n * 2 - 2\n      in  putStrLn (\"*\" ++ replicate width '-' ++ \"*\")\n          >> mapM_ (const (printSide width)) [1 .. n - 2]\n          >> putStrLn (\"*\" ++ replicate width '-' ++ \"*\")\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+                "scheme": "file"
+              },
+              "language": "haskell",
+              "markdownBeforeBlock": "Yes, you can define `printSide` as a top-level function to avoid nested functions. You just need to pass `width` as a parameter:\n\n"
+            }
+          ],
+          "modelMessageId": "14436c18-c833-45a1-aac5-158b82420040",
+          "responseId": "21826a67-6847-4998-ae21-532cf294ef4f",
+          "sessionId": "705b1a0c-db75-4b37-8235-9d7073b4609f",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "inkurey-22",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/146175466",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "external": "file:///home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "path": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1748511959887
+    },
+    {
+      "requestId": "request_9ac76189-6241-4a20-a76e-575a36137300",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 55
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 56
+            },
+            "text": "Now re-explain the function, still detailing the line 2",
+            "kind": "text"
+          }
+        ],
+        "text": "Now re-explain the function, still detailing the line 2"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:DoOp.hs",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+                "external": "file:///home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+                "path": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 63,
+                "startColumn": 1,
+                "endLineNumber": 84,
+                "endColumn": 1
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "Certainly! Here’s an explanation of the `printBox` function, with a focus on the second line of its body:\n\n```haskell\nprintBox :: Int -> IO ()\nprintBox n\n  | n < 2 = return ()\n  | otherwise =\n      let width = n * 2 - 2\n      in  putStrLn (\"*\" ++ replicate width '-' ++ \"*\")\n          >> mapM_ (const (printSide width)) [1 .. n - 2]\n          >> putStrLn (\"*\" ++ replicate width '-' ++ \"*\")\n```\n\n### What does `printBox` do?\n- **Purpose:** Prints an ASCII box of size `n` to the terminal.\n- **If `n < 2`:** Does nothing (returns immediately).\n- **Otherwise:**\n  1. Calculates the width of the box as `n * 2 - 2`.\n  2. Prints the top border: a `*`, then `width` dashes, then another `*`.\n  3. Prints the sides: each line is a `|`, then `width` spaces, then another `|`. This is repeated `n - 2` times.\n  4. Prints the bottom border (same as the top).\n\n---\n\n### Detailed explanation of the second line (the one with `mapM_`):\n\n```haskell\nmapM_ (const (printSide width)) [1 .. n - 2]\n```\n\n- **`[1 .. n - 2]`:** This creates a list of numbers from 1 to `n-2`. The length of this list determines how many side lines the box will have (i.e., the height minus the top and bottom borders).\n- **`printSide width`:** This function prints a single side line, like `|      |` (with `width` spaces).\n- **`const (printSide width)`:** The `const` function ignores its argument and always returns `printSide width`. This is used because we don't care about the actual numbers in the list, just how many times we repeat the action.\n- **`mapM_ ... [1 .. n - 2]`:** This applies the action `printSide width` for each element in the list, effectively repeating it `n-2` times. The `_` in `mapM_` means the results are discarded (since `printSide width` returns `IO ()`).\n\n**In summary:**  \nThe second line in the body of `printBox` prints the vertical sides of the box, one per line, for each row between the top and bottom borders.",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM3/PDG/day02/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_82d5f50b-4754-4015-98c6-c617fcde74fa",
+      "result": {
+        "timings": {
+          "firstProgress": 1235,
+          "totalElapsed": 7939
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "printBox :: Int -> IO ()\nprintBox n\n  | n < 2 = return ()\n  | otherwise =\n      let width = n * 2 - 2\n      in  putStrLn (\"*\" ++ replicate width '-' ++ \"*\")\n          >> mapM_ (const (printSide width)) [1 .. n - 2]\n          >> putStrLn (\"*\" ++ replicate width '-' ++ \"*\")\n",
+              "language": "haskell",
+              "markdownBeforeBlock": "Certainly! Here’s an explanation of the `printBox` function, with a focus on the second line of its body:\n\n"
+            },
+            {
+              "code": "mapM_ (const (printSide width)) [1 .. n - 2]\n",
+              "language": "haskell",
+              "markdownBeforeBlock": "\n### What does `printBox` do?\n- **Purpose:** Prints an ASCII box of size `n` to the terminal.\n- **If `n < 2`:** Does nothing (returns immediately).\n- **Otherwise:**\n  1. Calculates the width of the box as `n * 2 - 2`.\n  2. Prints the top border: a `*`, then `width` dashes, then another `*`.\n  3. Prints the sides: each line is a `|`, then `width` spaces, then another `|`. This is repeated `n - 2` times.\n  4. Prints the bottom border (same as the top).\n\n---\n\n### Detailed explanation of the second line (the one with `mapM_`):\n\n"
+            }
+          ],
+          "modelMessageId": "b441609a-3444-4366-8320-04bdbdcd590f",
+          "responseId": "4d7dee51-6679-4328-9c28-81a0e3b85852",
+          "sessionId": "705b1a0c-db75-4b37-8235-9d7073b4609f",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "inkurey-22",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/146175466",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "external": "file:///home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "path": "/home/curry/Workspace/SEM3/PDG/day02/DoOp.hs",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1748512048438
+    }
+  ],
+  "sessionId": "d39772f4-289b-4163-a3d6-7269ed1cb046",
+  "creationDate": 1748511511753,
+  "isImported": false,
+  "lastMessageDate": 1748512048438,
+  "customTitle": "Haskell \"Useless do\" warning resolution"
+}

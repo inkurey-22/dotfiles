@@ -1,0 +1,232 @@
+{
+    "telemetry.sqmId": "",
+    "telemetry.machineId": "148a92061b7e8b065076ff51073aa37e8682d5b96ea4a1b4c0c5cf8997643f30",
+    "telemetry.devDeviceId": "1064d4f4-d390-46f5-a5c3-a1c694258087",
+    "backupWorkspaces": {
+        "workspaces": [],
+        "folders": [
+            {
+                "folderUri": "file:///home/curry/Workspace/SEM1/POOL/PART1/day03"
+            },
+            {
+                "folderUri": "file:///home/curry/Workspace/SEM1/MUL/myhunter"
+            }
+        ],
+        "emptyWindows": []
+    },
+    "windowControlHeight": 35,
+    "profileAssociations": {
+        "workspaces": {
+            "file:///home/curry/.config/hypr": "__default__profile__",
+            "file:///home/curry/Workspace/SEM3/PDG/day01": "__default__profile__",
+            "file:///home/curry/.config/nvim": "__default__profile__",
+            "file:///home/curry/Workspace/SEM3/PDG/day02": "__default__profile__",
+            "file:///home/curry/Workspace/SEM3/PDG/day03": "__default__profile__",
+            "file:///home/curry/.config/kitty": "__default__profile__",
+            "file:///home/curry/.config/fastfetch": "__default__profile__",
+            "file:///home/curry/base_repo": "__default__profile__",
+            "file:///home/curry/Downloads/star": "__default__profile__",
+            "file:///home/curry/Workspace/Persos/pandas-rs": "__default__profile__",
+            "file:///home/curry/Workspace/Persos/bears": "__default__profile__",
+            "file:///home/curry/Workspace/SEM1/POOL/PART1/day06": "__default__profile__",
+            "file:///home/curry/Workspace/SEM1/POOL/PART1/day08": "__default__profile__",
+            "file:///home/curry/Workspace/SEM1/POOL/PART1/day11": "__default__profile__",
+            "file:///home/curry/Workspace/SEM1/POOL/PART1/countisland": "__default__profile__",
+            "file:///home/curry/Zappy": "__default__profile__",
+            "file:///home/curry/testcmake": "__default__profile__",
+            "file:///home/curry/Workspace/SEM2/CPE/amazed": "__default__profile__",
+            "file:///home/curry/Workspace/SEM2/CPE/amazed/build": "__default__profile__",
+            "file:///home/curry/Workspace/SEM1/POOL/PART1/day03": "__default__profile__",
+            "file:///home/curry/Downloads/StreamAssistant-stable": "__default__profile__",
+            "file:///home/curry/StreamAssistant": "__default__profile__",
+            "file:///home/curry/Workspace/SEM1/POOL/PART1/day10/do_op": "__default__profile__",
+            "file:///home/curry/Workspace/Persos/Epitech-Subjects": "__default__profile__",
+            "file:///home/curry/Workspace/SEM1/POOL/PART1/day10": "__default__profile__",
+            "file:///home/curry": "__default__profile__",
+            "file:///home/curry/Downloads/sujets/Groupe%201%20-%205/Mercredi": "__default__profile__",
+            "file:///home/curry/Downloads/sujets/Groupe%201%20-%205/Mercredi/Ressources": "__default__profile__",
+            "file:///home/curry/Workspace/Persos/vendredi/Aterlier-Meteo": "__default__profile__",
+            "file:///home/curry/.confwaybar": "__default__profile__",
+            "file:///home/curry/.config/waybar": "__default__profile__",
+            "file:///home/curry/Workspace/SEM1/MUL/myhunter": "__default__profile__"
+        },
+        "emptyWindows": {}
+    },
+    "theme": "vs-dark",
+    "themeBackground": "#1e1e2e",
+    "windowSplash": {
+        "zoomLevel": 0,
+        "baseTheme": "vs-dark",
+        "colorInfo": {
+            "foreground": "#cdd6f4",
+            "background": "#1e1e2e",
+            "editorBackground": "#1e1e2e",
+            "titleBarBackground": "#11111b",
+            "titleBarBorder": "rgba(0, 0, 0, 0)",
+            "activityBarBackground": "#11111b",
+            "activityBarBorder": "rgba(0, 0, 0, 0)",
+            "sideBarBackground": "#181825",
+            "sideBarBorder": "rgba(0, 0, 0, 0)",
+            "statusBarBackground": "#11111b",
+            "statusBarBorder": "rgba(0, 0, 0, 0)",
+            "statusBarNoFolderBackground": "#11111b",
+            "windowBorder": "rgba(0, 0, 0, 0)"
+        },
+        "layoutInfo": {
+            "sideBarSide": "left",
+            "editorPartMinWidth": 220,
+            "titleBarHeight": 35,
+            "activityBarWidth": 48,
+            "sideBarWidth": 240,
+            "auxiliarySideBarWidth": 452,
+            "statusBarHeight": 22,
+            "windowBorder": false
+        }
+    },
+    "windowSplashWorkspaceOverride": {
+        "layoutInfo": {
+            "sideBarWidth": 240,
+            "auxiliaryBarWidth": 452,
+            "workspaces": {
+                "85529afde94082de72727f49d3381481": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": true
+                },
+                "88f0a29e16c59fa9b6c5698f112e13cf": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "0d2494877ed79e503eac396fabecb134": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "33ac24b824d3f21880fbd20994f9391d": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": true
+                },
+                "7fe3a9381665ea7001acff0ef7004b66": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "03dbc0d4bd9897aa198b7abf2e72cd6a": {
+                    "sideBarVisible": false,
+                    "auxiliaryBarVisible": false
+                },
+                "e8a0b891a591b876f494016b9b498c80": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "d85aa939cc92d0408b3c6a398b0e81bd": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": true
+                },
+                "f305315814b38c0571b529c0be8b7a8c": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "37463a365570df36daec21b7c0bf4697": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": true
+                },
+                "bad9c95ad521425f9d7b6d9def1c7feb": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": true
+                },
+                "9354299a440967024bd644d5ce9e2fd7": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": true
+                },
+                "7587ed15deef26e86028cf3c5fbbe967": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": true
+                },
+                "616595e527d4aa443eea4b72c0ccb594": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": true
+                },
+                "a80b88af1b8134df1e8cb73e39f688db": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": true
+                },
+                "35dd96c59d034248e23dac6fb226c9fb": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "f3083b4689db585b8d394a8ef85c9f4e": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": true
+                },
+                "f0784d7cb4fca0d82f8f85c0dbb14490": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": true
+                },
+                "a2557e4220f04c465d58a55d8fb0c8bb": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "491e23bf01d62709ed0ffb0a8f4f35b5": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": true
+                },
+                "b98d661e928f02cd11e7d5ac46339cee": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "04dee0de551be204da6cc298579f79aa": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "978d0045e65cd95a263a215fceebd1c4": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "01682904a8e482ad3572b275c42c6687": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "a17075cc6b3221b56defb3836406b9fe": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "e20d12582f54c766f5112897e32230de": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": true
+                },
+                "1abab2838c5d4f074aee3f319f7bef77": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "b19ea1678643ad87d8d5a7f6e9744476": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "1988e4fbc4e0cad3e7143b3aae106afe": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "9922da6e77d93afbbe6ffbf0e801841a": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "4029743d00461ca2aa8bed5167aab284": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": true
+                }
+            }
+        }
+    },
+    "windowsState": {
+        "lastActiveWindow": {
+            "folder": "file:///home/curry/Workspace/SEM1/MUL/myhunter",
+            "backupPath": "/home/curry/.config/Code/Backups/232bb6595fd3b868180ac4991a62d4c0",
+            "uiState": {
+                "mode": 0,
+                "x": 0,
+                "y": 0,
+                "width": 960,
+                "height": 1050
+            }
+        },
+        "openedWindows": []
+    }
+}

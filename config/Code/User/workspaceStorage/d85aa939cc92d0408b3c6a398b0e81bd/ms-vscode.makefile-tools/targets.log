@@ -1,0 +1,1422 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.4.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2023 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Wed Jun 11 14:25:29 2025
+
+# Variables
+
+# makefile (from 'Makefile', line 76)
+OBJ = $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
+# environment
+MEMORY_PRESSURE_WRITE = c29tZSAyMDAwMDAgMjAwMDAwMAA=
+# environment
+GDK_BACKEND = wayland
+# environment
+LC_ALL = C
+# environment
+NO_AT_BRIDGE = 1
+# makefile (from 'Makefile', line 27)
+SRC = $(SRC_DIR)/main.c
+# makefile (from 'Makefile', line 86)
+AR = ar rc
+# makefile (from 'Makefile', line 90)
+PROGRESS_FILE = .progress
+# makefile (from 'Makefile', line 95)
+update_progress = 	@echo $$(( $$(cat $(PROGRESS_FILE) 2>/dev/null || echo 0) + 1 )) > $(PROGRESS_FILE)
+# environment
+GNOME_KEYRING_CONTROL = /run/user/1000/keyring
+# makefile (from 'Makefile', line 20)
+SRC_DIR = src
+# environment
+VSCODE_CRASH_REPORTER_PROCESS_TYPE = extensionHost
+# environment
+VSCODE_CWD = /home/curry/base_repo
+# environment
+GDM_LANG = en_US.UTF-8
+# default
+MAKE_COMMAND := make
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# makefile (from 'Makefile', line 22)
+OBJ_DIR = obj
+# makefile (from 'Makefile', line 21)
+INCLUDE_DIR = include
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# makefile (from 'Makefile', line 74)
+LIB_OBJ = $(LIB_SRC:$(LIB_DIR)/%.c=$(LIB_OBJ_DIR)/%.o)
+# environment
+PWD = /home/curry/base_repo
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+LSCOLORS = Gxfxcxdxbxegedabagacad
+# environment
+MAIL = /var/spool/mail/curry
+# environment
+XDG_DATA_DIRS = /home/curry/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/
+# environment
+OLDPWD = /home/curry/Zappy
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_CODE_CACHE_PATH = /home/curry/.config/Code/CachedData/258e40fedc6cb8edf399a463ce3a9d32e7e1f6f3
+# environment
+LANG = C
+# environment
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.E97472
+# default
+.LOADED := 
+# default
+.INCLUDE_DIRS := /usr/local/include /usr/include
+# environment
+MEMORY_PRESSURE_WATCH = /sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure
+# makefile
+MAKEFLAGS = pqrR
+# makefile (from 'Makefile', line 13)
+BLUE = \033[0;34m
+# makefile
+CURDIR := /home/curry/base_repo
+# environment
+VSCODE_L10N_BUNDLE_LOCATION = 
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+MFLAGS = -pqrR
+# default
+.SHELLFLAGS := -c
+# environment
+WAYLAND_DISPLAY = wayland-0
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+P9K_SSH = 0
+# environment
+XDG_SESSION_DESKTOP = gnome
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST := Makefile
+# automatic
+@F = $(notdir $@)
+# environment
+ZSH = /home/curry/.oh-my-zsh
+# environment
+VSCODE_PID = 6254
+# environment
+XDG_SESSION_TYPE = wayland
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+SESSION_MANAGER = local/arch-curry:@/tmp/.ICE-unix/1591,unix/arch-curry:/tmp/.ICE-unix/1591
+# automatic
+*F = $(notdir $*)
+# environment
+CHROME_DESKTOP = code.desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# makefile (from 'Makefile', line 26)
+LIB = $(LIB_DIR)/libmy.a
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+P9K_TTY = old
+# environment
+VSCODE_NLS_CONFIG = {"userLocale":"en-us","osLocale":"en-us","resolvedLanguage":"en","defaultMessagesFile":"/opt/visual-studio-code/resources/app/out/nls.messages.json","locale":"en-us","availableLanguages":{}}
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# makefile
+SHELL = /bin/sh
+# default
+MAKECMDGOALS := all
+# environment
+KITTY_PUBLIC_KEY = 1:!VW7%I|Z4#qp~Ah_z(R_>`~t7moj!&Bd|i&<A-!O
+# environment
+LD_LIBRARY_PATH = /usr/local/lib:/usr/lib:/lib
+# environment
+SHLVL = 2
+# environment
+TERMINFO = /usr/lib/kitty/terminfo
+# makefile (from 'Makefile', line 9)
+BOLD = \033[1m
+# environment
+_P9K_SSH_TTY = /dev/pts/0
+# makefile (from 'Makefile', line 82)
+CURRENT_STEP = 0
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /home/curry/.cabal/bin:/home/curry/.ghcup/bin:/home/curry/.local/bin:/usr/bin/uutils:/usr/local/sbin:/usr/local/bin:/usr/bin:/home/curry/.local/share/flatpak/exports/bin:/home/curry/.cargo/bin
+# default
+MAKEFILES := 
+# environment
+MOTD_SHOWN = pam
+# automatic
+^F = $(notdir $^)
+# makefile (from 'Makefile', line 100)
+show_progress = 	@CURRENT_STEP=$$(cat $(PROGRESS_FILE)); PERCENT=$$(( CURRENT_STEP * 100 / $(TOTAL_STEPS) )); printf "$(BOLD)$(BLUE)[%3s%%]$(NC) " "$$PERCENT"
+# makefile (from 'Makefile', line 12)
+YELLOW = \033[0;33m
+# environment
+APPLICATION_INSIGHTS_NO_STATSBEAT = true
+# makefile (from 'Makefile', line 30)
+LIB_SRC = $(LIB_DIR)/io/my_putnbr.c $(LIB_DIR)/io/my_putstr.c $(LIB_DIR)/io/my_puterr.c $(LIB_DIR)/io/my_putchar.c $(LIB_DIR)/io/my_show_word_array.c $(LIB_DIR)/my_printf/utilities.c $(LIB_DIR)/my_printf/my_printf.c $(LIB_DIR)/my_printf/printf_putnbr.c $(LIB_DIR)/my_printf/printf_putstr.c $(LIB_DIR)/my_printf/printf_putchar.c $(LIB_DIR)/numbers/my_isneg.c $(LIB_DIR)/numbers/my_getnbr.c $(LIB_DIR)/numbers/my_is_prime.c $(LIB_DIR)/numbers/my_find_prime_sup.c $(LIB_DIR)/numbers/my_compute_power_rec.c $(LIB_DIR)/numbers/my_compute_square_root.c $(LIB_DIR)/strings/my_strcat.c $(LIB_DIR)/strings/my_strcmp.c $(LIB_DIR)/strings/my_strcpy.c $(LIB_DIR)/strings/my_strdup.c $(LIB_DIR)/strings/my_strlen.c $(LIB_DIR)/strings/my_strstr.c $(LIB_DIR)/strings/my_strchr.c $(LIB_DIR)/strings/my_revstr.c $(LIB_DIR)/strings/my_strupcase.c $(LIB_DIR)/strings/split_string.c $(LIB_DIR)/strings/my_str_isnum.c $(LIB_DIR)/strings/my_strlowcase.c $(LIB_DIR)/strings/my_str_isupper.c $(LIB_DIR)/strings/my_str_isalpha.c $(LIB_DIR)/strings/my_str_islower.c $(LIB_DIR)/strings/my_strarray_len.c $(LIB_DIR)/strings/my_strcapitalize.c $(LIB_DIR)/strings/my_str_isprintable.c $(LIB_DIR)/strings/my_free_word_array.c $(LIB_DIR)/lists/size.c $(LIB_DIR)/lists/sort.c $(LIB_DIR)/lists/find.c $(LIB_DIR)/lists/append.c $(LIB_DIR)/lists/create.c $(LIB_DIR)/lists/remove.c $(LIB_DIR)/lists/free_list.c $(LIB_DIR)/lists/add_to_top.c
+# environment
+INVOCATION_ID = 763e10c9dc68479f89b5962d80bf0731
+# environment
+USERNAME = curry
+# makefile (from 'Makefile', line 11)
+GREEN = \033[0;32m
+# environment
+GNOME_SETUP_DISPLAY = :1
+# automatic
+?F = $(notdir $?)
+# makefile (from 'Makefile', line 78)
+NAME = proj
+# environment
+XDG_CURRENT_DESKTOP = GNOME
+# environment
+LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.7z=01;31:*.ace=01;31:*.alz=01;31:*.apk=01;31:*.arc=01;31:*.arj=01;31:*.bz=01;31:*.bz2=01;31:*.cab=01;31:*.cpio=01;31:*.crate=01;31:*.deb=01;31:*.drpm=01;31:*.dwm=01;31:*.dz=01;31:*.ear=01;31:*.egg=01;31:*.esd=01;31:*.gz=01;31:*.jar=01;31:*.lha=01;31:*.lrz=01;31:*.lz=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.lzo=01;31:*.pyz=01;31:*.rar=01;31:*.rpm=01;31:*.rz=01;31:*.sar=01;31:*.swm=01;31:*.t7z=01;31:*.tar=01;31:*.taz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tgz=01;31:*.tlz=01;31:*.txz=01;31:*.tz=01;31:*.tzo=01;31:*.tzst=01;31:*.udeb=01;31:*.war=01;31:*.whl=01;31:*.wim=01;31:*.xz=01;31:*.z=01;31:*.zip=01;31:*.zoo=01;31:*.zst=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.jxl=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:
+# automatic
++F = $(notdir $+)
+# environment
+LESS = -R
+# environment
+DESKTOP_SESSION = gnome
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = GNOME
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+LOGNAME = curry
+# makefile (from 'Makefile', line 14)
+NC = \033[0m 
+# makefile
+.DEFAULT_GOAL := all
+# environment
+SYSTEMD_EXEC_PID = 1724
+# makefile (from 'Makefile', line 10)
+RED = \033[0;31m
+# environment
+KITTY_WINDOW_ID = 1
+# environment
+EDITOR = nvim
+# environment
+DISPLAY = :0
+# environment
+USER = curry
+# default
+MAKE_VERSION := 4.4.1
+# makefile (from 'Makefile', line 88)
+LDFLAGS = -L$(LIB_DIR) -lmy
+# environment
+MANAGERPID = 1491
+# environment
+DEBUGINFOD_URLS = https://debuginfod.archlinux.org
+# environment
+KITTY_PID = 3017
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 3017
+# environment
+PAGER = less
+# environment
+_ = /usr/bin/make
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# makefile (from 'Makefile', line 87)
+CFLAGS = -I$(INCLUDE_DIR) -Wall -Wextra
+# makefile (from 'Makefile', line 23)
+LIB_OBJ_DIR = $(LIB_DIR)/obj
+# environment
+COLORTERM = truecolor
+# environment
+JOURNAL_STREAM = 9:11768
+# makefile (from 'Makefile', line 93)
+TOTAL_STEPS = $(shell echo "$$(($(words $(LIB_OBJ)) + $(words $(OBJ)) + 3))")
+# environment
+XDG_SESSION_CLASS = user
+# environment
+HOME = /home/curry
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-01b6af92-1.10-main.sock
+# environment
+TERM = xterm-kitty
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# default
+SUFFIXES := 
+# environment
+_P9K_TTY = /dev/pts/0
+# environment
+VSCODE_CLI = 1
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# makefile (from 'Makefile', line 19)
+LIB_DIR = lib
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs notintermediate shell-export archives jobserver jobserver-fifo output-sync check-symlink guile load
+# makefile (from 'Makefile', line 85)
+CC = gcc
+# environment
+ 
+KITTY_INSTALLATION_DIR = /usr/lib/kitty
+# environment
+XDG_MENU_PREFIX = gnome-
+# environment
+VSCODE_ESM_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+GDMSESSION = gnome
+# variable set hash-table stats:
+# Load=134/1024=13%, Rehash=0, Collisions=17/230=7%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# lib/lists (device 28, inode 1386691): 11 files, no impossibilities so far.
+# lib/io (device 28, inode 1386684): 7 files, no impossibilities so far.
+# src (device 28, inode 1386738): 3 files, no impossibilities so far.
+# . (device 28, inode 1386606): 14 files, no impossibilities.
+# lib/numbers (device 28, inode 1386709): 8 files, no impossibilities so far.
+# lib/strings (device 28, inode 1386717): 21 files, no impossibilities so far.
+# lib/my_printf (device 28, inode 1386702): 7 files, no impossibilities so far.
+# lib (device 28, inode 1386682): No files, no impossibilities so far.
+
+# 71 files, no impossibilities in 8 directories.
+
+# Implicit Rules
+
+lib/obj/%.o: lib/%.c
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+obj/%.o: src/%.c
+#  recipe to execute (from 'Makefile', line 134):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+# 2 implicit rules, 0 (0.0%) terminal.
+# Files
+
+# Not a target:
+lib/strings/my_str_isalpha.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:10:55.521522068
+#  File has been updated.
+#  Successfully updated.
+
+lib/obj/my_printf/printf_putstr.o: lib/my_printf/printf_putstr.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'my_printf/printf_putstr'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:32.215855403
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+lib/obj/lists/remove.o: lib/lists/remove.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'lists/remove'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:33.860726978
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+lib_fclean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 152):
+	rm -f $(LIB)
+
+# Not a target:
+lib/my_printf/utilities.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:09:51.473678894
+#  File has been updated.
+#  Successfully updated.
+
+lib/obj/strings/my_strcapitalize.o: lib/strings/my_strcapitalize.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'strings/my_strcapitalize'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:33.448385601
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+# Not a target:
+lib/strings/my_strlen.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:13:04.188261347
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lib/strings/my_str_isupper.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:11:40.643023745
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lib/io/my_putchar.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:06:24.63133514
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lib/lists/add_to_top.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-10 12:59:51.052016451
+#  File has been updated.
+#  Successfully updated.
+
+obj/main.o: src/main.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'main'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:34.064152365
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 134):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+lib/obj/my_printf/printf_putchar.o: lib/my_printf/printf_putchar.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'my_printf/printf_putchar'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:32.266835911
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+lib/obj/numbers/my_isneg.o: lib/numbers/my_isneg.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'numbers/my_isneg'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:32.318816037
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+# makefile (from 'Makefile', line 156)
+debug: CFLAGS += -g
+debug: re
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+# variable set hash-table stats:
+# Load=1/32=3%, Rehash=0, Collisions=0/3=0%
+
+# Not a target:
+lib/lists/append.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-10 12:55:31.706292595
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:26.679633827
+#  File has been updated.
+#  Successfully updated.
+
+lib/obj/strings/my_free_word_array.o: lib/strings/my_free_word_array.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'strings/my_free_word_array'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:33.552683998
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+lib:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+lib/obj/io/my_putstr.o: lib/io/my_putstr.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'io/my_putstr'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:31.841998866
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+lib/libmy.a: lib/obj/io/my_putnbr.o lib/obj/io/my_putstr.o lib/obj/io/my_puterr.o lib/obj/io/my_putchar.o lib/obj/io/my_show_word_array.o lib/obj/my_printf/utilities.o lib/obj/my_printf/my_printf.o lib/obj/my_printf/printf_putnbr.o lib/obj/my_printf/printf_putstr.o lib/obj/my_printf/printf_putchar.o lib/obj/numbers/my_isneg.o lib/obj/numbers/my_getnbr.o lib/obj/numbers/my_is_prime.o lib/obj/numbers/my_find_prime_sup.o lib/obj/numbers/my_compute_power_rec.o lib/obj/numbers/my_compute_square_root.o lib/obj/strings/my_strcat.o lib/obj/strings/my_strcmp.o lib/obj/strings/my_strcpy.o lib/obj/strings/my_strdup.o lib/obj/strings/my_strlen.o lib/obj/strings/my_strstr.o lib/obj/strings/my_strchr.o lib/obj/strings/my_revstr.o lib/obj/strings/my_strupcase.o lib/obj/strings/split_string.o lib/obj/strings/my_str_isnum.o lib/obj/strings/my_strlowcase.o lib/obj/strings/my_str_isupper.o lib/obj/strings/my_str_isalpha.o lib/obj/strings/my_str_islower.o lib/obj/strings/my_strarray_len.o lib/obj/strings/my_strcapitalize.o lib/obj/strings/my_str_isprintable.o lib/obj/strings/my_free_word_array.o lib/obj/lists/size.o lib/obj/lists/sort.o lib/obj/lists/find.o lib/obj/lists/append.o lib/obj/lists/create.o lib/obj/lists/remove.o lib/obj/lists/free_list.o lib/obj/lists/add_to_top.o
+#  Implicit rule search has not been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:34.003175285
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	$(update_progress)
+	$(show_progress)
+	@$(AR) $(LIB) $(LIB_OBJ)
+	@printf "$(GREEN)$(BOLD)Linking C static library$(NC)"
+	@printf "$(YELLOW)$(BOLD)%s$(NC)\n" "$(LIB)"
+
+# Not a target:
+lib/strings/my_strchr.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:12:27.382039249
+#  File has been updated.
+#  Successfully updated.
+
+lib/obj/strings/my_str_isnum.o: lib/strings/my_str_isnum.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'strings/my_str_isnum'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:33.158495499
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+lib/obj/strings/my_revstr.o: lib/strings/my_revstr.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'strings/my_revstr'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:32.989559581
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+lib/obj/strings/split_string.o: lib/strings/split_string.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'strings/split_string'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:33.106515205
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+# Not a target:
+lib/numbers/my_isneg.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:10:34.383379758
+#  File has been updated.
+#  Successfully updated.
+
+lib/obj/lists/free_list.o: lib/lists/free_list.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'lists/free_list'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:33.911210143
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+clean: lib_clean
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 141):
+	rm -rf $(OBJ_DIR)
+	@rm -f $(PROGRESS_FILE)
+
+# Not a target:
+lib/numbers/my_find_prime_sup.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:10:17.342293598
+#  File has been updated.
+ 
+#  Successfully updated.
+
+lib/obj/numbers/my_find_prime_sup.o: lib/numbers/my_find_prime_sup.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'numbers/my_find_prime_sup'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:32.472757178
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+lib/obj/lists/size.o: lib/lists/size.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'lists/size'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:33.597329136
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+# Not a target:
+lib/strings/my_strarray_len.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:04:54.364164398
+#  File has been updated.
+#  Successfully updated.
+
+lib/obj/my_printf/utilities.o: lib/my_printf/utilities.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'my_printf/utilities'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:32.05391732
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+# Not a target:
+lib/lists/find.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-10 12:55:31.694292301
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lib/lists/remove.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-10 12:59:25.638819681
+#  File has been updated.
+#  Successfully updated.
+
+lib/obj/strings/my_strdup.o: lib/strings/my_strdup.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'strings/my_strdup'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:32.780639461
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+# Not a target:
+lib/my_printf/printf_putstr.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:09:51.454440651
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lib/strings/my_free_word_array.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:10:41.882885225
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lib/strings/my_strdup.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:12:55.738714589
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lib/strings/split_string.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-10 11:53:18.803234183
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lib/my_printf/my_printf.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:08:45.405418419
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/main.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:06:11.503853106
+#  File has been updated.
+#  Successfully updated.
+
+re: fclean all
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+lib/obj/strings/my_str_isupper.o: lib/strings/my_str_isupper.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'strings/my_str_isupper'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:33.253459498
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+lib/obj/strings/my_str_isprintable.o: lib/strings/my_str_isprintable.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'strings/my_str_isprintable'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:33.499366274
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+lib/obj/lists/create.o: lib/lists/create.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'lists/create'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:33.804250692
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+# Not a target:
+lib/lists/size.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-10 12:55:31.694292301
+#  File has been updated.
+#  Successfully updated.
+
+lib_clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 145):
+	rm -rf $(LIB_OBJ_DIR)
+
+# Not a target:
+lib/numbers/my_getnbr.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:10:23.275544318
+#  File has been updated.
+#  Successfully updated.
+
+lib/obj/strings/my_strlowcase.o: lib/strings/my_strlowcase.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'strings/my_strlowcase'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:33.208476551
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+lib/obj/lists/add_to_top.o: lib/lists/add_to_top.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'lists/add_to_top'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:33.965189679
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+lib/obj/strings/my_strchr.o: lib/strings/my_strchr.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'strings/my_strchr'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:32.940578309
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+lib/obj/strings/my_strupcase.o: lib/strings/my_strupcase.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'strings/my_strupcase'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:33.040540216
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+lib/obj/lists/append.o: lib/lists/append.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'lists/append'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:33.748271914
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+# Not a target:
+lib/strings/my_str_isnum.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:11:20.16501396
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+ 
+#  File has not been updated.
+
+# Not a target:
+lib/strings/my_strcat.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:12:15.351186424
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lib/io/my_putstr.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:06:44.498264051
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lib/lists/create.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-10 12:59:12.845866363
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lib/strings/my_strupcase.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:13:21.358518245
+#  File has been updated.
+#  Successfully updated.
+
+all: proj
+#  Phony target (prerequisite of .PHONY).
+#  Command line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Successfully updated.
+
+fclean: clean lib_fclean
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 148):
+	rm -f $(NAME)
+	rm -f $(PROGRESS_FILE)
+
+lib/obj/lists/sort.o: lib/lists/sort.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'lists/sort'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:33.648309809
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+# Not a target:
+lib/strings/my_strcmp.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:12:38.243968737
+#  File has been updated.
+#  Successfully updated.
+
+lib/obj/strings/my_strstr.o: lib/strings/my_strstr.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'strings/my_strstr'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:32.883600094
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+# Not a target:
+lib/my_printf/printf_putchar.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:09:16.476189586
+#  File has been updated.
+#  Successfully updated.
+
+lib/obj/my_printf/my_printf.o: lib/my_printf/my_printf.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'my_printf/my_printf'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:32.116893241
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+# Not a target:
+lib/io/my_putnbr.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:06:39.464748542
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lib/numbers/my_is_prime.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:10:28.450140607
+#  File has been updated.
+#  Successfully updated.
+
+lib/obj/strings/my_str_isalpha.o: lib/strings/my_str_isalpha.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'strings/my_str_isalpha'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:33.304440171
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+lib/obj/my_printf/printf_putnbr.o: lib/my_printf/printf_putnbr.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'my_printf/printf_putnbr'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:32.165874513
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+lib/obj/strings/my_str_islower.o: lib/strings/my_str_islower.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'strings/my_str_islower'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:33.353421602
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+# Not a target:
+lib/lists/free_list.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-10 12:59:37.965090804
+#  File has been updated.
+#  Successfully updated.
+
+lib/obj/numbers/my_is_prime.o: lib/numbers/my_is_prime.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'numbers/my_is_prime'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:32.419777435
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+lib/obj/strings/my_strcmp.o: lib/strings/my_strcmp.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'strings/my_strcmp'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:32.675679592
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+# Not a target:
+lib/strings/my_str_islower.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:11:09.230204622
+#  File has been updated.
+#  Successfully updated.
+
+lib/obj/strings/my_strcpy.o: lib/strings/my_strcpy.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'strings/my_strcpy'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:32.728659335
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+lib/obj/io/my_putchar.o: lib/io/my_putchar.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'io/my_putchar'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:31.949957236
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+lib/obj/io/my_putnbr.o: lib/io/my_putnbr.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'io/my_putnbr'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:31.79013097
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+# Not a target:
+lib/strings/my_strcapitalize.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:12:08.936202898
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lib/numbers/my_compute_power_rec.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:10:05.321826014
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lib/strings/my_revstr.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:10:46.885552105
+#  File has been updated.
+#  Successfully updated.
+
+lib/obj/numbers/my_compute_square_root.o: lib/numbers/my_compute_square_root.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'numbers/my_compute_square_root'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:32.573718576
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+lib/obj/numbers/my_compute_power_rec.o: lib/numbers/my_compute_power_rec.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'numbers/my_compute_power_rec'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:32.523737686
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+# Not a target:
+lib/strings/my_strcpy.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:12:45.892793288
+#  File has been updated.
+#  Successfully updated.
+
+lib/obj/io/my_puterr.o: lib/io/my_puterr.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'io/my_puterr'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:31.892979207
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+# Not a target:
+lib/numbers/my_compute_square_root.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:10:12.63763352
+#  File has been updated.
+#  Successfully updated.
+
+lib/obj/strings/my_strarray_len.o: lib/strings/my_strarray_len.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'strings/my_strarray_len'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:33.39940417
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+lib/obj/lists/find.o: lib/lists/find.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'lists/find'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:33.696291619
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+# Not a target:
+lib/my_printf/printf_putnbr.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:09:22.890417525
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lib/strings/my_str_isprintable.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:11:30.706991937
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lib/strings/my_strlowcase.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:13:09.655378326
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lib/io/my_show_word_array.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:06:48.914471042
+#  File has been updated.
+#  Successfully updated.
+
+lib/obj/strings/my_strcat.o: lib/strings/my_strcat.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'strings/my_strcat'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:32.623699466
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+lib/obj/io/my_show_word_array.o: lib/io/my_show_word_array.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'io/my_show_word_array'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:31.996939119
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+lib/obj/strings/my_strlen.o: lib/strings/my_strlen.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'strings/my_strlen'
+#  File is secondary (prerequisite of .SECONDARY).
+ 
+#  Last modified 2025-06-11 14:24:32.831004546
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+.PHONY: all clean fclean re debug lib lib_clean lib_fclean
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lib/strings/my_strstr.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:13:16.834257262
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lib/io/my_puterr.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-04 13:06:34.022028492
+#  File has been updated.
+#  Successfully updated.
+
+lib/obj/numbers/my_getnbr.o: lib/numbers/my_getnbr.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'numbers/my_getnbr'
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:32.366797691
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 127):
+	@mkdir -p $(@D)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\n" "$@"
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+proj: lib/libmy.a obj/main.o
+#  Implicit rule search has not been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-11 14:24:34.122751076
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 109):
+	$(update_progress)
+	$(show_progress)
+	@printf "$(GREEN)$(BOLD)Linking C executable$(NC)"
+	@printf "$(YELLOW)$(BOLD)%s$(NC)\n" "$(NAME)"
+	@$(CC) -o $(NAME) $(OBJ) $(CFLAGS) $(LDFLAGS)
+	$(update_progress)
+	$(show_progress)
+	@printf "$(RED)$(BOLD)Built target$(NC)\n"
+
+# Not a target:
+lib/lists/sort.c:
+#  Implicit rule search has been done.
+#  File is secondary (prerequisite of .SECONDARY).
+#  Last modified 2025-06-10 12:55:31.694292301
+#  File has been updated.
+#  Successfully updated.
+
+# files hash-table stats:
+# Load=102/1024=10%, Rehash=0, Collisions=24/315=8%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 214 / storage = 4169 B / avg = 19 B
+# current buf: size = 8162 B / used = 4169 B / count = 214 / avg = 19 B
+
+# strcache performance: lookups = 304 / hit rate = 29%
+# hash-table stats:
+# Load=214/8192=3%, Rehash=0, Collisions=0/304=0%
+# Finished Make data base on Wed Jun 11 14:25:29 2025
+
+ 

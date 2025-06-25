@@ -1,0 +1,86 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/curry/Zappy'
+mkdir -p obj/Server/src/
+if [ ! -f .server_counter ]; then echo 1 > .server_counter; fi
+if [ ! -f .server_counter ]; then echo 1 > .server_counter; fi; count=$(cat .server_counter 2>/dev/null || echo 1); total=$(echo $((8))); if [ -z "$count" ] || [ "$count" = "" ]; then count=1; fi; progress=$(($count * 100 / $total)); if [ $progress -gt 100 ]; then progress=100; fi; bar_fill=$(($progress * 40 / 100)); bar=$(printf "%0.s=" $(seq 1 $bar_fill)); space=$((40 - $bar_fill)); if [ $progress -lt 100 ]; then empty=$(printf "%0.s " $(seq 1 $space)); else empty=""; fi; printf "\r[\033[1;34m%s%s\033[0m] %3d%% \033[1;32m%s\033[0m\n" "$bar" "$empty" "$progress" "Compiling Server/src/main.c..."
+gcc -c -o obj/Server/src/main.o Server/src/main.c -Werror -Wall -Wextra -Iinclude -I Server/include -I Debug
+count=$(cat .server_counter 2>/dev/null || echo 1); echo $((count + 1)) > .server_counter
+mkdir -p obj/Server/src/
+if [ ! -f .server_counter ]; then echo 1 > .server_counter; fi
+if [ ! -f .server_counter ]; then echo 1 > .server_counter; fi; count=$(cat .server_counter 2>/dev/null || echo 1); total=$(echo $((8))); if [ -z "$count" ] || [ "$count" = "" ]; then count=1; fi; progress=$(($count * 100 / $total)); if [ $progress -gt 100 ]; then progress=100; fi; bar_fill=$(($progress * 40 / 100)); bar=$(printf "%0.s=" $(seq 1 $bar_fill)); space=$((40 - $bar_fill)); if [ $progress -lt 100 ]; then empty=$(printf "%0.s " $(seq 1 $space)); else empty=""; fi; printf "\r[\033[1;34m%s%s\033[0m] %3d%% \033[1;32m%s\033[0m\n" "$bar" "$empty" "$progress" "Compiling Server/src/garbage.c..."
+gcc -c -o obj/Server/src/garbage.o Server/src/garbage.c -Werror -Wall -Wextra -Iinclude -I Server/include -I Debug
+count=$(cat .server_counter 2>/dev/null || echo 1); echo $((count + 1)) > .server_counter
+mkdir -p obj/Server/src/
+if [ ! -f .server_counter ]; then echo 1 > .server_counter; fi
+if [ ! -f .server_counter ]; then echo 1 > .server_counter; fi; count=$(cat .server_counter 2>/dev/null || echo 1); total=$(echo $((8))); if [ -z "$count" ] || [ "$count" = "" ]; then count=1; fi; progress=$(($count * 100 / $total)); if [ $progress -gt 100 ]; then progress=100; fi; bar_fill=$(($progress * 40 / 100)); bar=$(printf "%0.s=" $(seq 1 $bar_fill)); space=$((40 - $bar_fill)); if [ $progress -lt 100 ]; then empty=$(printf "%0.s " $(seq 1 $space)); else empty=""; fi; printf "\r[\033[1;34m%s%s\033[0m] %3d%% \033[1;32m%s\033[0m\n" "$bar" "$empty" "$progress" "Compiling Server/src/init_server.c..."
+gcc -c -o obj/Server/src/init_server.o Server/src/init_server.c -Werror -Wall -Wextra -Iinclude -I Server/include -I Debug
+count=$(cat .server_counter 2>/dev/null || echo 1); echo $((count + 1)) > .server_counter
+mkdir -p obj/Server/src/
+if [ ! -f .server_counter ]; then echo 1 > .server_counter; fi
+if [ ! -f .server_counter ]; then echo 1 > .server_counter; fi; count=$(cat .server_counter 2>/dev/null || echo 1); total=$(echo $((8))); if [ -z "$count" ] || [ "$count" = "" ]; then count=1; fi; progress=$(($count * 100 / $total)); if [ $progress -gt 100 ]; then progress=100; fi; bar_fill=$(($progress * 40 / 100)); bar=$(printf "%0.s=" $(seq 1 $bar_fill)); space=$((40 - $bar_fill)); if [ $progress -lt 100 ]; then empty=$(printf "%0.s " $(seq 1 $space)); else empty=""; fi; printf "\r[\033[1;34m%s%s\033[0m] %3d%% \033[1;32m%s\033[0m\n" "$bar" "$empty" "$progress" "Compiling Server/src/handle_event.c..."
+gcc -c -o obj/Server/src/handle_event.o Server/src/handle_event.c -Werror -Wall -Wextra -Iinclude -I Server/include -I Debug
+count=$(cat .server_counter 2>/dev/null || echo 1); echo $((count + 1)) > .server_counter
+mkdir -p obj/Server/src/
+if [ ! -f .server_counter ]; then echo 1 > .server_counter; fi
+if [ ! -f .server_counter ]; then echo 1 > .server_counter; fi; count=$(cat .server_counter 2>/dev/null || echo 1); total=$(echo $((8))); if [ -z "$count" ] || [ "$count" = "" ]; then count=1; fi; progress=$(($count * 100 / $total)); if [ $progress -gt 100 ]; then progress=100; fi; bar_fill=$(($progress * 40 / 100)); bar=$(printf "%0.s=" $(seq 1 $bar_fill)); space=$((40 - $bar_fill)); if [ $progress -lt 100 ]; then empty=$(printf "%0.s " $(seq 1 $space)); else empty=""; fi; printf "\r[\033[1;34m%s%s\033[0m] %3d%% \033[1;32m%s\033[0m\n" "$bar" "$empty" "$progress" "Compiling Server/src/init_density.c..."
+gcc -c -o obj/Server/src/init_density.o Server/src/init_density.c -Werror -Wall -Wextra -Iinclude -I Server/include -I Debug
+count=$(cat .server_counter 2>/dev/null || echo 1); echo $((count + 1)) > .server_counter
+mkdir -p obj/Server/src/
+if [ ! -f .server_counter ]; then echo 1 > .server_counter; fi
+if [ ! -f .server_counter ]; then echo 1 > .server_counter; fi; count=$(cat .server_counter 2>/dev/null || echo 1); total=$(echo $((8))); if [ -z "$count" ] || [ "$count" = "" ]; then count=1; fi; progress=$(($count * 100 / $total)); if [ $progress -gt 100 ]; then progress=100; fi; bar_fill=$(($progress * 40 / 100)); bar=$(printf "%0.s=" $(seq 1 $bar_fill)); space=$((40 - $bar_fill)); if [ $progress -lt 100 ]; then empty=$(printf "%0.s " $(seq 1 $space)); else empty=""; fi; printf "\r[\033[1;34m%s%s\033[0m] %3d%% \033[1;32m%s\033[0m\n" "$bar" "$empty" "$progress" "Compiling Server/src/start_server.c..."
+gcc -c -o obj/Server/src/start_server.o Server/src/start_server.c -Werror -Wall -Wextra -Iinclude -I Server/include -I Debug
+count=$(cat .server_counter 2>/dev/null || echo 1); echo $((count + 1)) > .server_counter
+mkdir -p obj/Server/src/
+if [ ! -f .server_counter ]; then echo 1 > .server_counter; fi
+if [ ! -f .server_counter ]; then echo 1 > .server_counter; fi; count=$(cat .server_counter 2>/dev/null || echo 1); total=$(echo $((8))); if [ -z "$count" ] || [ "$count" = "" ]; then count=1; fi; progress=$(($count * 100 / $total)); if [ $progress -gt 100 ]; then progress=100; fi; bar_fill=$(($progress * 40 / 100)); bar=$(printf "%0.s=" $(seq 1 $bar_fill)); space=$((40 - $bar_fill)); if [ $progress -lt 100 ]; then empty=$(printf "%0.s " $(seq 1 $space)); else empty=""; fi; printf "\r[\033[1;34m%s%s\033[0m] %3d%% \033[1;32m%s\033[0m\n" "$bar" "$empty" "$progress" "Compiling Server/src/poll_handling.c..."
+gcc -c -o obj/Server/src/poll_handling.o Server/src/poll_handling.c -Werror -Wall -Wextra -Iinclude -I Server/include -I Debug
+count=$(cat .server_counter 2>/dev/null || echo 1); echo $((count + 1)) > .server_counter
+mkdir -p obj/Server/src/
+if [ ! -f .server_counter ]; then echo 1 > .server_counter; fi
+if [ ! -f .server_counter ]; then echo 1 > .server_counter; fi; count=$(cat .server_counter 2>/dev/null || echo 1); total=$(echo $((8))); if [ -z "$count" ] || [ "$count" = "" ]; then count=1; fi; progress=$(($count * 100 / $total)); if [ $progress -gt 100 ]; then progress=100; fi; bar_fill=$(($progress * 40 / 100)); bar=$(printf "%0.s=" $(seq 1 $bar_fill)); space=$((40 - $bar_fill)); if [ $progress -lt 100 ]; then empty=$(printf "%0.s " $(seq 1 $space)); else empty=""; fi; printf "\r[\033[1;34m%s%s\033[0m] %3d%% \033[1;32m%s\033[0m\n" "$bar" "$empty" "$progress" "Compiling Server/src/options_parser.c..."
+gcc -c -o obj/Server/src/options_parser.o Server/src/options_parser.c -Werror -Wall -Wextra -Iinclude -I Server/include -I Debug
+count=$(cat .server_counter 2>/dev/null || echo 1); echo $((count + 1)) > .server_counter
+make libLogger.a -s -C Debug
+make[1]: Entering directory '/home/curry/Zappy/Debug'
+gcc -Wall -Wextra -Werror -std=c11 -I. -fPIC -c logger.c -o logger.o
+g++ -Wall -Wextra -Werror -std=c++20 -I. -fPIC -c Logger.cpp -o Logger.o
+echo -e "\033[1;34mCreating static library: libLogger.a\033[0m"
+ar rcs libLogger.a logger.o Logger.o
+make[1]: Leaving directory '/home/curry/Zappy/Debug'
+echo 1 > .server_counter
+echo -e "\033[1;32mLinking zappy_server with static Logger lib...\033[0m"
+gcc -o zappy_server obj/Server/src/main.o obj/Server/src/garbage.o obj/Server/src/init_server.o obj/Server/src/handle_event.o obj/Server/src/init_density.o obj/Server/src/start_server.o obj/Server/src/poll_handling.o obj/Server/src/options_parser.o Debug/libLogger.a -Werror -Wall -Wextra -Iinclude -I Server/include -I Debug
+mkdir -p obj/Gui/src/
+if [ ! -f .gui_counter ]; then echo 1 > .gui_counter; fi
+if [ ! -f .gui_counter ]; then echo 1 > .gui_counter; fi; count=$(cat .gui_counter 2>/dev/null || echo 1); total=$(echo $((4))); if [ -z "$count" ] || [ "$count" = "" ]; then count=1; fi; progress=$(($count * 100 / $total)); if [ $progress -gt 100 ]; then progress=100; fi; bar_fill=$(($progress * 40 / 100)); bar=$(printf "%0.s=" $(seq 1 $bar_fill)); space=$((40 - $bar_fill)); if [ $progress -lt 100 ]; then empty=$(printf "%0.s " $(seq 1 $space)); else empty=""; fi; printf "\r[\033[1;34m%s%s\033[0m] %3d%% \033[1;32m%s\033[0m\n" "$bar" "$empty" "$progress" "Compiling Gui/src/main.cpp..."
+g++ -c -o obj/Gui/src/main.o Gui/src/main.cpp -Werror -Wall -Wextra -Iinclude -I Gui/include -lraylib -lpthread -lGL -I Debug
+count=$(cat .gui_counter 2>/dev/null || echo 1); echo $((count + 1)) > .gui_counter
+mkdir -p obj/Gui/src/
+if [ ! -f .gui_counter ]; then echo 1 > .gui_counter; fi
+if [ ! -f .gui_counter ]; then echo 1 > .gui_counter; fi; count=$(cat .gui_counter 2>/dev/null || echo 1); total=$(echo $((4))); if [ -z "$count" ] || [ "$count" = "" ]; then count=1; fi; progress=$(($count * 100 / $total)); if [ $progress -gt 100 ]; then progress=100; fi; bar_fill=$(($progress * 40 / 100)); bar=$(printf "%0.s=" $(seq 1 $bar_fill)); space=$((40 - $bar_fill)); if [ $progress -lt 100 ]; then empty=$(printf "%0.s " $(seq 1 $space)); else empty=""; fi; printf "\r[\033[1;34m%s%s\033[0m] %3d%% \033[1;32m%s\033[0m\n" "$bar" "$empty" "$progress" "Compiling Gui/src/Kayu.cpp..."
+g++ -c -o obj/Gui/src/Kayu.o Gui/src/Kayu.cpp -Werror -Wall -Wextra -Iinclude -I Gui/include -lraylib -lpthread -lGL -I Debug
+count=$(cat .gui_counter 2>/dev/null || echo 1); echo $((count + 1)) > .gui_counter
+mkdir -p obj/Gui/src/
+if [ ! -f .gui_counter ]; then echo 1 > .gui_counter; fi
+if [ ! -f .gui_counter ]; then echo 1 > .gui_counter; fi; count=$(cat .gui_counter 2>/dev/null || echo 1); total=$(echo $((4))); if [ -z "$count" ] || [ "$count" = "" ]; then count=1; fi; progress=$(($count * 100 / $total)); if [ $progress -gt 100 ]; then progress=100; fi; bar_fill=$(($progress * 40 / 100)); bar=$(printf "%0.s=" $(seq 1 $bar_fill)); space=$((40 - $bar_fill)); if [ $progress -lt 100 ]; then empty=$(printf "%0.s " $(seq 1 $space)); else empty=""; fi; printf "\r[\033[1;34m%s%s\033[0m] %3d%% \033[1;32m%s\033[0m\n" "$bar" "$empty" "$progress" "Compiling Gui/src/Entity.cpp..."
+g++ -c -o obj/Gui/src/Entity.o Gui/src/Entity.cpp -Werror -Wall -Wextra -Iinclude -I Gui/include -lraylib -lpthread -lGL -I Debug
+count=$(cat .gui_counter 2>/dev/null || echo 1); echo $((count + 1)) > .gui_counter
+mkdir -p obj/Gui/src/
+if [ ! -f .gui_counter ]; then echo 1 > .gui_counter; fi
+if [ ! -f .gui_counter ]; then echo 1 > .gui_counter; fi; count=$(cat .gui_counter 2>/dev/null || echo 1); total=$(echo $((4))); if [ -z "$count" ] || [ "$count" = "" ]; then count=1; fi; progress=$(($count * 100 / $total)); if [ $progress -gt 100 ]; then progress=100; fi; bar_fill=$(($progress * 40 / 100)); bar=$(printf "%0.s=" $(seq 1 $bar_fill)); space=$((40 - $bar_fill)); if [ $progress -lt 100 ]; then empty=$(printf "%0.s " $(seq 1 $space)); else empty=""; fi; printf "\r[\033[1;34m%s%s\033[0m] %3d%% \033[1;32m%s\033[0m\n" "$bar" "$empty" "$progress" "Compiling Gui/src/Player.cpp..."
+g++ -c -o obj/Gui/src/Player.o Gui/src/Player.cpp -Werror -Wall -Wextra -Iinclude -I Gui/include -lraylib -lpthread -lGL -I Debug
+count=$(cat .gui_counter 2>/dev/null || echo 1); echo $((count + 1)) > .gui_counter
+echo 1 > .gui_counter
+echo -e "\033[1;32mLinking zappy_gui with static Logger lib...\033[0m"
+g++ -o zappy_gui obj/Gui/src/main.o obj/Gui/src/Kayu.o obj/Gui/src/Entity.o obj/Gui/src/Player.o Debug/libLogger.a -Werror -Wall -Wextra -Iinclude -I Gui/include -lraylib -lpthread -lGL -I Debug
+make libLogger.so -s -C Debug
+make[1]: Entering directory '/home/curry/Zappy/Debug'
+gcc -Wall -Wextra -Werror -std=c11 -I. -fPIC -c logger.c -o logger.o
+g++ -Wall -Wextra -Werror -std=c++20 -I. -fPIC -c Logger.cpp -o Logger.o
+echo -e "\033[1;34mCreating shared library: libLogger.so\033[0m"
+cc -fPIC -shared -o libLogger.so logger.c
+make[1]: Leaving directory '/home/curry/Zappy/Debug'
+echo -e "\033[1;32mLinking zappy_ai with shared Logger lib...\033[0m"
+cp Ai/src/startAi.py ./zappy_ai
+make: Leaving directory '/home/curry/Zappy'
+ 

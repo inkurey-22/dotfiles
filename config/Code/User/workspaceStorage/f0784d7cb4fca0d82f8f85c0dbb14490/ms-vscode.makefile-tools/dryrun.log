@@ -1,0 +1,20 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/curry/Workspace/SEM2/CPE/amazed'
+clang -W -Wall -Wextra -Werror -Wpedantic -Iinclude   -c -o src/main.o src/main.c
+clang -W -Wall -Wextra -Werror -Wpedantic -Iinclude   -c -o src/parsing/parsing.o src/parsing/parsing.c
+clang -W -Wall -Wextra -Werror -Wpedantic -Iinclude   -c -o src/parsing/init_robot.o src/parsing/init_robot.c
+clang -W -Wall -Wextra -Werror -Wpedantic -Iinclude   -c -o src/parsing/comments.o src/parsing/comments.c
+clang -W -Wall -Wextra -Werror -Wpedantic -Iinclude   -c -o src/parsing/text.o src/parsing/text.c
+clang -W -Wall -Wextra -Werror -Wpedantic -Iinclude   -c -o src/parsing/number_robot.o src/parsing/number_robot.c
+clang -W -Wall -Wextra -Werror -Wpedantic -Iinclude   -c -o src/parsing/rooms.o src/parsing/rooms.c
+clang -W -Wall -Wextra -Werror -Wpedantic -Iinclude   -c -o src/parsing/start_end.o src/parsing/start_end.c
+clang -W -Wall -Wextra -Werror -Wpedantic -Iinclude   -c -o src/parsing/error.o src/parsing/error.c
+clang -W -Wall -Wextra -Werror -Wpedantic -Iinclude   -c -o src/graph/utils.o src/graph/utils.c
+clang -W -Wall -Wextra -Werror -Wpedantic -Iinclude   -c -o src/graph/create_graph.o src/graph/create_graph.c
+clang -W -Wall -Wextra -Werror -Wpedantic -Iinclude   -c -o src/graph/free_graph.o src/graph/free_graph.c
+clang -W -Wall -Wextra -Werror -Wpedantic -Iinclude   -c -o src/display.o src/display.c
+clang -W -Wall -Wextra -Werror -Wpedantic -Iinclude   -c -o src/walking/init_moves.o src/walking/init_moves.c
+make -C ./lib/my
+gcc -o amazed src/main.o src/parsing/parsing.o src/parsing/init_robot.o src/parsing/comments.o src/parsing/text.o src/parsing/number_robot.o src/parsing/rooms.o src/parsing/start_end.o src/parsing/error.o src/graph/utils.o src/graph/create_graph.o src/graph/free_graph.o src/display.o src/walking/init_moves.o -L./lib/my -lmy -W -Wall -Wextra -Werror -Wpedantic -Iinclude
+make: Leaving directory '/home/curry/Workspace/SEM2/CPE/amazed'
+ 

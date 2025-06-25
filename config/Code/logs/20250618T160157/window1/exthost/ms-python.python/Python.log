@@ -1,0 +1,12 @@
+2025-06-18 16:02:01.101 [info] Telemetry level is off
+2025-06-18 16:02:01.101 [info] Experiments are disabled, only manually opted experiments are active.
+2025-06-18 16:02:01.101 [warning] Dir "/home/curry/Downloads/sujets/Groupe 1 - 5/Mercredi/Ressources/.pixi/envs" is not watchable (directory does not exist)
+2025-06-18 16:02:01.101 [info] Python interpreter path: ./venv/bin/python
+2025-06-18 16:02:02.411 [info] > pyenv which python
+2025-06-18 16:02:02.411 [info] cwd: ~/Downloads/sujets/Groupe 1 - 5/Mercredi/Ressources
+2025-06-18 16:02:06.268 [info] Send text to terminal: source "/home/curry/Downloads/sujets/Groupe 1 - 5/Mercredi/Ressources/venv/bin/activate"
+2025-06-18 16:02:08.696 [info] Starting Pylance language server.
+2025-06-18 16:35:26.713 [info] Discover tests for workspace name: Ressources - uri: /home/curry/Downloads/sujets/Groupe 1 - 5/Mercredi/Ressources/tictactoe.py
+2025-06-18 16:35:55.827 [info] Discover tests for workspace name: Ressources - uri: /home/curry/Downloads/sujets/Groupe 1 - 5/Mercredi/Ressources/tictactoe.py
+2025-06-18 16:36:25.142 [info] Discover tests for workspace name: Ressources - uri: /home/curry/Downloads/sujets/Groupe 1 - 5/Mercredi/Ressources/tictactoe.py
+2025-06-18 16:42:03.828 [info] Discover tests for workspace name: Ressources - uri: /home/curry/Downloads/sujets/Groupe 1 - 5/Mercredi/Ressources/tictactoe.py

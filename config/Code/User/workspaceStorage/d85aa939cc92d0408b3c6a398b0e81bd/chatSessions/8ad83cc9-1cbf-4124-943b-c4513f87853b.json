@@ -1,0 +1,385 @@
+{
+  "version": 3,
+  "requesterUsername": "inkurey-22",
+  "requesterAvatarIconUri": {
+    "$mid": 1,
+    "path": "/u/146175466",
+    "scheme": "https",
+    "authority": "avatars.githubusercontent.com",
+    "query": "v=4"
+  },
+  "responderUsername": "GitHub Copilot",
+  "responderAvatarIconUri": {
+    "id": "copilot"
+  },
+  "initialLocation": "panel",
+  "requests": [
+    {
+      "requestId": "request_3beeabd2-ec95-42bb-ae61-7bd2ba6815cb",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 94
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 95
+            },
+            "text": "Merge the lib Makefile to this one. Still compile the lib separately, but in the same Makefile",
+            "kind": "text"
+          }
+        ],
+        "text": "Merge the lib Makefile to this one. Still compile the lib separately, but in the same Makefile"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "file:///home/curry/base_repo/lib/Makefile",
+            "value": {
+              "$mid": 1,
+              "fsPath": "/home/curry/base_repo/lib/Makefile",
+              "external": "file:///home/curry/base_repo/lib/Makefile",
+              "path": "/home/curry/base_repo/lib/Makefile",
+              "scheme": "file"
+            },
+            "name": "Makefile",
+            "omittedState": 0
+          },
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:Makefile",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/base_repo/Makefile",
+                "external": "file:///home/curry/base_repo/Makefile",
+                "path": "/home/curry/base_repo/Makefile",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 39,
+                "startColumn": 1,
+                "endLineNumber": 79,
+                "endColumn": 28
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "Here’s how you can merge the ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/base_repo/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/base_repo/lib/Makefile",
+            "external": "file:///home/curry/base_repo/lib/Makefile",
+            "path": "/home/curry/base_repo/lib/Makefile",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": " into your main ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/base_repo/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/base_repo/Makefile",
+            "external": "file:///home/curry/base_repo/Makefile",
+            "path": "/home/curry/base_repo/Makefile",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": " while still compiling the library separately, but managed from a single Makefile. This approach keeps the build logic for the library and the main project together, but still builds the library as a static archive (`libmy.a`) before linking your main executable.\n\nBelow is the revised ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/base_repo/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/base_repo/Makefile",
+            "external": "file:///home/curry/base_repo/Makefile",
+            "path": "/home/curry/base_repo/Makefile",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": ":\n\n````makefile\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/base_repo/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/base_repo/Makefile",
+            "external": "file:///home/curry/base_repo/Makefile",
+            "path": "/home/curry/base_repo/Makefile",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "##\n## EPITECH PROJECT, 2024\n## c_proj_template\n## File description:\n## Makefile\n##\n\n# Colors\nBOLD=\\033[1m\nRED=\\033[0;31m\nGREEN=\\033[0;32m\nYELLOW=\\033[0;33m\nBLUE=\\033[0;34m\nNC=\\033[0m # No Color\n\n.PHONY: all clean fclean re debug lib lib_clean lib_fclean\n\n# Directories\nLIB_DIR = lib\nSRC_DIR = src\nINCLUDE_DIR = include\nOBJ_DIR = obj\nLIB_OBJ_DIR = $(LIB_DIR)/obj\n\n# Files\nLIB = $(LIB_DIR)/libmy.a\nSRC = $(SRC_DIR)/main.c\n\n# Library sources and objects\nLIB_SRC =\t$(LIB_DIR)/io/my_putnbr.c                   \\\n            $(LIB_DIR)/io/my_putstr.c                   \\\n            $(LIB_DIR)/io/my_puterr.c                   \\\n            $(LIB_DIR)/io/my_putchar.c                  \\\n            $(LIB_DIR)/io/my_show_word_array.c          \\\n            $(LIB_DIR)/my_printf/utilities.c            \\\n            $(LIB_DIR)/my_printf/my_printf.c            \\\n            $(LIB_DIR)/my_printf/printf_putnbr.c        \\\n            $(LIB_DIR)/my_printf/printf_putstr.c        \\\n            $(LIB_DIR)/my_printf/printf_putchar.c       \\\n            $(LIB_DIR)/numbers/my_isneg.c               \\\n            $(LIB_DIR)/numbers/my_getnbr.c              \\\n            $(LIB_DIR)/numbers/my_is_prime.c            \\\n            $(LIB_DIR)/numbers/my_find_prime_sup.c      \\\n            $(LIB_DIR)/numbers/my_compute_power_rec.c   \\\n            $(LIB_DIR)/numbers/my_compute_square_root.c \\\n            $(LIB_DIR)/strings/my_strcat.c              \\\n            $(LIB_DIR)/strings/my_strcmp.c              \\\n            $(LIB_DIR)/strings/my_strcpy.c              \\\n            $(LIB_DIR)/strings/my_strdup.c              \\\n            $(LIB_DIR)/strings/my_strlen.c              \\\n            $(LIB_DIR)/strings/my_strstr.c              \\\n            $(LIB_DIR)/strings/my_strchr.c              \\\n            $(LIB_DIR)/strings/my_revstr.c              \\\n            $(LIB_DIR)/strings/my_strupcase.c           \\\n            $(LIB_DIR)/strings/split_string.c           \\\n            $(LIB_DIR)/strings/my_str_isnum.c           \\\n            $(LIB_DIR)/strings/my_strlowcase.c          \\\n            $(LIB_DIR)/strings/my_str_isupper.c         \\\n            $(LIB_DIR)/strings/my_str_isalpha.c         \\\n            $(LIB_DIR)/strings/my_str_islower.c         \\\n            $(LIB_DIR)/strings/my_strarray_len.c        \\\n            $(LIB_DIR)/strings/my_strcapitalize.c       \\\n            $(LIB_DIR)/strings/my_str_isprintable.c     \\\n            $(LIB_DIR)/strings/my_free_word_array.c     \\\n            $(LIB_DIR)/lists/size.c                     \\\n            $(LIB_DIR)/lists/sort.c                     \\\n            $(LIB_DIR)/lists/find.c                     \\\n            $(LIB_DIR)/lists/append.c                   \\\n            $(LIB_DIR)/lists/create.c                   \\\n            $(LIB_DIR)/lists/remove.c                   \\\n            $(LIB_DIR)/lists/free_list.c                \\\n            $(LIB_DIR)/lists/add_to_top.c\n\nLIB_OBJ = $(LIB_SRC:$(LIB_DIR)/%.c=$(LIB_OBJ_DIR)/%.o)\n\nOBJ = $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)\n\nNAME = proj\n\n# Compiler\nCC = gcc\nAR = ar rc\nCFLAGS = -I$(INCLUDE_DIR) -Wall -Wextra\nLDFLAGS = -L$(LIB_DIR) -lmy\n\nall: $(NAME)\n\n$(NAME): $(LIB) $(OBJ)\n\t@printf \"$(BOLD)$(BLUE)[100%%]$(NC)$(GREEN)$(BOLD)Linking C executable$(NC)$(YELLOW)$(BOLD)%s$(NC)\\n\" \"$(NAME)\"\n\t@$(CC) -o $(NAME) $(OBJ) $(CFLAGS) $(LDFLAGS)\n\t@printf \"$(BOLD)$(BLUE)[100%%]$(NC)$(BOLD)Built target $(NC)$(YELLOW)%s$(NC)\\n\" \"$(NAME)\"\n\n# Build the library\n$(LIB): lib\n\nlib: $(LIB_OBJ)\n\t@$(AR) $(LIB) $(LIB_OBJ)\n\t@printf \"$(BOLD)$(BLUE)[100%%]$(NC)$(GREEN)$(BOLD)Linking C static library$(NC)$(YELLOW)$(BOLD)%s$(NC)\\n\" \"$(LIB)\"\n\t@cp $(LIB_DIR)/io/my_io.h $(INCLUDE_DIR) 2>/dev/null || true\n\t@cp $(LIB_DIR)/my_printf/my_printf.h $(INCLUDE_DIR) 2>/dev/null || true\n\t@cp $(LIB_DIR)/strings/my_strings.h $(INCLUDE_DIR) 2>/dev/null || true\n\t@cp $(LIB_DIR)/numbers/my_numbers.h $(INCLUDE_DIR) 2>/dev/null || true\n\n$(LIB_OBJ_DIR)/%.o: $(LIB_DIR)/%.c\n\t@mkdir -p $(@D)\n\t@COMPILED=$$(find $(LIB_OBJ_DIR) -name '*.o' | wc -l); \\\n\tTOTAL=$$(echo \"$(LIB_SRC)\" | wc -w); \\\n\tPERCENT=$$(( (COMPILED + 1) * 100 / TOTAL )); \\\n\tprintf \"$(BOLD)$(BLUE)[%3s%%]$(NC)$(GREEN)Building LIB object$(NC)$(YELLOW)%s$(NC)\\n\" \"$$PERCENT\" \"$@\"\n\t@$(CC) -c $< -o $@ -I$(INCLUDE_DIR) -Wall -Wextra\n\n# Main project objects\n$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c\n\t@mkdir -p $(@D)\n\t@COMPILED=$$(find $(OBJ_DIR) -name '*.o' | wc -l); \\\n\tTOTAL=$$(echo \"$(SRC)\" | wc -w); \\\n\tPERCENT=$$(( (COMPILED + 1) * 100 / TOTAL )); \\\n\tprintf \"$(BOLD)$(BLUE)[%3s%%]$(NC)$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\\n\" \"$$PERCENT\" \"$@\"\n\t@$(CC) -c $< -o $@ $(CFLAGS)\n\nclean: lib_clean\n\trm -rf $(OBJ_DIR)\n\nlib_clean:\n\trm -rf $(LIB_OBJ_DIR)\n\nfclean: clean lib_fclean\n\trm -f $(NAME)\n\nlib_fclean:\n\trm -f $(LIB)\n\nre: fclean all\n\ndebug: CFLAGS += -g\ndebug: re\n````\n\n**Key points:**\n- All logic is now in one Makefile.\n- ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/base_repo/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/base_repo/lib/",
+            "external": "file:///home/curry/base_repo/lib/",
+            "path": "/home/curry/base_repo/lib/",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": " target builds the static library from sources in ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/base_repo/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/base_repo/lib/",
+            "external": "file:///home/curry/base_repo/lib/",
+            "path": "/home/curry/base_repo/lib/",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": ".\n- Main project sources are built as before.\n- `clean`, `fclean` and their lib equivalents clean both main and lib objects.\n- Header copying is handled in the ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/base_repo/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/base_repo/lib/",
+            "external": "file:///home/curry/base_repo/lib/",
+            "path": "/home/curry/base_repo/lib/",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": " target.\n- You can still run `make lib` to only build the library, or `make` to build everything.\n\nLet me know if you want to further simplify or split targets!",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/base_repo/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_fb4f31e3-4bc5-4aeb-a5f8-d8031c5c33f5",
+      "result": {
+        "timings": {
+          "firstProgress": 2457,
+          "totalElapsed": 14285
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "##\n## EPITECH PROJECT, 2024\n## c_proj_template\n## File description:\n## Makefile\n##\n\n# Colors\nBOLD=\\033[1m\nRED=\\033[0;31m\nGREEN=\\033[0;32m\nYELLOW=\\033[0;33m\nBLUE=\\033[0;34m\nNC=\\033[0m # No Color\n\n.PHONY: all clean fclean re debug lib lib_clean lib_fclean\n\n# Directories\nLIB_DIR = lib\nSRC_DIR = src\nINCLUDE_DIR = include\nOBJ_DIR = obj\nLIB_OBJ_DIR = $(LIB_DIR)/obj\n\n# Files\nLIB = $(LIB_DIR)/libmy.a\nSRC = $(SRC_DIR)/main.c\n\n# Library sources and objects\nLIB_SRC =\t$(LIB_DIR)/io/my_putnbr.c                   \\\n            $(LIB_DIR)/io/my_putstr.c                   \\\n            $(LIB_DIR)/io/my_puterr.c                   \\\n            $(LIB_DIR)/io/my_putchar.c                  \\\n            $(LIB_DIR)/io/my_show_word_array.c          \\\n            $(LIB_DIR)/my_printf/utilities.c            \\\n            $(LIB_DIR)/my_printf/my_printf.c            \\\n            $(LIB_DIR)/my_printf/printf_putnbr.c        \\\n            $(LIB_DIR)/my_printf/printf_putstr.c        \\\n            $(LIB_DIR)/my_printf/printf_putchar.c       \\\n            $(LIB_DIR)/numbers/my_isneg.c               \\\n            $(LIB_DIR)/numbers/my_getnbr.c              \\\n            $(LIB_DIR)/numbers/my_is_prime.c            \\\n            $(LIB_DIR)/numbers/my_find_prime_sup.c      \\\n            $(LIB_DIR)/numbers/my_compute_power_rec.c   \\\n            $(LIB_DIR)/numbers/my_compute_square_root.c \\\n            $(LIB_DIR)/strings/my_strcat.c              \\\n            $(LIB_DIR)/strings/my_strcmp.c              \\\n            $(LIB_DIR)/strings/my_strcpy.c              \\\n            $(LIB_DIR)/strings/my_strdup.c              \\\n            $(LIB_DIR)/strings/my_strlen.c              \\\n            $(LIB_DIR)/strings/my_strstr.c              \\\n            $(LIB_DIR)/strings/my_strchr.c              \\\n            $(LIB_DIR)/strings/my_revstr.c              \\\n            $(LIB_DIR)/strings/my_strupcase.c           \\\n            $(LIB_DIR)/strings/split_string.c           \\\n            $(LIB_DIR)/strings/my_str_isnum.c           \\\n            $(LIB_DIR)/strings/my_strlowcase.c          \\\n            $(LIB_DIR)/strings/my_str_isupper.c         \\\n            $(LIB_DIR)/strings/my_str_isalpha.c         \\\n            $(LIB_DIR)/strings/my_str_islower.c         \\\n            $(LIB_DIR)/strings/my_strarray_len.c        \\\n            $(LIB_DIR)/strings/my_strcapitalize.c       \\\n            $(LIB_DIR)/strings/my_str_isprintable.c     \\\n            $(LIB_DIR)/strings/my_free_word_array.c     \\\n            $(LIB_DIR)/lists/size.c                     \\\n            $(LIB_DIR)/lists/sort.c                     \\\n            $(LIB_DIR)/lists/find.c                     \\\n            $(LIB_DIR)/lists/append.c                   \\\n            $(LIB_DIR)/lists/create.c                   \\\n            $(LIB_DIR)/lists/remove.c                   \\\n            $(LIB_DIR)/lists/free_list.c                \\\n            $(LIB_DIR)/lists/add_to_top.c\n\nLIB_OBJ = $(LIB_SRC:$(LIB_DIR)/%.c=$(LIB_OBJ_DIR)/%.o)\n\nOBJ = $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)\n\nNAME = proj\n\n# Compiler\nCC = gcc\nAR = ar rc\nCFLAGS = -I$(INCLUDE_DIR) -Wall -Wextra\nLDFLAGS = -L$(LIB_DIR) -lmy\n\nall: $(NAME)\n\n$(NAME): $(LIB) $(OBJ)\n\t@printf \"$(BOLD)$(BLUE)[100%%]$(NC)$(GREEN)$(BOLD)Linking C executable$(NC)$(YELLOW)$(BOLD)%s$(NC)\\n\" \"$(NAME)\"\n\t@$(CC) -o $(NAME) $(OBJ) $(CFLAGS) $(LDFLAGS)\n\t@printf \"$(BOLD)$(BLUE)[100%%]$(NC)$(BOLD)Built target $(NC)$(YELLOW)%s$(NC)\\n\" \"$(NAME)\"\n\n# Build the library\n$(LIB): lib\n\nlib: $(LIB_OBJ)\n\t@$(AR) $(LIB) $(LIB_OBJ)\n\t@printf \"$(BOLD)$(BLUE)[100%%]$(NC)$(GREEN)$(BOLD)Linking C static library$(NC)$(YELLOW)$(BOLD)%s$(NC)\\n\" \"$(LIB)\"\n\t@cp $(LIB_DIR)/io/my_io.h $(INCLUDE_DIR) 2>/dev/null || true\n\t@cp $(LIB_DIR)/my_printf/my_printf.h $(INCLUDE_DIR) 2>/dev/null || true\n\t@cp $(LIB_DIR)/strings/my_strings.h $(INCLUDE_DIR) 2>/dev/null || true\n\t@cp $(LIB_DIR)/numbers/my_numbers.h $(INCLUDE_DIR) 2>/dev/null || true\n\n$(LIB_OBJ_DIR)/%.o: $(LIB_DIR)/%.c\n\t@mkdir -p $(@D)\n\t@COMPILED=$$(find $(LIB_OBJ_DIR) -name '*.o' | wc -l); \\\n\tTOTAL=$$(echo \"$(LIB_SRC)\" | wc -w); \\\n\tPERCENT=$$(( (COMPILED + 1) * 100 / TOTAL )); \\\n\tprintf \"$(BOLD)$(BLUE)[%3s%%]$(NC)$(GREEN)Building LIB object$(NC)$(YELLOW)%s$(NC)\\n\" \"$$PERCENT\" \"$@\"\n\t@$(CC) -c $< -o $@ -I$(INCLUDE_DIR) -Wall -Wextra\n\n# Main project objects\n$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c\n\t@mkdir -p $(@D)\n\t@COMPILED=$$(find $(OBJ_DIR) -name '*.o' | wc -l); \\\n\tTOTAL=$$(echo \"$(SRC)\" | wc -w); \\\n\tPERCENT=$$(( (COMPILED + 1) * 100 / TOTAL )); \\\n\tprintf \"$(BOLD)$(BLUE)[%3s%%]$(NC)$(GREEN)Building C object$(NC)$(YELLOW)%s$(NC)\\n\" \"$$PERCENT\" \"$@\"\n\t@$(CC) -c $< -o $@ $(CFLAGS)\n\nclean: lib_clean\n\trm -rf $(OBJ_DIR)\n\nlib_clean:\n\trm -rf $(LIB_OBJ_DIR)\n\nfclean: clean lib_fclean\n\trm -f $(NAME)\n\nlib_fclean:\n\trm -f $(LIB)\n\nre: fclean all\n\ndebug: CFLAGS += -g\ndebug: re\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/home/curry/base_repo/Makefile",
+                "scheme": "file"
+              },
+              "language": "makefile",
+              "markdownBeforeBlock": "Here’s how you can merge the  into your main  while still compiling the library separately, but managed from a single Makefile. This approach keeps the build logic for the library and the main project together, but still builds the library as a static archive (`libmy.a`) before linking your main executable.\n\nBelow is the revised :\n\n"
+            }
+          ],
+          "modelMessageId": "302070ce-7ad2-4dcc-a520-4bba9d67cf5d",
+          "responseId": "1d2bf8c1-b020-4919-b6e7-b7a9e7945d17",
+          "sessionId": "6775363a-2a73-4733-9a4f-2c9bf1dad4dd",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "inkurey-22",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/146175466",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/base_repo/lib/Makefile",
+            "external": "file:///home/curry/base_repo/lib/Makefile",
+            "path": "/home/curry/base_repo/lib/Makefile",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/base_repo/Makefile",
+            "external": "file:///home/curry/base_repo/Makefile",
+            "path": "/home/curry/base_repo/Makefile",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1749552475963
+    }
+  ],
+  "sessionId": "8ad83cc9-1cbf-4124-943b-c4513f87853b",
+  "creationDate": 1749552454842,
+  "isImported": false,
+  "lastMessageDate": 1749552475963,
+  "customTitle": "Merging two Makefiles into one"
+}

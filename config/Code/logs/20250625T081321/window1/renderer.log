@@ -1,0 +1,23 @@
+2025-06-25 08:13:22.177 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-vsliveshare.vsliveshare' wants API proposal 'notebookCellExecutionState' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-06-25 08:13:22.192 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.gather' wants API proposal 'notebookCellExecutionState' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-06-25 08:13:22.192 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.vscode-pylance' wants API proposal 'mcpConfigurationProvider' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-06-25 08:13:22.620 [info] Started local extension host with pid 3141.
+2025-06-25 08:13:22.664 [info] ComputeTargetPlatform: linux-x64
+2025-06-25 08:13:22.918 [info] ChatSessionStore: Migrating 0 chat sessions from storage service to file system
+2025-06-25 08:13:23.005 [error] Extension 'ms-python.vscode-pylance' wants API proposal 'mcpConfigurationProvider' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-06-25 08:13:23.088 [error] Ignoring clangd.onConfigChanged.forceEnable as clangd.onConfigChanged is "prompt"
+2025-06-25 08:13:23.925 [warning] No search provider registered for scheme: file, waiting
+2025-06-25 08:13:23.963 [info] Settings Sync: Account status changed from uninitialized to unavailable
+2025-06-25 08:13:25.230 [info] [perf] Render performance baseline is 24ms
+2025-06-25 08:13:25.695 [info] Auto updating outdated extensions. github.copilot-chat
+2025-06-25 08:13:27.225 [error] [Extension Host] (node:3141) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `exe --trace-deprecation ...` to show where the warning was created)
+2025-06-25 08:13:52.968 [error] lock() request could not be registered.: InvalidStateError: lock() request could not be registered.
+2025-06-25 08:13:57.639 [info] Started local extension host with pid 3734.
+2025-06-25 08:14:01.499 [error] [Extension Host] (node:3734) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `exe --trace-deprecation ...` to show where the warning was created)
+2025-06-25 08:14:03.577 [error] No registered selector for ID: copilot-chat.fixWithCopilot
+2025-06-25 08:14:03.578 [error] No registered selector for ID: copilot-chat.generateCommitMessage
+2025-06-25 08:14:03.586 [error] No registered selector for ID: copilot-chat.terminalToDebugging
+2025-06-25 08:14:03.587 [error] No registered selector for ID: copilot-chat.terminalToDebuggingSuccess
+2025-06-25 08:14:25.854 [error] lock() request could not be registered.: InvalidStateError: lock() request could not be registered.

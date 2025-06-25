@@ -1,0 +1,32 @@
+2025-06-25 11:41:24.151 [info] Extension host with pid 36312 started
+2025-06-25 11:41:24.151 [info] Skipping acquiring lock for /home/curry/.config/Code/User/workspaceStorage/4029743d00461ca2aa8bed5167aab284.
+2025-06-25 11:41:24.232 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2025-06-25 11:41:24.276 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-06-25 11:41:24.284 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-06-25 11:41:24.359 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-06-25 11:41:24.401 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-06-25 11:41:24.558 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-06-25 11:41:24.561 [info] ExtensionService#_doActivateExtension DIMFLIX-OFFICIAL.meowrch-theme, startup: true, activationEvent: '*'
+2025-06-25 11:41:24.564 [info] ExtensionService#_doActivateExtension nicolaspolomack.epitech-c-cpp-headers, startup: true, activationEvent: '*'
+2025-06-25 11:41:24.659 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-06-25 11:41:24.731 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-06-25 11:41:24.754 [info] ExtensionService#_doActivateExtension ms-vscode.makefile-tools, startup: true, activationEvent: 'workspaceContains:**/makefile,**/Makefile,**/GNUmakefile'
+2025-06-25 11:41:25.247 [info] Eager extensions activated
+2025-06-25 11:41:25.248 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-06-25 11:41:25.265 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-06-25 11:41:25.295 [info] ExtensionService#_doActivateExtension GitHub.copilot, startup: false, activationEvent: 'onStartupFinished'
+2025-06-25 11:41:26.624 [info] ExtensionService#_doActivateExtension GitHub.copilot-chat, startup: false, activationEvent: 'onStartupFinished'
+2025-06-25 11:41:26.920 [info] ExtensionService#_doActivateExtension LeonardSSH.vscord, startup: false, activationEvent: 'onStartupFinished'
+2025-06-25 11:41:26.990 [info] ExtensionService#_doActivateExtension ms-vscode-remote.remote-containers, startup: false, activationEvent: 'onStartupFinished'
+2025-06-25 11:41:27.120 [info] ExtensionService#_doActivateExtension ritwickdey.LiveServer, startup: false, activationEvent: 'onStartupFinished'
+2025-06-25 11:41:27.862 [info] ExtensionService#_doActivateExtension mechatroner.rainbow-csv, startup: false, activationEvent: 'onLanguage:plaintext'
+2025-06-25 11:51:03.179 [info] Extension host terminating: renderer closed the MessagePort
+2025-06-25 11:51:03.241 [error] Error: Channel has been closed
+    at n (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:127:2816)
+    at Object.info (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:127:3161)
+    at T.info (/opt/visual-studio-code/resources/app/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:291132)
+    at ChildProcess.<anonymous> (/opt/visual-studio-code/resources/app/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:514808)
+    at ChildProcess.emit (node:events:518:28)
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:293:12)
+    at Process.callbackTrampoline (node:internal/async_hooks:130:17)
+2025-06-25 11:51:08.224 [info] Extension host with pid 36312 exiting with code 0

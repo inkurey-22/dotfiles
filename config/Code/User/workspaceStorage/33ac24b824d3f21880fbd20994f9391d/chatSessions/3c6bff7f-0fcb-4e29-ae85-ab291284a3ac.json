@@ -1,0 +1,1104 @@
+{
+  "version": 3,
+  "requesterUsername": "inkurey-22",
+  "requesterAvatarIconUri": {
+    "$mid": 1,
+    "path": "/u/146175466",
+    "scheme": "https",
+    "authority": "avatars.githubusercontent.com",
+    "query": "v=4"
+  },
+  "responderUsername": "GitHub Copilot",
+  "responderAvatarIconUri": {
+    "id": "copilot"
+  },
+  "initialLocation": "panel",
+  "requests": [
+    {
+      "requestId": "request_e9ff364d-fabc-4ee1-9173-2a53e35dadfb",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 147
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 2,
+              "endColumn": 49
+            },
+            "text": "We want to be able to apply a function on all the values stored in our Tree. To achieve this, make\nyour tree an instance of the Functor type class.",
+            "kind": "text"
+          }
+        ],
+        "text": "We want to be able to apply a function on all the values stored in our Tree. To achieve this, make\nyour tree an instance of the Functor type class."
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:Tree.hs",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+                "external": "file:///home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+                "path": "/home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 22,
+                "endColumn": 1
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "To make your `Tree` type an instance of the `Functor` type class, you need to implement the `fmap` function. Here’s how you can do it:\n\n````haskell\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM3/PDG/day03/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+            "external": "file:///home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+            "path": "/home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "-- ...existing code...\n\ninstance Functor Tree where\n    fmap _ Empty = Empty\n    fmap f (Node left val right) = Node (fmap f left) (f val) (fmap f right)\n\n-- ...existing code...\n````\n\nThis allows you to apply any function to all values stored in your `Tree`.",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM3/PDG/day03/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_e87dbe2f-e1d8-421e-8d1a-925350cbe37e",
+      "result": {
+        "timings": {
+          "firstProgress": 899,
+          "totalElapsed": 4615
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "-- ...existing code...\n\ninstance Functor Tree where\n    fmap _ Empty = Empty\n    fmap f (Node left val right) = Node (fmap f left) (f val) (fmap f right)\n\n-- ...existing code...\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+                "scheme": "file"
+              },
+              "language": "haskell",
+              "markdownBeforeBlock": "To make your `Tree` type an instance of the `Functor` type class, you need to implement the `fmap` function. Here’s how you can do it:\n\n"
+            }
+          ],
+          "modelMessageId": "28191cd5-07d4-41bd-bb0b-9d6af4745c15",
+          "responseId": "8145b93a-2ded-4a7b-accc-10bcb30e11bd",
+          "sessionId": "c2ab3bbb-c16d-4359-8626-7bacbda1f468",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "inkurey-22",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/146175466",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+              "external": "file:///home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+              "path": "/home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 22,
+              "endColumn": 1
+            }
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1748526087548
+    },
+    {
+      "requestId": "request_9c7b1b8f-7e0b-4a8d-a67e-f52c6490325a",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 167
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 2,
+              "endColumn": 68
+            },
+            "text": "We want to be able to convert a list of values to a Tree. Write the function listToTree which takes\na list of “a” as argument and returns a Tree build using addInTree.",
+            "kind": "text"
+          }
+        ],
+        "text": "We want to be able to convert a list of values to a Tree. Write the function listToTree which takes\na list of “a” as argument and returns a Tree build using addInTree."
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:Tree.hs",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+                "external": "file:///home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+                "path": "/home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 3,
+                "startColumn": 1,
+                "endLineNumber": 27,
+                "endColumn": 1
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "````haskell\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM3/PDG/day03/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+            "external": "file:///home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+            "path": "/home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "-- ...existing code...\n\nlistToTree :: Ord a => [a] -> Tree a\nlistToTree = foldr addInTree Empty\n\n-- ...existing code...\n````\n\nThis function inserts each element of the list into the tree using `addInTree`, starting from an empty tree.",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM3/PDG/day03/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_423889aa-4a7d-4736-aec4-d15b0c8b4055",
+      "result": {
+        "timings": {
+          "firstProgress": 893,
+          "totalElapsed": 1473
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "-- ...existing code...\n\nlistToTree :: Ord a => [a] -> Tree a\nlistToTree = foldr addInTree Empty\n\n-- ...existing code...\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+                "scheme": "file"
+              },
+              "language": "haskell",
+              "markdownBeforeBlock": ""
+            }
+          ],
+          "modelMessageId": "bd3369d7-96e1-49be-bf26-bcb462446a4c",
+          "responseId": "6b90e0b5-055f-4ab6-86eb-d34e6189c154",
+          "sessionId": "c2ab3bbb-c16d-4359-8626-7bacbda1f468",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "inkurey-22",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/146175466",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+            "external": "file:///home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+            "path": "/home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1748526121509
+    },
+    {
+      "requestId": "request_5b16ead9-8c62-4b68-951f-18f6a7f6cd7d",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 141
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 2,
+              "endColumn": 44
+            },
+            "text": "Likewise, we want to be able to concert a Tree to a list. Write a function treeToList which takes\na tree of “a” as argument and returns a [a]",
+            "kind": "text"
+          }
+        ],
+        "text": "Likewise, we want to be able to concert a Tree to a list. Write a function treeToList which takes\na tree of “a” as argument and returns a [a]"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:Tree.hs",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+                "external": "file:///home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+                "path": "/home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 4,
+                "startColumn": 1,
+                "endLineNumber": 28,
+                "endColumn": 35
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "````haskell\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM3/PDG/day03/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+            "external": "file:///home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+            "path": "/home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "-- ...existing code...\n\ntreeToList :: Tree a -> [a]\ntreeToList Empty = []\ntreeToList (Node left val right) = treeToList left ++ [val] ++ treeToList right\n\n-- ...existing code...\n````\n\nThis function performs an in-order traversal of the tree, returning a list of its elements.",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM3/PDG/day03/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_22a3c6f0-739d-406a-8e4b-ae672412dda7",
+      "result": {
+        "timings": {
+          "firstProgress": 730,
+          "totalElapsed": 1382
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "-- ...existing code...\n\ntreeToList :: Tree a -> [a]\ntreeToList Empty = []\ntreeToList (Node left val right) = treeToList left ++ [val] ++ treeToList right\n\n-- ...existing code...\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+                "scheme": "file"
+              },
+              "language": "haskell",
+              "markdownBeforeBlock": ""
+            }
+          ],
+          "modelMessageId": "e9fb3b83-1577-4dab-b846-2d285fa58a3c",
+          "responseId": "03165977-0737-45dd-91dc-ffeb939e155b",
+          "sessionId": "c2ab3bbb-c16d-4359-8626-7bacbda1f468",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "inkurey-22",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/146175466",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+            "external": "file:///home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+            "path": "/home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1748526149657
+    },
+    {
+      "requestId": "request_a5b49c59-2961-4da9-91ea-bf9627693c86",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 118
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 2,
+              "endColumn": 20
+            },
+            "text": "Using your existing function, write the function treeSort, which takes a list of “a” and returns a\nsorted list of “a”.",
+            "kind": "text"
+          }
+        ],
+        "text": "Using your existing function, write the function treeSort, which takes a list of “a” and returns a\nsorted list of “a”."
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:Tree.hs",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+                "external": "file:///home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+                "path": "/home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 10,
+                "startColumn": 1,
+                "endLineNumber": 33,
+                "endColumn": 1
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "````haskell\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM3/PDG/day03/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+            "external": "file:///home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+            "path": "/home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "-- ...existing code...\n\ntreeSort :: Ord a => [a] -> [a]\ntreeSort = treeToList . listToTree\n\n-- ...existing code...\n````\n\nThis function builds a tree from the list and then flattens it back to a sorted list using in-order traversal.",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM3/PDG/day03/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_36aed328-435c-4f48-982d-fb8d74fba8de",
+      "result": {
+        "timings": {
+          "firstProgress": 1737,
+          "totalElapsed": 2696
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "-- ...existing code...\n\ntreeSort :: Ord a => [a] -> [a]\ntreeSort = treeToList . listToTree\n\n-- ...existing code...\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+                "scheme": "file"
+              },
+              "language": "haskell",
+              "markdownBeforeBlock": ""
+            }
+          ],
+          "modelMessageId": "71feef9a-0d9e-45e9-8c72-1ad88d7fa37e",
+          "responseId": "57abe752-6fdb-4cde-b481-c14add76d0e2",
+          "sessionId": "c2ab3bbb-c16d-4359-8626-7bacbda1f468",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "inkurey-22",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/146175466",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+            "external": "file:///home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+            "path": "/home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1748526185445
+    },
+    {
+      "requestId": "request_6d38e092-f44b-460b-89ad-d1f82cbfb4d5",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 22
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 23
+            },
+            "text": "What does the . mean ?",
+            "kind": "text"
+          }
+        ],
+        "text": "What does the . mean ?"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:Tree.hs",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+                "external": "file:///home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+                "path": "/home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 11,
+                "startColumn": 1,
+                "endLineNumber": 35,
+                "endColumn": 35
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "In Haskell, the `.` operator is function composition.  \nGiven two functions, `f` and `g`, the expression `(f . g)` creates a new function that, when called with an argument `x`, computes `f (g x)`.\n\nFor example, in your code:\n\n```haskell\ntreeSort = treeToList . listToTree\n```\n\nThis means `treeSort xs` is the same as `treeToList (listToTree xs)`.  \nIt first applies `listToTree` to `xs`, then applies `treeToList` to the result.",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM3/PDG/day03/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_821db356-1808-4b53-a110-b18aa924ea1d",
+      "result": {
+        "timings": {
+          "firstProgress": 1877,
+          "totalElapsed": 4631
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "treeSort = treeToList . listToTree\n",
+              "language": "haskell",
+              "markdownBeforeBlock": "In Haskell, the `.` operator is function composition.  \nGiven two functions, `f` and `g`, the expression `(f . g)` creates a new function that, when called with an argument `x`, computes `f (g x)`.\n\nFor example, in your code:\n\n"
+            }
+          ],
+          "modelMessageId": "d21c2096-f3c4-4a43-bd3a-efb895ca259c",
+          "responseId": "60bfb3af-432d-4a58-94a8-7514795b1113",
+          "sessionId": "c2ab3bbb-c16d-4359-8626-7bacbda1f468",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "inkurey-22",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/146175466",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+            "external": "file:///home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+            "path": "/home/curry/Workspace/SEM3/PDG/day03/Tree.hs",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1748526218300
+    }
+  ],
+  "sessionId": "3c6bff7f-0fcb-4e29-ae85-ab291284a3ac",
+  "creationDate": 1748526085064,
+  "isImported": false,
+  "lastMessageDate": 1748526218300,
+  "customTitle": "Implementing Functor instance for Tree data structure"
+}

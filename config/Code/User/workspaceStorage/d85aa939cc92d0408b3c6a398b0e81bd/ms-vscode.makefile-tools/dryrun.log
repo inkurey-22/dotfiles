@@ -1,0 +1,244 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/curry/base_repo'
+mkdir -p lib/obj/io
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/io/my_putnbr.o"
+gcc -c lib/io/my_putnbr.c -o lib/obj/io/my_putnbr.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/io
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/io/my_putstr.o"
+gcc -c lib/io/my_putstr.c -o lib/obj/io/my_putstr.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/io
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/io/my_puterr.o"
+gcc -c lib/io/my_puterr.c -o lib/obj/io/my_puterr.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/io
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/io/my_putchar.o"
+gcc -c lib/io/my_putchar.c -o lib/obj/io/my_putchar.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/io
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/io/my_show_word_array.o"
+gcc -c lib/io/my_show_word_array.c -o lib/obj/io/my_show_word_array.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/my_printf
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/my_printf/utilities.o"
+gcc -c lib/my_printf/utilities.c -o lib/obj/my_printf/utilities.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/my_printf
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/my_printf/my_printf.o"
+gcc -c lib/my_printf/my_printf.c -o lib/obj/my_printf/my_printf.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/my_printf
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/my_printf/printf_putnbr.o"
+gcc -c lib/my_printf/printf_putnbr.c -o lib/obj/my_printf/printf_putnbr.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/my_printf
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/my_printf/printf_putstr.o"
+gcc -c lib/my_printf/printf_putstr.c -o lib/obj/my_printf/printf_putstr.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/my_printf
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/my_printf/printf_putchar.o"
+gcc -c lib/my_printf/printf_putchar.c -o lib/obj/my_printf/printf_putchar.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/numbers
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/numbers/my_isneg.o"
+gcc -c lib/numbers/my_isneg.c -o lib/obj/numbers/my_isneg.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/numbers
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/numbers/my_getnbr.o"
+gcc -c lib/numbers/my_getnbr.c -o lib/obj/numbers/my_getnbr.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/numbers
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/numbers/my_is_prime.o"
+gcc -c lib/numbers/my_is_prime.c -o lib/obj/numbers/my_is_prime.o -Iinclude -Wall -Wextra
+ 
+mkdir -p lib/obj/numbers
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/numbers/my_find_prime_sup.o"
+gcc -c lib/numbers/my_find_prime_sup.c -o lib/obj/numbers/my_find_prime_sup.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/numbers
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/numbers/my_compute_power_rec.o"
+gcc -c lib/numbers/my_compute_power_rec.c -o lib/obj/numbers/my_compute_power_rec.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/numbers
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/numbers/my_compute_square_root.o"
+gcc -c lib/numbers/my_compute_square_root.c -o lib/obj/numbers/my_compute_square_root.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/strings
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/strings/my_strcat.o"
+gcc -c lib/strings/my_strcat.c -o lib/obj/strings/my_strcat.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/strings
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/strings/my_strcmp.o"
+gcc -c lib/strings/my_strcmp.c -o lib/obj/strings/my_strcmp.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/strings
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/strings/my_strcpy.o"
+gcc -c lib/strings/my_strcpy.c -o lib/obj/strings/my_strcpy.o -Iinclude -Wall -Wextra
+ 
+mkdir -p lib/obj/strings
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/strings/my_strdup.o"
+gcc -c lib/strings/my_strdup.c -o lib/obj/strings/my_strdup.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/strings
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/strings/my_strlen.o"
+gcc -c lib/strings/my_strlen.c -o lib/obj/strings/my_strlen.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/strings
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/strings/my_strstr.o"
+gcc -c lib/strings/my_strstr.c -o lib/obj/strings/my_strstr.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/strings
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/strings/my_strchr.o"
+gcc -c lib/strings/my_strchr.c -o lib/obj/strings/my_strchr.o -Iinclude -Wall -Wextra
+ 
+mkdir -p lib/obj/strings
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/strings/my_revstr.o"
+gcc -c lib/strings/my_revstr.c -o lib/obj/strings/my_revstr.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/strings
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/strings/my_strupcase.o"
+gcc -c lib/strings/my_strupcase.c -o lib/obj/strings/my_strupcase.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/strings
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/strings/split_string.o"
+gcc -c lib/strings/split_string.c -o lib/obj/strings/split_string.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/strings
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/strings/my_str_isnum.o"
+gcc -c lib/strings/my_str_isnum.c -o lib/obj/strings/my_str_isnum.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/strings
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/strings/my_strlowcase.o"
+gcc -c lib/strings/my_strlowcase.c -o lib/obj/strings/my_strlowcase.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/strings
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/strings/my_str_isupper.o"
+gcc -c lib/strings/my_str_isupper.c -o lib/obj/strings/my_str_isupper.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/strings
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/strings/my_str_isalpha.o"
+gcc -c lib/strings/my_str_isalpha.c -o lib/obj/strings/my_str_isalpha.o -Iinclude -Wall -Wextra
+ 
+mkdir -p lib/obj/strings
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/strings/my_str_islower.o"
+gcc -c lib/strings/my_str_islower.c -o lib/obj/strings/my_str_islower.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/strings
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/strings/my_strarray_len.o"
+gcc -c lib/strings/my_strarray_len.c -o lib/obj/strings/my_strarray_len.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/strings
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/strings/my_strcapitalize.o"
+gcc -c lib/strings/my_strcapitalize.c -o lib/obj/strings/my_strcapitalize.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/strings
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/strings/my_str_isprintable.o"
+gcc -c lib/strings/my_str_isprintable.c -o lib/obj/strings/my_str_isprintable.o -Iinclude -Wall -Wextra
+ 
+mkdir -p lib/obj/strings
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/strings/my_free_word_array.o"
+gcc -c lib/strings/my_free_word_array.c -o lib/obj/strings/my_free_word_array.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/lists
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/lists/size.o"
+gcc -c lib/lists/size.c -o lib/obj/lists/size.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/lists
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/lists/sort.o"
+gcc -c lib/lists/sort.c -o lib/obj/lists/sort.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/lists
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/lists/find.o"
+gcc -c lib/lists/find.c -o lib/obj/lists/find.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/lists
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/lists/append.o"
+gcc -c lib/lists/append.c -o lib/obj/lists/append.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/lists
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/lists/create.o"
+gcc -c lib/lists/create.c -o lib/obj/lists/create.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/lists
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/lists/remove.o"
+gcc -c lib/lists/remove.c -o lib/obj/lists/remove.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/lists
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/lists/free_list.o"
+gcc -c lib/lists/free_list.c -o lib/obj/lists/free_list.o -Iinclude -Wall -Wextra
+mkdir -p lib/obj/lists
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "lib/obj/lists/add_to_top.o"
+gcc -c lib/lists/add_to_top.c -o lib/obj/lists/add_to_top.o -Iinclude -Wall -Wextra
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+ar rc lib/libmy.a lib/obj/io/my_putnbr.o lib/obj/io/my_putstr.o lib/obj/io/my_puterr.o lib/obj/io/my_putchar.o lib/obj/io/my_show_word_array.o lib/obj/my_printf/utilities.o lib/obj/my_printf/my_printf.o lib/obj/my_printf/printf_putnbr.o lib/obj/my_printf/printf_putstr.o lib/obj/my_printf/printf_putchar.o lib/obj/numbers/my_isneg.o lib/obj/numbers/my_getnbr.o lib/obj/numbers/my_is_prime.o lib/obj/numbers/my_find_prime_sup.o lib/obj/numbers/my_compute_power_rec.o lib/obj/numbers/my_compute_square_root.o lib/obj/strings/my_strcat.o lib/obj/strings/my_strcmp.o lib/obj/strings/my_strcpy.o lib/obj/strings/my_strdup.o lib/obj/strings/my_strlen.o lib/obj/strings/my_strstr.o lib/obj/strings/my_strchr.o lib/obj/strings/my_revstr.o lib/obj/strings/my_strupcase.o lib/obj/strings/split_string.o lib/obj/strings/my_str_isnum.o lib/obj/strings/my_strlowcase.o lib/obj/strings/my_str_isupper.o lib/obj/strings/my_str_isalpha.o lib/obj/strings/my_str_islower.o lib/obj/strings/my_strarray_len.o lib/obj/strings/my_strcapitalize.o lib/obj/strings/my_str_isprintable.o lib/obj/strings/my_free_word_array.o lib/obj/lists/size.o lib/obj/lists/sort.o lib/obj/lists/find.o lib/obj/lists/append.o lib/obj/lists/create.o lib/obj/lists/remove.o lib/obj/lists/free_list.o lib/obj/lists/add_to_top.o
+printf "\033[0;32m\033[1mLinking C static library\033[0m "
+printf "\033[0;33m\033[1m%s\033[0m \n" "lib/libmy.a"
+ 
+mkdir -p obj
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32mBuilding C object\033[0m \033[0;33m%s\033[0m \n" "obj/main.o"
+gcc -c src/main.c -o obj/main.o -Iinclude -Wall -Wextra
+ 
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;32m\033[1mLinking C executable\033[0m "
+printf "\033[0;33m\033[1m%s\033[0m \n" "proj"
+gcc -o proj obj/main.o -Iinclude -Wall -Wextra -Llib -lmy
+echo $(( $(cat .progress 2>/dev/null || echo 0) + 1 )) > .progress
+CURRENT_STEP=$(cat .progress); PERCENT=$(( CURRENT_STEP * 100 / 47 )); printf "\033[1m\033[0;34m[%3s%%]\033[0m  " "$PERCENT"
+printf "\033[0;31m\033[1mBuilt target\033[0m \n"
+make: Leaving directory '/home/curry/base_repo'
+ 

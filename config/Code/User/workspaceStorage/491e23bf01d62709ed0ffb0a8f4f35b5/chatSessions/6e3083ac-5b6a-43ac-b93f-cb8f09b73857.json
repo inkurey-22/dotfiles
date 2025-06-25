@@ -1,0 +1,250 @@
+{
+  "version": 3,
+  "requesterUsername": "inkurey-22",
+  "requesterAvatarIconUri": {
+    "$mid": 1,
+    "path": "/u/146175466",
+    "scheme": "https",
+    "authority": "avatars.githubusercontent.com",
+    "query": "v=4"
+  },
+  "responderUsername": "GitHub Copilot",
+  "responderAvatarIconUri": {
+    "id": "copilot"
+  },
+  "initialLocation": "panel",
+  "requests": [
+    {
+      "requestId": "request_92ba3e2d-0d39-426b-9abe-e64b39e4dfbe",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 54
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 55
+            },
+            "text": "Can you recode this function but in an iterative way ?",
+            "kind": "text"
+          }
+        ],
+        "text": "Can you recode this function but in an iterative way ?"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:my_put_nbr.c",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day03/my_put_nbr.c",
+                "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day03/my_put_nbr.c",
+                "path": "/home/curry/Workspace/SEM1/POOL/PART1/day03/my_put_nbr.c",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 26,
+                "endColumn": 1
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "Certainly! Here is an iterative version of `my_put_nbr`:\n\n````c\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day03/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day03/my_put_nbr.c",
+            "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day03/my_put_nbr.c",
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day03/my_put_nbr.c",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "/*\n** EPITECH PROJECT, 2024\n** my_lib\n** File description:\n** my_put_nbr (iterative version)\n*/\n\n#include <limits.h>\nvoid my_putchar(char);\n\nint my_put_nbr(int n)\n{\n    if (n == 0) {\n        my_putchar('0');\n        return 0;\n    }\n\n    if (n == INT_MIN) {\n        my_putchar('-');\n        my_putchar('2');\n        n = 147483648;\n    } else if (n < 0) {\n        my_putchar('-');\n        n = -n;\n    }\n\n    int digits[10];\n    int i = 0;\n\n    while (n > 0) {\n        digits[i++] = n % 10;\n        n /= 10;\n    }\n\n    for (int j = i - 1; j >= 0; j--) {\n        my_putchar(digits[j] + '0');\n    }\n\n    return 0;\n}\n````",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/home/curry/Workspace/SEM1/POOL/PART1/day03/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_6ea17228-0738-498b-abf3-ddad216c5d8e",
+      "result": {
+        "timings": {
+          "firstProgress": 802,
+          "totalElapsed": 5425
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "/*\n** EPITECH PROJECT, 2024\n** my_lib\n** File description:\n** my_put_nbr (iterative version)\n*/\n\n#include <limits.h>\nvoid my_putchar(char);\n\nint my_put_nbr(int n)\n{\n    if (n == 0) {\n        my_putchar('0');\n        return 0;\n    }\n\n    if (n == INT_MIN) {\n        my_putchar('-');\n        my_putchar('2');\n        n = 147483648;\n    } else if (n < 0) {\n        my_putchar('-');\n        n = -n;\n    }\n\n    int digits[10];\n    int i = 0;\n\n    while (n > 0) {\n        digits[i++] = n % 10;\n        n /= 10;\n    }\n\n    for (int j = i - 1; j >= 0; j--) {\n        my_putchar(digits[j] + '0');\n    }\n\n    return 0;\n}\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/home/curry/Workspace/SEM1/POOL/PART1/day03/my_put_nbr.c",
+                "scheme": "file"
+              },
+              "language": "c",
+              "markdownBeforeBlock": "Certainly! Here is an iterative version of `my_put_nbr`:\n\n"
+            }
+          ],
+          "modelMessageId": "248699b9-d523-45a2-bc92-a02a78b0da70",
+          "responseId": "dccaed21-5c21-434a-86ec-d7972392d273",
+          "sessionId": "db0714c0-ac36-4f8b-b5f5-cd7396231f4a",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "inkurey-22",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/146175466",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "/home/curry/Workspace/SEM1/POOL/PART1/day03/my_put_nbr.c",
+              "external": "file:///home/curry/Workspace/SEM1/POOL/PART1/day03/my_put_nbr.c",
+              "path": "/home/curry/Workspace/SEM1/POOL/PART1/day03/my_put_nbr.c",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 26,
+              "endColumn": 1
+            }
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1749630444435
+    }
+  ],
+  "sessionId": "6e3083ac-5b6a-43ac-b93f-cb8f09b73857",
+  "creationDate": 1749630434141,
+  "isImported": false,
+  "lastMessageDate": 1749630444435,
+  "customTitle": "Iterative implementation of my_put_nbr function"
+}

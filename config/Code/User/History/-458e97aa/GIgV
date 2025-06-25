@@ -1,0 +1,20 @@
+# Makefile for building Haskell programs with GHC
+
+# GHC compiler
+GHC = ghc
+
+# Source files (all .hs files in the directory)
+SOURCES = DoOp.hs
+
+# Output binary
+BINARY = doop
+
+.PHONY: all clean
+
+all: $(BINARY)
+
+$(BINARY): $(SOURCES)
+	$(GHC) -o $(BINARY) $(SOURCES)
+
+clean:
+	rm -f $(BINARY) *.hi *.o
