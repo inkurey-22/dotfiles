@@ -1,6 +1,7 @@
 # Curry's Dotfiles
 
 Repos for my personal dotfiles, in case i reinstall a system
+## IT'S NOT MADE FOR ANYONE ELSE THAN ME
 
 ## What's in there
 
