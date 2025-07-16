@@ -135,4 +135,3 @@ else
     # Load TTY configuration
     source ~/.p10k.tty.zsh
 fi
-source ~/.ghcup/env

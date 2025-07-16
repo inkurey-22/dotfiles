@@ -11,19 +11,12 @@ if [ -f /etc/os-release ]; then
             zsh \
             kitty \
             neovim \
-            sway \
-            waybar \
-            rofi \
             fastfetch \
-            konsave
     elif [[ "$ID" == "fedora" || "$ID_LIKE" == *"fedora"* ]]; then
         sudo dnf install -y \
             zsh \
             kitty \
             neovim \
-            sway \
-            waybar \
-            rofi \
             fastfetch
     else
         echo "Unsupported OS: $ID"
@@ -39,23 +32,15 @@ chsh -s $(which zsh)
 
 # === LINK DOTFILES === #
 
-ln -sf "$DOTFILES_DIR/shell/zshrc" "$HOME/.zshrc"
-ln -sf "$DOTFILES_DIR/shell/zshenv" "$HOME/.zshenv"
-ln -sf "$DOTFILES_DIR/shell/p10k.graphical.zsh" "$HOME/.p10k.graphical.zsh"
-ln -sf "$DOTFILES_DIR/shell/p10k.tty.zsh" "$HOME/.p10k.tty.zsh"
+cp -f "$DOTFILES_DIR/shell/zshrc" "$HOME/.zshrc"
+cp -f "$DOTFILES_DIR/shell/zshenv" "$HOME/.zshenv"
+cp -f "$DOTFILES_DIR/shell/p10k.graphical.zsh" "$HOME/.p10k.graphical.zsh"
+cp -f "$DOTFILES_DIR/shell/p10k.tty.zsh" "$HOME/.p10k.tty.zsh"
 
 rm -rf "$CONFIG_DIR/nvim" \
     "$CONFIG_DIR/kitty" \
-    "$CONFIG_DIR/sway" \
-    "$CONFIG_DIR/waybar" \
-    "$CONFIG_DIR/fastfetch" \
-    "$CONFIG_DIR/rofi"
+    "$CONFIG_DIR/fastfetch"
 
-ln -sf "$DOTFILES_DIR/config/nvim" "$CONFIG_DIR/nvim"
-ln -sf "$DOTFILES_DIR/config/kitty" "$CONFIG_DIR/kitty"
-ln -sf "$DOTFILES_DIR/config/sway" "$CONFIG_DIR/sway"
-ln -sf "$DOTFILES_DIR/config/waybar" "$CONFIG_DIR/waybar"
-ln -sf "$DOTFILES_DIR/config/fastfetch" "$CONFIG_DIR/fastfetch"
-ln -sf "$DOTFILES_DIR/config/rofi" "$CONFIG_DIR/rofi"
-
-konsave -i "$DOTFILES_DIR/curry-catppuccin.knsv"
+cp -r "$DOTFILES_DIR/config/nvim" "$CONFIG_DIR/nvim"
+cp -r "$DOTFILES_DIR/config/kitty" "$CONFIG_DIR/kitty"
+cp -r "$DOTFILES_DIR/config/fastfetch" "$CONFIG_DIR/fastfetch"
