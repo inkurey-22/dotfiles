@@ -6,7 +6,7 @@ Repos for my personal dotfiles, in case i reinstall a system
 ## What's in there
 
 - **Shell**: oh-my-zsh with [powerlevel10k](https://github.com/romkatv/powerlevel10k) theme and custom prompt settings.
-- **Neovim**: With [NvChad](https://nvchad.com/) as a base, with additional plugins like the one for Epitech header.
+- **Neovim**: Catppuccin Latte, nvim-tree, buffers...
 - **Kitty**: Terminal emulator, catppuccin theme + ligatures
 - **Sway**: Tiling Wayland compositor, with matching configuration.
 - **Waybar**: Custom status bar for Sway.
