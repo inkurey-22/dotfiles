@@ -5,10 +5,10 @@ return {
     -- Automatically install LSPs to stdpath for neovim
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
-    
+
     -- Useful status updates for LSP
     { "j-hui/fidget.nvim", opts = {} },
-    
+
     -- Additional lua configuration
     "folke/neodev.nvim",
   },
@@ -18,7 +18,34 @@ return {
 
     -- Setup mason
     require("mason").setup()
-    
+    -- Diagnostic signs and configuration
+    local signs = { Error = "", Warn = "", Hint = "", Info = "" }
+    for type, icon in pairs(signs) do
+      local hl = "DiagnosticSign" .. type
+      vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+    end
+
+    vim.diagnostic.config({
+      virtual_text = {
+        prefix = '●', -- Could be '●' or '▎'
+        spacing = 4,
+      },
+      signs = true,
+      underline = true,
+      update_in_insert = false,
+      severity_sort = true,
+      float = {
+        border = "rounded",
+        source = "always",
+        header = "",
+        prefix = "",
+      },
+    })
+
+    -- Rounded borders for hover and signature help like NVChad
+    vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" })
+    vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
+
     -- LSP settings
     local on_attach = function(_, bufnr)
       local nmap = function(keys, func, desc)
@@ -57,7 +84,21 @@ return {
 
     -- LSP servers configuration
     local servers = {
-      clangd = {},
+      clangd = {
+        -- Useful defaults for clangd. Adjust args as you prefer.
+        cmd = {
+          "clangd",
+          "--background-index",
+          "--clang-tidy",
+          "--completion-style=detailed",
+          "--header-insertion=never",
+        },
+        filetypes = { "c", "cpp", "objc", "objcpp" },
+        single_file_support = true,
+        init_options = {
+          clangdFileStatus = true, -- report compile flags status
+        },
+      },
       lua_ls = {
         Lua = {
           workspace = { checkThirdParty = false },
