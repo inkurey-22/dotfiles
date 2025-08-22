@@ -94,8 +94,6 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR='nvim'
 export PATH="/home/curry/.local/bin:/usr/bin/uutils:/usr/local/sbin:/usr/local/bin:/usr/bin:/home/curry/.local/share/flatpak/exports/bin:/home/curry/.cargo/bin:/opt/Deezer Discord RPC"
 export LD_LIBRARY_PATH="/usr/local/lib:/usr/lib:/lib"
-export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
-export CC="clang"
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
@@ -116,12 +114,10 @@ export CC="clang"
 #}
 
 # alias vi='nvim_fzf'
-alias gs='git status'
 alias reset="reset; source ~/.zshrc"
 alias clear="clear; fastfetch"
 alias epitest='docker run -it -v "$(pwd)":/usr/app epitechcontent/epitest-docker:latest'
 alias emacs-cs='bat ~/emacs-cs'
-alias zshconfig="nvim ~/.zshrc"
 alias init_repo='cp -r ~/base_repo/. .'
 alias coverage='gcovr --txt-metric=branch --exclude tests --html --html-details -o coverage.html && firefox --new-window coverage.html'
 fastfetch
