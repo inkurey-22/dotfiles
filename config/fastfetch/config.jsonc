@@ -22,7 +22,8 @@
         {
             "type": "os",
             "key": "   OS",
-            "keyColor": "red"
+            "keyColor": "red",
+            "format": "{2}"
         },
         {
             "type": "kernel",
@@ -80,13 +81,12 @@
             "format": "{3}",
             "key": "   GPU Driver",
             "keyColor": "magenta"
-            
         },
         {
-             "type": "memory",
+            "type": "memory",
             "key": "   Memory",
             "keyColor": "magenta"
-        },      
+        },
         {
             "type": "command",
             "key": "  󱦟 OS Age ",
@@ -102,12 +102,11 @@
             "type": "custom",
             "format": "└──────────────────────────────────────────┘"
         },
-	{
+        {
             "type": "colors",
             "paddingLeft": 2,
             "symbol": "circle"
         },
         "break"
-        
     ]
 }
