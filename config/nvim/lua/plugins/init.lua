@@ -20,6 +20,11 @@ return {
     opts = require("configs.cord")
   },
 
+  {
+    "nvim-tree/nvim-tree.lua",
+    opts = require("configs.nvimtree"),
+  },
+
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
 
