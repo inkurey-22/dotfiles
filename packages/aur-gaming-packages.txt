@@ -1,0 +1,4 @@
+dxvk-bin
+proton-ge-custom
+protontricks
+vesktop

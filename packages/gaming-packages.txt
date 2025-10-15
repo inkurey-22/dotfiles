@@ -1,0 +1,10 @@
+gamemode
+gamescope
+goverlay
+lib32-gamemode
+lib32-mangohud
+lutris
+mangohud
+steam
+wine-staging
+winetricks

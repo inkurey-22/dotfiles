@@ -1,0 +1,56 @@
+@define-color accent_color {{ $primary }};
+@define-color accent_fg_color {{ $onPrimary }};
+@define-color accent_bg_color {{ $primary }};
+
+@define-color window_bg_color {{ $background }};
+@define-color window_fg_color {{ $onBackground }};
+
+@define-color headerbar_bg_color {{ $surfaceDim }};
+@define-color headerbar_fg_color {{ $onSurface }};
+@define-color headerbar_border_color {{ $surfaceDim +3% }};
+@define-color headerbar_backdrop_color {{ $surfaceDim }};
+@define-color headerbar_shade_color {{ $surfaceDim +2% }};
+
+@define-color popover_bg_color {{ $surfaceDim }};
+@define-color popover_fg_color {{ $onSurface }};
+
+@define-color dialog_bg_color {{ $surfaceDim }};
+@define-color dialog_fg_color {{ $onSurface }};
+
+@define-color view_bg_color {{ $surface }};
+@define-color view_fg_color {{ $onSurface }};
+
+@define-color card_bg_color {{ $surface }};
+@define-color card_fg_color {{ $onSurface }};
+@define-color card_shade_color {{ $surface +1% }};
+
+@define-color sidebar_bg_color @window_bg_color;
+@define-color sidebar_fg_color @window_fg_color;
+@define-color sidebar_border_color @window_bg_color;
+@define-color sidebar_backdrop_color {{ $surfaceDim +1% }};
+@define-color sidebar_shade_color {{ $surfaceDim +2% }};
+
+@define-color secondary_sidebar_bg_color @sidebar_backdrop_color;
+@define-color secondary_sidebar_fg_color @sidebar_fg_color;
+@define-color secondary_sidebar_backdrop_color @sidebar_backdrop_color;
+@define-color secondary_sidebar_shade_color @sidebar_shade_color;
+@define-color secondary_sidebar_border_color @sidebar_border_color;
+
+@define-color thumbnail_bg_color {{ $surface }};
+@define-color thumbnail_fg_color {{ $onSurface }};
+
+@define-color warning_color {{ $error }};
+@define-color warning_bg_color {{ $error }};
+@define-color warning_fg_color {{ $onError }};
+
+@define-color error_color {{ $error }};
+@define-color error_bg_color {{ $error }};
+@define-color error_fg_color {{ $onError }};
+
+@define-color success_color {{ $success }};
+@define-color success_bg_color {{ $success }};
+@define-color success_fg_color {{ $onSuccess }};
+
+@define-color destructive_color {{ $error }};
+@define-color destructive_bg_color {{ $error }};
+@define-color destructive_fg_color {{ $onError }};
