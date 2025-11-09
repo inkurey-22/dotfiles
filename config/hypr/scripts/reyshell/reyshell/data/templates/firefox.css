@@ -1,4 +1,0 @@
-:root {
-	--gnome-accent-bg: {{ $primary }};
-	--gnome-accent: {{ $primary }};
-}
