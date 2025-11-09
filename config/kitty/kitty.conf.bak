@@ -1,0 +1,66 @@
+font_family FiraCode Nerd Font
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+
+window_padding_width 10
+cursor_shape beam
+cursor_trail 100
+tab_bar_align center
+confirm_os_window_close 0
+detect_urls yes
+strip_trailing_spaces smart
+
+scrollback_lines 10000
+
+# include colors.conf
+
+foreground         #e5e1e7
+background         #131317
+cursor             #e5e1e7
+
+active_tab_foreground     #bfc1ff
+active_tab_background     #282b60
+inactive_tab_foreground   #f4b2e2
+inactive_tab_background   #4e1e45
+
+active_border_color   #bfc1ff
+inactive_border_color #f4b2e2
+bell_border_color     #a875ff
+
+# black
+color0 #45475A
+color8 #585B70
+
+# red
+color1 #F38BA8
+color9 #F38BA8
+
+# green
+color2  #A6E3A1
+color10 #A6E3A1
+
+# yellow
+color3  #F9E2AF
+color11 #F9E2AF
+
+# blue
+color4  #89B4FA
+color12 #89B4FA
+
+# magenta
+color5  #F5C2E7
+color13 #F5C2E7
+
+# cyan
+color6  #94E2D5
+color14 #94E2D5
+
+# white
+color7  #BAC2DE
+color15 #A6ADC8
+
+# BEGIN_KITTY_THEME
+# Catppuccin-Mocha
+# include ./colors.conf
+# END_KITTY_THEME
