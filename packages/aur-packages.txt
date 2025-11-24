@@ -1,11 +1,8 @@
 app2unit
-arch-update
 bibata-cursor-theme-bin
 clipse
-darkly-bin
 downgrade
 gapless
-gpu-screen-recorder
 hardcode-fixer-git
 hardcode-tray
 libcava
@@ -13,7 +10,6 @@ pinta
 python-materialyoucolor
 qt5ct-kde
 qt6ct-kde
-quickshell-git
 sddm-silent-theme
 ttf-material-symbols-variable-git
 ttf-meslo-nerd-font-powerlevel10k
