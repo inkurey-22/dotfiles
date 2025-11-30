@@ -124,12 +124,6 @@ eval "$(zoxide init --cmd cd zsh)"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias c='clear'
-alias i='yay -S'
-alias s='yay -Ss'
-alias r='yay -Rns'
 alias allpng='for file in *.jpg; do if [ -f "$file" ]; then magick "$file" "${file%.*}.png"; fi; done'
 
 bindkey '^H' backward-kill-word
-
-(cat ~/.local/state/reyshell/sequences.txt &)
