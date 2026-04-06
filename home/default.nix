@@ -11,8 +11,8 @@
     ./discord
     ./obs
     ./fastfetch
+    ./nvim
     ./plasma
-    ./vim
     ./vscode
   ];
 
@@ -21,8 +21,8 @@
     homeDirectory = "/home/${username}";
 
     sessionVariables = {
-      EDITOR = "vim";
-      VISUAL = "vim";
+      EDITOR = "nvim";
+      VISUAL = "nvim";
       NIXOS_OZONE_WL = "1";
     };
 
@@ -50,6 +50,7 @@
     ];
 
   };
+
   programs = {
     direnv = {
       # Move
