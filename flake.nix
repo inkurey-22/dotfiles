@@ -36,10 +36,6 @@
 
       pkgs = (import nixpkgs pkgs-settings);
 
-      mod-hardware = with nixos-hardware.nixosModules; [
-        framework-desktop-amd-ai-max-300-series
-      ];
-
       home-manager-conf = {
         useGlobalPkgs = false;
         useUserPackages = true;
@@ -63,20 +59,37 @@
           inherit username system;
         };
       };
+
+      # Helper function to create a nixos system configuration
+      mkSystem = machineDir: extraHardwareModules: nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = { 
+          inherit username;
+          commonConfig = ./common.nix;
+        };
+        modules = [
+          "${machineDir}/configuration.nix"
+          "${machineDir}/hardware-configuration.nix"
+          ./common.nix
+          home-manager.nixosModules.home-manager
+          { home-manager = home-manager-conf; }
+        ] ++ extraHardwareModules;
+      };
     in
     rec {
       formatter.${system} = pkgs.nixpkgs-fmt;
+      
       nixosConfigurations = {
-        nixos = nixpkgs.lib.nixosSystem {
-          inherit system;
-          modules = [
-            ./configuration.nix
-            ./hardware-configuration.nix
-            home-manager.nixosModules.home-manager
-            { home-manager = home-manager-conf; }
-          ] ++ mod-hardware;
-        };
+        desktop = mkSystem ./machines/desktop [
+          nixos-hardware.nixosModules.framework-desktop-amd-ai-max-300-series
+        ];
+        
+        laptop = mkSystem ./machines/laptop [ ];
+        
+        # Legacy: keep 'nixos' for backwards compatibility (points to desktop)
+        nixos = nixosConfigurations.desktop;
       };
+      
       checks.${system}.pre-commit-check = pre-commit-hooks.lib.${system}.run {
         src = ./.;
         hooks = {
@@ -86,6 +99,7 @@
           };
         };
       };
+      
       devShells.${system}.default = pkgs.mkShell {
         inherit (checks.${system}.pre-commit-check) shellHook;
       };
