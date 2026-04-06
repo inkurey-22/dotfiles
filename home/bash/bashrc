@@ -16,3 +16,5 @@ function mayhem() {
 function rmayhem() {
     sed -i "s/;/;/g" "$@"
 }
+
+eval "$(zoxide init bash --cmd cd)"

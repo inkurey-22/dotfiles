@@ -12,7 +12,7 @@
     ./obs
     ./fastfetch
     ./plasma
-    ./nvim
+    ./vim
     ./vscode
   ];
 
@@ -21,8 +21,8 @@
     homeDirectory = "/home/${username}";
 
     sessionVariables = {
-      EDITOR = "nvim";
-      VISUAL = "nvim";
+      EDITOR = "vim";
+      VISUAL = "vim";
       NIXOS_OZONE_WL = "1";
     };
 
@@ -32,6 +32,7 @@
       ripgrep # Move?
       rclone # Move?
       file
+      zoxide
       zip
       unzip
       ffmpeg

@@ -12,8 +12,8 @@ export MAKEFLAGS
 GPG_TTY=$(tty)
 export GPG_TTY
 
-export EDITOR=nvim
-export VISUAL=nvim
+export EDITOR=vim
+export VISUAL=vim
 
 export BUN_INSTALL="$HOME/.bun"
 
