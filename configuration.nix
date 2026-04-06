@@ -6,7 +6,8 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
 
@@ -48,14 +49,11 @@
     LC_TIME = "fr_FR.UTF-8";
   };
 
-  # Enable Plasma desktop and use SDDM as login manager.
+  # Enable Plasma desktop and use the Plasma login manager.
   services.xserver.enable = true;
 
-  # Use SDDM as login manager for Plasma sessions.
-  services.displayManager.sddm = {
-    enable = true;
-    wayland.enable = true;
-  };
+  # Use the native Plasma login manager for Plasma sessions.
+  services.displayManager.plasma-login-manager.enable = true;
   services.desktopManager.plasma6.enable = true;
 
   # Desktop portals are required by many Wayland applications.
@@ -118,7 +116,7 @@
     extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
       kdePackages.kate
-    #  thunderbird
+      #  thunderbird
       tree
       zip
       unzip
