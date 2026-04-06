@@ -1,0 +1,75 @@
+local function auto_cd(data)
+  -- buffer is a directory
+  local directory = vim.fn.isdirectory(data.file) == 1
+
+  if directory then
+    -- change to the directory
+    vim.cmd.cd(data.file)
+  end
+end
+
+vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = auto_cd })
+
+return {
+  {
+    -- fuzzy finder
+    "nvim-telescope/telescope.nvim",
+    branch = "master",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("telescope").setup {
+        defaults = {
+          dynamic_preview_title = true,
+          layout_strategy = "flex",
+          layout_config = {
+            flip_columns = 200,
+          },
+        },
+      }
+
+      local builtin = require("telescope.builtin")
+
+      vim.keymap.set("n", "<leader>sf", function()
+        builtin.find_files({
+          hidden = true,
+          file_ignore_patterns = { "%.git/", "%.jj/" },
+          find_command = { "rg", "--files", "--no-require-git" },
+        })
+      end, {})
+      vim.keymap.set("n", "<leader>sg", function()
+        builtin.live_grep({
+          hidden = true,
+          file_ignore_patterns = { "%.git/", "%.jj/" },
+          additional_args = { "--no-require-git" },
+          disable_coordinates = true,
+        })
+      end, {})
+      vim.keymap.set("n", "<leader>o", builtin.buffers, {})
+      vim.keymap.set("n", "<leader>d", function()
+        builtin.diagnostics({
+          severity_limit = "WARN",
+        })
+      end, {})
+    end,
+  },
+  {
+    -- file icons
+    'echasnovski/mini.icons',
+    opts = {},
+  },
+  {
+    -- explorer
+    "stevearc/oil.nvim",
+    config = function()
+      require("oil").setup {
+        keymaps = {
+          ["<C-h>"] = false,
+          ["<C-l>"] = false,
+          ["<C-c>"] = false,
+        },
+      }
+
+      vim.keymap.set("n", "-", "<CMD>Oil<CR>")
+    end,
+  },
+}

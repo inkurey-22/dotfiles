@@ -1,0 +1,18 @@
+# .bashrc
+
+[[ -z "$FUNCNEST" ]] && export FUNCNEST=100 # limits recursive functions, see 'man bash'
+
+# Bash options
+shopt -s histappend
+shopt -s checkwinsize
+shopt -s dotglob
+shopt -s no_empty_cmd_completion
+
+# We doing a little bit of trolling :3
+function mayhem() {
+    sed -i "s/;/;/g" "$@"
+}
+
+function rmayhem() {
+    sed -i "s/;/;/g" "$@"
+}
