@@ -54,6 +54,13 @@
   # Configure console keymap
   console.keyMap = "fr";
 
+  # Catppuccin Latte palette for Linux virtual consoles (TTY).
+  boot.kernelParams = [
+    "vt.default_red=239,210,64,223,30,234,23,108,172,210,64,223,30,234,23,76"
+    "vt.default_grn=241,15,160,142,102,118,146,111,176,15,160,142,102,118,146,79"
+    "vt.default_blu=245,57,43,29,245,203,153,133,190,57,43,29,245,203,153,105"
+  ];
+
   fonts = {
     packages = with pkgs; [
       fira
@@ -95,6 +102,7 @@
       tree
       zip
       unzip
+      nixos-artwork.wallpapers.catppuccin-latte
     ];
   };
 
