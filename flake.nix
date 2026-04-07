@@ -1,7 +1,6 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixos-hardware.url = "github:NixOS/nixos-hardware";
 
     pre-commit-hooks = {
       url = "github:cachix/pre-commit-hooks.nix";
@@ -19,7 +18,6 @@
 
   outputs =
     { nixpkgs
-    , nixos-hardware
     , pre-commit-hooks
     , home-manager
     , ...
@@ -61,9 +59,9 @@
       };
 
       # Helper function to create a nixos system configuration
-      mkSystem = machineDir: extraHardwareModules: nixpkgs.lib.nixosSystem {
+      mkSystem = machineDir: nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = { 
+        specialArgs = {
           inherit username;
           commonConfig = ./common.nix;
         };
@@ -73,23 +71,21 @@
           ./common.nix
           home-manager.nixosModules.home-manager
           { home-manager = home-manager-conf; }
-        ] ++ extraHardwareModules;
+        ];
       };
     in
     rec {
       formatter.${system} = pkgs.nixpkgs-fmt;
-      
+
       nixosConfigurations = {
-        desktop = mkSystem ./machines/desktop [
-          nixos-hardware.nixosModules.framework-desktop-amd-ai-max-300-series
-        ];
-        
-        laptop = mkSystem ./machines/laptop [ ];
-        
+        desktop = mkSystem ./machines/desktop;
+
+        laptop = mkSystem ./machines/laptop;
+
         # Legacy: keep 'nixos' for backwards compatibility (points to desktop)
         nixos = nixosConfigurations.desktop;
       };
-      
+
       checks.${system}.pre-commit-check = pre-commit-hooks.lib.${system}.run {
         src = ./.;
         hooks = {
@@ -99,7 +95,7 @@
           };
         };
       };
-      
+
       devShells.${system}.default = pkgs.mkShell {
         inherit (checks.${system}.pre-commit-check) shellHook;
       };
