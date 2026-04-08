@@ -105,6 +105,7 @@
       nixos-artwork.wallpapers.catppuccin-latte
       deezer-enhanced
       qalculate-qt
+      distrobox
     ];
   };
 
