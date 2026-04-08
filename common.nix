@@ -103,6 +103,8 @@
       zip
       unzip
       nixos-artwork.wallpapers.catppuccin-latte
+      deezer-enhanced
+      qalculate-qt
     ];
   };
 
