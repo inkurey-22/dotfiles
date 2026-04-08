@@ -33,7 +33,7 @@
   };
 
   # Enable Plasma desktop and use the Plasma login manager.
-  services.xserver.enable = true;
+  services.xserver.enable = false;
 
   # Use the native Plasma login manager for Plasma sessions.
   services.displayManager.plasma-login-manager.enable = true;
