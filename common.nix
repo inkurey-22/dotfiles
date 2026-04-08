@@ -45,6 +45,11 @@
     extraPortals = [ pkgs.kdePackages.xdg-desktop-portal-kde ];
   };
 
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "fr";
@@ -88,6 +93,10 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
+  };
+
+  programs.steam = {
+    enable = true;
   };
 
   # Define a user account.

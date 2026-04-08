@@ -37,7 +37,6 @@
       unzip
       ffmpeg
       gnupg # Move
-      steam
       flatpak
       gimp
       qpwgraph
