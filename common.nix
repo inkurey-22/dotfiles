@@ -82,6 +82,9 @@
       fira
       fira-code
       nerd-fonts.fira-code
+      noto-fonts
+      noto-fonts-cjk-sans
+      noto-fonts-color-emoji
     ];
     fontconfig = {
       defaultFonts = {
@@ -115,18 +118,6 @@
     isNormalUser = true;
     description = "Curry";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
-    packages = with pkgs; [
-      kdePackages.kate
-      kdePackages.partitionmanager
-      element-desktop
-      tree
-      zip
-      unzip
-      nixos-artwork.wallpapers.catppuccin-latte
-      deezer-enhanced
-      qalculate-qt
-      distrobox
-    ];
   };
 
   # Install firefox.
@@ -135,7 +126,8 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system profile.
+  # Keep machine-level tools in the system profile.
+  # User-facing apps and personal CLI tools are managed by Home Manager.
   environment.systemPackages = with pkgs; [
     vim
     wget

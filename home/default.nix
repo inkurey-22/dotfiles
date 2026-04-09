@@ -29,22 +29,32 @@
     stateVersion = "25.11";
 
     packages = with pkgs; [
-      ripgrep # Move?
-      rclone # Move?
+      # CLI and workflow tools
+      ripgrep
+      rclone
       file
+      tree
       zoxide
       zip
       unzip
       ffmpeg
-      gnupg # Move
+      gnupg
       flatpak
+      distrobox
+
+      # Desktop applications
       gimp
       qpwgraph
       vlc
       libreoffice
       mediawriter
       protontricks
-      nerd-fonts.fira-code
+      element-desktop
+      deezer-enhanced
+      qalculate-qt
+      kdePackages.kate
+      kdePackages.partitionmanager
+      nixos-artwork.wallpapers.catppuccin-latte
       pcmanfm-qt
     ];
 
@@ -52,11 +62,10 @@
 
   programs = {
     direnv = {
-      # Move
       enable = true;
       nix-direnv.enable = true;
     };
-    btop.enable = true; # Move
+    btop.enable = true;
     lutris = {
       enable = true;
       defaultWinePackage = pkgs.proton-ge-bin;
