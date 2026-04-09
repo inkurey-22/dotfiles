@@ -39,6 +39,17 @@
   services.displayManager.plasma-login-manager.enable = true;
   services.desktopManager.plasma6.enable = true;
 
+  # Keep the login manager cursor and NumLock aligned with the user session.
+  services.displayManager.plasma-login-manager.settings = {
+    Theme = {
+      CursorTheme = "catppuccin-latte-yellow-cursors";
+      CursorSize = 24;
+    };
+    General = {
+      Numlock = "on";
+    };
+  };
+
   # Desktop portals are required by many Wayland applications.
   xdg.portal = {
     enable = true;
@@ -130,6 +141,7 @@
     wget
     git
     docker
+    catppuccin-cursors.latteYellow
   ];
 
   environment.sessionVariables = { };
