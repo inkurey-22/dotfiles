@@ -7,6 +7,7 @@
 
   imports = [
     ./bash
+    ./btop
     ./browser
     ./discord
     ./obs
@@ -65,7 +66,6 @@
       enable = true;
       nix-direnv.enable = true;
     };
-    btop.enable = true;
     lutris = {
       enable = true;
       defaultWinePackage = pkgs.proton-ge-bin;
