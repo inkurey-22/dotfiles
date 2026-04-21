@@ -55,6 +55,7 @@
       qalculate-qt
       kdePackages.kate
       kdePackages.partitionmanager
+      kdePackages.kcolorpicker
       nixos-artwork.wallpapers.catppuccin-latte
       pcmanfm-qt
     ];

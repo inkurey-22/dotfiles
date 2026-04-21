@@ -15,6 +15,7 @@
         rust-lang.rust-analyzer
       ];
       userSettings = {
+        "extensions.ignoreRecommendations" = true;
         "editor.fontFamily" = "'FiraCode Nerd Font', 'Fira Code', monospace";
         "terminal.integrated.fontFamily" = "'FiraCode Nerd Font', 'Fira Code', monospace";
         "workbench.colorTheme" = "Catppuccin Latte";
