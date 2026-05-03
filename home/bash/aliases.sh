@@ -28,6 +28,8 @@ alias todo='vim ~/todo.txt'
 
 alias nixos-diff='nix profile diff-closures --profile /nix/var/nix/profiles/system'
 
+alias cformat="find . -type f \( -name "*.c" -o -name "*.h" \) -exec clang-format -i {} +"
+
 function prune_branches() {
     git fetch -p && for branch in $(git for-each-ref --format '%(refname) %(upstream:track)' refs/heads | awk '$2 == "[gone]" {sub("refs/heads/", "", $1); print $1}'); do git branch -D $branch; done
 }

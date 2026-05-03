@@ -13,6 +13,7 @@
         catppuccin.catppuccin-vsc-icons
         llvm-vs-code-extensions.vscode-clangd
         rust-lang.rust-analyzer
+        mkhl.direnv
       ];
       userSettings = {
         "extensions.ignoreRecommendations" = true;
