@@ -43,6 +43,7 @@
       gnupg
       flatpak
       distrobox
+      gh
 
       # Desktop applications
       gimp
@@ -59,6 +60,7 @@
       kdePackages.kcolorpicker
       nixos-artwork.wallpapers.catppuccin-latte
       pcmanfm-qt
+      zed-editor-fhs
     ];
 
   };
@@ -67,10 +69,6 @@
     direnv = {
       enable = true;
       nix-direnv.enable = true;
-    };
-    lutris = {
-      enable = true;
-      defaultWinePackage = pkgs.proton-ge-bin;
     };
   };
 }
