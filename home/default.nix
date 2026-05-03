@@ -25,6 +25,7 @@
       EDITOR = "nvim";
       VISUAL = "nvim";
       NIXOS_OZONE_WL = "1";
+      SAL_USE_VCLPLUGIN = "qt6";
     };
 
     stateVersion = "25.11";
@@ -47,7 +48,7 @@
       gimp
       qpwgraph
       vlc
-      libreoffice
+      libreoffice-qt
       mediawriter
       protontricks
       element-desktop
