@@ -61,6 +61,7 @@
       nixos-artwork.wallpapers.catppuccin-latte
       pcmanfm-qt
       zed-editor-fhs
+      signal-desktop
     ];
 
   };
