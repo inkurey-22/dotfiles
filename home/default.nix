@@ -46,6 +46,7 @@
       gh
       ansible
       ansible-lint
+      joycond
 
       # Desktop applications
       gimp
@@ -64,6 +65,7 @@
       pcmanfm-qt
       zed-editor-fhs
       signal-desktop
+      lmstudio
     ];
 
   };
