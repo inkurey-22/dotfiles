@@ -44,6 +44,8 @@
       flatpak
       distrobox
       gh
+      ansible
+      ansible-lint
 
       # Desktop applications
       gimp

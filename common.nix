@@ -12,7 +12,16 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Enable networking
-  networking.networkmanager.enable = true;
+  networking.networkmanager = {
+    enable = true;
+    plugins = with pkgs; [
+      networkmanager-openvpn
+    ];
+  };
+
+  services.openvpn.servers = {
+    octopus = { config = '' config /home/curry/.config/openvpn-groupe7-student2.ovpn ''; };
+  };
 
   # Set your time zone.
   time.timeZone = "Europe/Paris";
@@ -166,6 +175,11 @@
     enableSSHSupport = true;
   };
   services.tailscale.enable = true;
+
+  virtualisation.virtualbox.host.enable = true;
+  virtualisation.virtualbox.host.enableExtensionPack = true;
+  users.extraGroups.vboxusers.members = [ "curry" ];
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It's perfectly fine and recommended to leave
