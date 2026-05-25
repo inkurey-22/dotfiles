@@ -10,6 +10,7 @@
     ./btop
     ./browser
     ./discord
+    ./git
     ./obs
     ./fastfetch
     ./nvim
