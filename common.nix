@@ -1,5 +1,5 @@
 # Shared configuration across all machines
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   # Bootloader.
@@ -17,10 +17,6 @@
     plugins = with pkgs; [
       networkmanager-openvpn
     ];
-  };
-
-  services.openvpn.servers = {
-    octopus = { config = '' config /home/curry/.config/openvpn-groupe7-student2.ovpn ''; };
   };
 
   # Set your time zone.
@@ -118,6 +114,65 @@
     pulse.enable = true;
   };
 
+  services.gitea-actions-runner = {
+    package = pkgs.forgejo-runner;
+    instances.default = {
+      enable = true;
+      name = "codeberg-${config.networking.hostName}";
+      url = "https://codeberg.org";
+      # Must contain:
+      # UUID=<runner uuid>
+      # TOKEN=<runner token>
+      tokenFile = "/etc/codeberg-runner-connection";
+      labels = [
+        # jobs.<job_id>.container.image can override this default and use any image.
+        "docker:docker://ghcr.io/catthehacker/ubuntu:act-latest"
+        "ubuntu-latest:docker://ghcr.io/catthehacker/ubuntu:act-latest"
+        "self-hosted:docker://ghcr.io/catthehacker/ubuntu:act-latest"
+        "linux:docker://ghcr.io/catthehacker/ubuntu:act-latest"
+        "native:host"
+      ];
+    };
+  };
+  systemd.services.gitea-runner-default.serviceConfig = {
+    ExecStartPre = lib.mkForce [
+      (pkgs.writeShellScript "forgejo-runner-write-config" ''
+                set -eu
+
+                : "''${UUID:?UUID is required in /etc/codeberg-runner-connection}"
+                : "''${TOKEN:?TOKEN is required in /etc/codeberg-runner-connection}"
+
+                instance_dir="$STATE_DIRECTORY/default"
+                mkdir -p "$instance_dir"
+
+                cat > "$instance_dir/config.yaml" <<EOF
+        runner:
+          labels:
+            - docker:docker://ghcr.io/catthehacker/ubuntu:act-latest
+            - ubuntu-latest:docker://ghcr.io/catthehacker/ubuntu:act-latest
+            - self-hosted:docker://ghcr.io/catthehacker/ubuntu:act-latest
+            - linux:docker://ghcr.io/catthehacker/ubuntu:act-latest
+            - native:host
+        server:
+          connections:
+            codeberg:
+              url: https://codeberg.org/
+              uuid: $UUID
+              token: $TOKEN
+        EOF
+                chmod 600 "$instance_dir/config.yaml"
+      '')
+    ];
+    ExecStart = lib.mkForce "${lib.getExe pkgs.forgejo-runner} daemon --config /var/lib/gitea-runner/default/config.yaml";
+  };
+
+  users.groups.gitea-runner = { };
+  users.users.gitea-runner = {
+    isSystemUser = true;
+    group = "gitea-runner";
+    extraGroups = [ "docker" ];
+  };
+
   programs.steam = {
     enable = true;
   };
@@ -141,9 +196,6 @@
     extraGroups = [ "networkmanager" "wheel" "docker" ];
   };
 
-  # Install firefox.
-  programs.firefox.enable = true;
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -158,6 +210,17 @@
   ];
 
   environment.sessionVariables = { };
+
+  xdg.mime = {
+    enable = true;
+    defaultApplications = {
+      "text/html" = "zen.desktop"; # use the real filename you found
+      "x-scheme-handler/http" = "zen.desktop";
+      "x-scheme-handler/https" = "zen.desktop";
+      "x-scheme-handler/about" = "zen.desktop";
+      "x-scheme-handler/unknown" = "zen.desktop";
+    };
+  };
 
   services.flatpak.enable = true;
   systemd.services.flatpak-repo = {
@@ -176,9 +239,6 @@
   };
   services.tailscale.enable = true;
 
-  virtualisation.virtualbox.host.enable = true;
-  virtualisation.virtualbox.host.enableExtensionPack = true;
-  users.extraGroups.vboxusers.members = [ "curry" ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

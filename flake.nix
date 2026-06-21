@@ -14,14 +14,30 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nixcord = {
+      url = "github:FlameFlag/nixcord";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    zen-browser = {
+      url = "github:youwen5/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    catppuccin-zen = {
+      url = "github:catppuccin/zen-browser";
+      flake = false;
+    };
   };
 
   outputs =
-    { nixpkgs
+    { self
+    , nixpkgs
     , pre-commit-hooks
     , home-manager
+    , nixcord
     , ...
-    }:
+    } @ inputs:
     let
       system = "x86_64-linux";
       username = "curry";
@@ -54,7 +70,7 @@
         '';
         users.${username} = import ./home;
         extraSpecialArgs = {
-          inherit username system;
+          inherit username system inputs;
         };
       };
 

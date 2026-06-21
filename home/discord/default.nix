@@ -1,14 +1,18 @@
-{ pkgs, username, ... }:
+{ pkgs, inputs, ... }:
 let
   vencordSettings = import ./vencord-settings.nix;
 in
 {
-  home.packages = [
-    pkgs.vesktop
-  ];
+  imports = [ inputs.nixcord.homeModules.nixcord ];
 
-  home.file.".config/vesktop/settings/settings.json".text =
-    builtins.toJSON vencordSettings;
+  programs.nixcord = {
+    enable = true;
 
-  home.file.".config/vesktop/settings/quickCss.css".source = ./quickCss.css;
+    # Use Discord with Vencord and OpenASAR
+    discord.vencord.enable = true;
+
+    # Settings
+    config = vencordSettings;
+    quickCss = builtins.readFile ./quickCss.css;
+  };
 }

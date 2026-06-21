@@ -15,7 +15,7 @@
     ./fastfetch
     ./nvim
     ./plasma
-    ./vscode
+    ./zen
   ];
 
   home = {
@@ -62,6 +62,7 @@
       kdePackages.kate
       kdePackages.partitionmanager
       kdePackages.kcolorpicker
+      kdePackages.tokodon
       nixos-artwork.wallpapers.catppuccin-latte
       pcmanfm-qt
       zed-editor-fhs
