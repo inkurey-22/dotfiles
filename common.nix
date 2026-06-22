@@ -193,7 +193,7 @@
   users.users.curry = {
     isNormalUser = true;
     description = "Curry";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "libvirt" "kvm" ];
   };
 
   # Allow unfree packages
@@ -207,6 +207,7 @@
     git
     docker
     catppuccin-cursors.latteYellow
+    dnsmasq
   ];
 
   environment.sessionVariables = { };
@@ -239,6 +240,12 @@
   };
   services.tailscale.enable = true;
 
+  virtualisation.libvirtd = {
+    enable = true;
+    qemu.vhostUserPackages = with pkgs; [ virtiofsd ];
+  };
+  programs.virt-manager.enable = true;
+  networking.firewall.trustedInterfaces = [ "virbr0" ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
