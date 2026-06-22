@@ -68,6 +68,7 @@
       zed-editor-fhs
       signal-desktop
       lmstudio
+      prismlauncher
     ];
 
   };
